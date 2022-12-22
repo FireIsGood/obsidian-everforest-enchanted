@@ -233,6 +233,7 @@ a.external-link {
 
 /** Bullet Lists **/
 
+.cm-indent::before,
 ul::before,
 ol::before {
 	opacity: 0.5;
