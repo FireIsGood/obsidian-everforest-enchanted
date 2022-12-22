@@ -6,8 +6,16 @@
 *? 2. Themes
 *?   - Dark
 *?   - Light
-*? 3. Extra Fixes
+*? 2. General UI
+*?   - Workspace
+*? 4. Markdown
+*?   - Emphasis
+*?   - Code
+*?   - Links
+*? 5. Cursor
+*? 6. Extra Fixes
 *?   - Callouts
+*?   - Misc.
 *?
  **--------------------**/
 
@@ -76,9 +84,12 @@ body:is(.theme-dark, .theme-light) {
   --h6-weight: 500;
 }
 
+
+
 /**** Theme Colors ****/
 
 
+/** Dark Theme **/
 .theme-dark {
   --bg-dim:      #293136;
   --bg0:         #333C43;
@@ -121,57 +132,29 @@ body:is(.theme-dark, .theme-light) {
   --statusline2: #E67E80;
 }
 
-/*Buttons*/
 
-/*Default Buttons*/
-button {}
-/*Settings Buttons*/
-button.mod-cta {}
-/*Warning Buttons*/
-button.mod-warning{}
+/** Light Theme **/
+.theme-light {}
 
 
 
-/*--Workspace: Notes--*/
-/*Note Title Bar*/
+/**** General UI ****/
+
+
+/** Workspace **/
+
+
+/* Title Bar */
 .workspace-leaf .view-header {
 	box-shadow: 0 0 8px -4px var(--divider-color); 
 }
 
-/*Inactive Note Titlebar*/
-/*Note Title Bar: Text*/
+/* Title Text */
 .view-header-title {
   font-weight: 600;
 }
 
-/*Note Title Bar: Note Icon*/
-.view-header-icon {}
-
-/*Note Title Bar: Settings Icons*/
-.view-action {}
-
-/*Active Note Titlebar*/
-/*Note Title Bar: Text*/
-.workspace-leaf.mod-active .view-header-title {}
-
-/*Note Title Bar: Note Icon*/
-.workspace-leaf.mod-active .view-header-icon {}
-
-/*Note Title Bar: Settings Icons*/
-.workspace-leaf.mod-active .view-action {}
-
-
-
-
-
-
-
-/*----Notes----*/
-.cm-s-obsidian:not(.is-live-preview) {} /*Source Mode*/
-.markdown-source-view {} /*Source Mode*/
-
-.cm-s-obsidian.is-live-preview {} /*Live Preview Mode*/
-
+/* Gutters */
 .markdown-source-view.mod-cm6 .cm-gutters {
 	z-index: -1 !important;
 	margin-inline-start: calc(0px - var(--file-folding-offset) - 12px); 
@@ -180,23 +163,28 @@ button.mod-warning{}
 .markdown-source-view.mod-cm6 .cm-content {
 	width: fit-content;
 }
-
 .markdown-preview-view {
 	padding-block: var(--file-margins);
 	padding-right: 10px;
 }
 
-/*--Emphasis--*/
 
-/*Bold*/
-strong {} /*Reading View*/
-.cm-s-obsidian .cm-strong {} /*Editing View*/
 
-/*Italic/Emphasis*/
-em {} /*Reading View*/
-.cm-em {} /*Editing View*/
+/**** Markdown ****/
 
-/*--Code--*/
+
+/** Emphasis **/
+
+/* Bold */
+.cm-s-obsidian .cm-strong,
+strong {}
+
+/* Italic/Emphasis */
+.cm-em,
+em {}
+
+
+/** Code **/
 
 code {}
 
@@ -209,10 +197,10 @@ code {}
 	border-radius: var(--radius-s)
 }
 .cm-s-obsidian span.cm-inline-code:not(.cm-formatting) {
-  color: var(--code-inline);
+	color: var(--code-inline);
 }
 
-/*Codeblock (no language specified) */
+/* Codeblock (no language specified) */
 .markdown-preview-view pre code {
   color: inherit;
 }
@@ -220,25 +208,13 @@ code {}
   background-color: var(--code-background)
 }
 
-/*Codeblock: Language Specified: ```js*/
-.markdown-preview-view pre[class*=language-] {} /*Reading Mode*/
-.markdown-preview-view code[class*=language-] {} /*Reading Mode*/
 
-/* Make Live Preview mode code show better when not selected */
-.cm-inline-code:not(.cm-formatting):not(.cm-formatting + .cm-inline-code) {
-	color: var(--code-inline);
-	background-color: var(--code-background) !important;
-	padding: 0.1em 0.25em;
-	border-radius: var(--radius-s);
-}
-
-
-/*--Links--*/
+/** Links **/
 .cm-s-obsidian span.cm-hmd-internal-link {
   color: var(--text-link);
-} /*Source Mode*/
+}
 
-/*Wiki Links*/
+/* Wiki Links */
 a.internal-link {
   color: var(--text-link);
 }
@@ -246,7 +222,7 @@ a.internal-link:hover {
   color: var(--text-link-hover)
 }
 
-/*Markdown Links*/
+/* Markdown Links */
 a.external-link {
   color: var(--text-link-external);
 }
@@ -255,22 +231,7 @@ a.external-link {
 }
 
 
-/*Link to No Page*/
-a.internal-link.is-unresolved {} /*Reading Mode*/
-
-
-
-
-/*--Lists--*/
-.cm-s-obsidian .HyperMD-list-line {} /*Source Mode*/
-
-/*List Bullet/Number/Formatting*/
-li::marker {} /*Reading Mode*/
-span.cm-formatting-list-ul {} /*Source Mode*/
-span.cm-formatting-list-ol {} /*Source Mode*/
-
-/*Bullet Lists*/
-ul {} /*Reading Mode*/
+/** Bullet Lists **/
 
 ul::before,
 ol::before {
@@ -278,92 +239,46 @@ ol::before {
   border-right: 2px solid var(--fg-blue) !important;
 }
 
-/*Bullet List Text*/
-ul li {} /*Reading Mode*/
-
-/*Bullet List Symbol*/
-ul li::marker {} /*Reading Mode*/
-
-
-/*Numbered Lists*/
-ol {} /*Reading Mode*/
-
-/*Numbered List Text*/
-ol li {} /*Reading Mode*/
-
-/*Numbered List Number*/
-ol li::marker {} /*Reading Mode*/
-
-/*Checkbox List*/
-li.task-list-item {} /*Reading Mode*/
-input[type=checkbox i] {} /*Reading Mode*/
-
-/*Checked Checkbox*/
-.markdown-preview-view .task-list-item-checkbox:checked {} /*Reading Mode*/
-input[type=checkbox]:checked {} /*Reading Mode*/
-
 .empty-state-container:hover {
     background-color: var(--bg-green);
     border: 5px solid var(--interactive-accent) ;
 }
-
 .checkbox-container {
     background-color: var(--interactive-before);
 }
-
-.checkbox-container:after
-{
+.checkbox-container:after {
     background-color: var(--interactive-accent);
 }
-
 .checkbox-container.is-enabled:after {
     background-color: var(--bg3);
 }
 
-/*--Blockquotes--*/
+
+/** Blockquotes **/
 .markdown-preview-view blockquote {
   padding-block: 0.25em;
 }
 
-/*--Tables--*/
+
+/** Tables **/
+
 table {
   background-color: var(--bg1);
-} /*Reading Mode*/
+}
 
-/*Table Headers*/
+/* Table Headers */
 table th {
   background-color: var(--bg-green) !important;
 }
 
 
-/*Table Column*/
-table td {} /*Reading Mode*/
-
-/*Table Row*/
-table tr {} /*Reading Mode*/
-.cm-s-obsidian .HyperMD-table-row {} /*Source Mode*/
-
-
-
-
-/*--Tags--*/
-/*Reading Mode*/
-a.tag {
-  font-weight: 500;
-}
-/*Source Mode*/
-.cm-s-obsidian span.cm-hashtag {
+/** Tags **/
+.cm-s-obsidian span.cm-hashtag,
+a.tag{
   font-weight: 500;
 }
 
-/*--Frontmatter/Metadata/Yaml--*/
-.frontmatter-container {} /*Reading Mode*/
-.CodeMirror-line .cm-s-obsidian .cm-hmd-frontmatter {} /*Source Mode*/
-
-/*Frontmatter Tag*/
-.frontmatter-container .frontmatter-alias {} /*Reading Mode*/
-
-/*--Embeds--*/
+/** Embeds **/
 .markdown-preview-view .markdown-embed {
   background-color: var(--blockquote-background-color);
 }
@@ -371,42 +286,8 @@ a.tag {
   background-color: var(--blockquote-background-color);
 }
 
-.markdown-source-view.mod-cm6 .cm-embed-block {} /*Live Preview Mode*/
-.markdown-source-view .markdown-embed:not(.mod-empty) {} /*Live Preview Mode*/
 
-/*File Embed*/
-.markdown-preview-view .file-embed {} /*Reading Mode*/
-.markdown-source-view .file-embed:not(.mod-empty) {} /*Live Preview Mode*/
-
-/*Empty/No Embed Found*/
-.markdown-source-view .markdown-embed.mod-empty {} /*Live Preview Mode*/
-.markdown-source-view .file-embed.mod-empty {} /*Live Preview Mode*/
-
-/*Embed Titles*/
-.markdown-embed-title {} /*Reading Mode*/
-.file-embed-title {} /*Reading Mode*/
-
-/*Embed Link*/
-.markdown-embed-link {}
-.file-embed-link {}
-
-
-/*--Footnotes--*/
-
-/*Footnote link in note*/
-.markdown-preview-view a.footnote-link {} /*Reading View*/
-
-/*Reference Number in text*/
-.cm-s-obsidian span.cm-footref {} /*Editing View*/
-
-/*Footnotes section at the bottom of the note*/
-.markdown-preview-view .footnotes {} /*Reading View*/
-
-/*Footnote back ref (arrow) at the bottom of the note*/
-.footnote-backref {} /*Reading View*/
-
-
-/*--Graph--*/
+/** Graph **/
 
 .graph-view.color-fill {
 	color: var(--text-muted); /*color of nodes*/
@@ -450,9 +331,11 @@ a.tag {
 	color: var(--interactive-accent);
 }
 
-.graph-controls {} /*Graph Menu*/
 
-/* Cursor */
+
+/****  Cursor ****/
+
+
 .cm-cursorLayer .cm-cursor {}
 
 /* animation of the blinking */
@@ -476,6 +359,7 @@ a.tag {
 
 /**** Extra Fixes ****/
 
+
 /** Callouts **/
 
 .callout[data-callout="math"] {
@@ -488,12 +372,10 @@ padding: 0 !important;
 .callout[data-callout="math"] .callout-content .math-block {
 border: none
 }
-
 .callout[data-callout="graph"] {
   --callout-color: 255, 213, 79;
   --callout-icon: lucide-line-chart;
 }
-
 .callout[data-callout="image"] {
   --callout-color: 255, 255, 255;
   --callout-icon: lucide-image;
@@ -501,7 +383,6 @@ border: none
 .callout[data-callout="image"] .callout-content {
 padding: 0 !important;
 }
-
 .callout[data-callout="code"] {
   --callout-color: 200, 255, 200;
   --callout-icon: lucide-curly-braces;
@@ -514,7 +395,6 @@ padding:.5em !important;
 margin-block: 0;
 background-color: var(--code-background);
 }
-
 
 /* Fix all the callouts to be better */
 .callout {
