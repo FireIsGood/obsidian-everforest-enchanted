@@ -1,86 +1,134 @@
-/*Fonts*/
-:root {
-    /*
-    If the font isn't installed in the system, 
-    it will go down the list until it finds on that is.
-    */
+/**--------------------**
+*?
+*? 1. Variables
+*?   - Fonts
+*?   - Implementation
+*? 2. Themes
+*?   - Dark
+*?   - Light
+*? 3. Extra Fixes
+*?   - Callouts
+*?
+ **--------------------**/
 
-    --default-font: "Inter", sans-serif; /*Note and Settings Text*/
-    --font-monospace: "Source Code Pro", monospace; /*Code block text*/
+/**** Implementation ****/
 
-    /*
-    var(--variableName); is a variable,
-    so you can use what you set over and over without having
-    to rewrite it multiple times.
-    */
+body:is(.theme-dark, .theme-light) {
+
+  /** Fonts **/
+
+  --font-monospace: "Fira Code", "Source Code Pro", monospace;
+
+  /** Backgrounds **/
+
+  --background-modifier-border: var(--bg5);
+  --background-embed: var(--bg1);
+  --blockquote-background-color: var(--background-embed);
+
+  --background-primary:       var(--bg0);
+  --background-primary-alt:   var(--bg0);
+  --background-secondary:     var(--bg0);
+  --background-secondary-alt: var(--bg0);
+
+  --text-normal:              var(--fg);
+  --text-muted:               var(--color-base-70);
+  --text-faint:               var(--grey1);
+  --text-selection:           var(--bg3);
+
+  --text-link:                var(--header-aqua);
+  --text-link-hover:          var(--fg-aqua);
+  --text-link-external:       var(--header-blue);
+  --text-link-external-hover: var(--fg-blue);
+  --text-accent:              var(--header-blue);
+  --text-accent-hover:        var(--header-purple);
+
+  --code-background: var(--bg-dim);
+  --code-normal: var(--text-muted);
+  --code-inline: var(--fg-blue);
+
+  --table-border-color: var(--bg5);
+  
+  --interactive-before: var(--bg4);
+  --interactive-hover: var(--fg-aqua);
+  --interactive-accent: var(--header-aqua);
+  --interactive-accent-hover: var(--header-blue);
+  
+  --text-highlight-bg: var(--bg-yellow);
+
+  --h1-color: var(--header-red);
+  --h2-color: var(--header-orange);
+  --h3-color: var(--header-yellow);
+  --h4-color: var(--header-green);
+  --h5-color: var(--header-blue);
+  --h6-color: var(--header-purple);
+
+  --h1-size: 34px;
+  --h2-size: 26px;
+  --h3-size: 22px;
+  --h4-size: 20px;
+  --h5-size: 19px;
+  --h6-size: 18px;
+
+  --h1-weight: 500;
+  --h2-weight: 500;
+  --h3-weight: 500;
+  --h4-weight: 500;
+  --h6-weight: 500;
 }
 
-/*Dark Theme Variables*/
+/**** Theme Colors ****/
+
+
 .theme-dark {
-    --background-modifier-cover: rgba(0, 0, 0, 0.8); /*Obsidian Title Bar Bg*/
-    --background-primary: #202020; /*Note background*/
-    --background-primary-alt: #1a1a1a; /*Note Title background active*/
-    --background-secondary: #161616; /*Sidebar background*/
-    --background-secondary-alt: #000000; /*Sidebar Title background*/
-    
-    --background-modifier-border: #333; /*Border outline of quotes, tables, line breaks*/
-    
-    --text-normal: #dcddde; /*Text body of note*/
-    --text-muted: ; /*Text darker for sidebar, toggles, inactive, tags, etc*/
-    --text-accent: #7f6df2; /*Links*/
-    --text-accent-hover: #8875ff; /*Links hover*/
-    --text-faint: #666; /*Link brackets color & Gutter Numbers*/
+  --bg-dim:      #293136;
+  --bg0:         #333C43;
+  --bg1:         #3A464C;
+  --bg2:         #434F55;
+  --bg3:         #4D5960;
+  --bg4:         #555F66;
+  --bg5:         #5D6B66;
+  
+  --bg-visual:   #5C3F4F;
+  --bg-red:      #59464C;
+  --bg-green:    #48584E;
+  --bg-blue:     #3F5865;
+  --bg-yellow:   #55544A;
+  
+  --fg:          #D3C6AA;
+  
+  --fg-red:      #E67E80;
+  --fg-orange:   #E69875;
+  --fg-yellow:   #DBBC7F;
+  --fg-green:    #A7C080;
+  --fg-aqua:     #83C092;
+  --fg-blue:     #7FBBB3;
+  --fg-purple:   #D699B6;
 
-    --text-highlight-bg: rgba(255, 255, 0, 0.4); /*Search Matches*/
-    --text-highlight-bg-active: rgba(255, 128, 0, 0.4); /*Active Search Match (Preview Mode)*/
-    --text-selection: rgba(23, 48, 77, 0.99); /*Text Selections*/
+  --header-red:       #da6362;
+  --header-orange:    #d77f48;
+  --header-yellow:    #bf983d;
+  --header-green:     #899c40;
+  --header-aqua:      #569d79;
+  --header-blue:      #5a93a2;
+  --header-purple:    #b87b9d;
+  
+  --grey0:       #7A8478;
+  --grey1:       #859289;
+  --grey2:       #9DA9A0;
 
-    --interactive-normal: #2a2a2a; /*Button Color*/
-    --interactive-hover: #303030; /*Button Hovered Color*/
-    --interactive-accent: #483699; /*Workspace Note Title Underline*/
-    --interactive-accent-hover: #4d3ca6; /*Menu Button Hover*/
+  --statusline0: #A7C080;
+  --statusline1: #D3C6AA;
+  --statusline2: #E67E80;
+}
+
+
+//.theme-dark {
+
     
     --scrollbar-bg: rgba(255, 255, 255, 0.05); /*Scrollbar Gutter Background*/
     --scrollbar-thumb-bg: rgba(255, 255, 255, 0.1); /*Scrollbar Color*/
     --scrollbar-active-thumb-bg: rgba(255, 255, 255, 0.2); /*Scrollbar Dragged Color*/
 }
-
-.theme-light {
-    --background-primary: #ffffff; /*Note background*/
-    --background-primary-alt: #f5f6f8; /*Note Title background active*/
-    --background-secondary: #f2f3f5; /*Sidebar background*/
-    --background-secondary-alt: #e3e5e8; /*Sidebar Title background*/
-    
-    --background-modifier-border: #ddd; /*Border outline of quotes, tables, line breaks*/
-
-    --text-normal: #2e3338; /*Text body of note*/
-    --text-muted: #888888; /*Text darker for sidebar, toggles, inactive, tags, etc*/
-    --text-accent: #705dcf; /*Links*/
-    --text-accent-hover: #7a6ae6; /*Links hover*/
-    --text-faint: #999999; /*Link brackets color*/
-
-    --text-highlight-bg: rgba(255, 255, 0, 0.4); /*Search Matches*/
-    --text-highlight-bg-active:rgba(255, 128, 0, 0.4); /*Active Search Match (Preview Mode)*/
-    --text-selection: rgba(23, 48, 77, 0.99); /*Text Selections*/
-    
-    --interactive-normal: #f2f3f5; /*Button background Color*/
-    --interactive-hover:#e9e9e9; /*Button Hovered Color*/
-    --interactive-accent: #7b6cd9; /*Workspace Note Title Underline*/
-    --interactive-accent-hover: #8273e6; /*Menu Button Hover*/
-    
-    --scrollbar-bg: rgba(0, 0, 0, 0.05); /*Scrollbar Gutter Background*/
-    --scrollbar-thumb-bg: rgba(0, 0, 0, 0.1); /*Scrollbar Color*/
-    --scrollbar-active-thumb-bg: rgba(0, 0, 0, 0.2); /*Scrollbar Dragged Color*/
-}
-
-/*Box Sizing Reset - this makes it easier to set any ::before and ::after pseudo-elements' dimensions,
-since it includes any border and padding into the height and width values you set.
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}*/
 
 /*----Startup Progress Bar Screen----*/
 /*Startup Progress Bar Window*/
@@ -125,60 +173,6 @@ since it includes any border and padding into the height and width values you se
 .tooltip {}
 
 
-
-/*----Workspace----*/
-/* ribbons, the thin vertical bars to the far left/right */
-.workspace-ribbon {}
-
-/*Side Panels*/
-.workspace-tabs {}
-
-/*Side Panel: Icons*/
-.workspace-tab-header-inner-icon {}
-
-
-
-
-/*--File Explorer--*/
-
-/*Nav Top: Create Note, Sort, Create Folder*/
-.nav-header {}
-
-/*Folder*/
-.nav-folder {}
-.nav-folder-title {}
-
-/*Files*/
-.nav-file {}
-.nav-file-title {}
-/* (also applies to many plugins displaying file lists in the side bar) */
-
-
-/*Status Bar*/
-.status-bar {}
-
-/*--Title Bar--*/
-
-/*Title Bar*/
-.titlebar {}
-
-/*Navigation Button - Back */
-.mod-back {}
-
-/*Navigation Button - Forward*/
-.mod-forward {}
-
-/*Window Control- Minimize*/
-.mod-minimize {}
-
-/*Window Control- Minimize*/
-.mod-maximize {}
-
-/*Window Control- Close*/
-.mod-close {}
-
-
-
 /*Buttons*/
 /*Default Buttons*/
 button {}
@@ -191,11 +185,15 @@ button.mod-warning{}
 
 /*--Workspace: Notes--*/
 /*Note Title Bar*/
-.workspace-leaf .view-header {}
+.workspace-leaf .view-header {
+	box-shadow: 0 0 8px -4px var(--divider-color); 
+}
 
 /*Inactive Note Titlebar*/
 /*Note Title Bar: Text*/
-.view-header-title {}
+.view-header-title {
+  font-weight: 600;
+}
 
 /*Note Title Bar: Note Icon*/
 .view-header-icon {}
@@ -225,7 +223,19 @@ button.mod-warning{}
 
 .cm-s-obsidian.is-live-preview {} /*Live Preview Mode*/
 
-.markdown-preview-view {} /*Reading Mode*/
+.markdown-source-view.mod-cm6 .cm-gutters {
+	z-index: -1 !important;
+	margin-inline-start: calc(0px - var(--file-folding-offset) - 12px); 
+	pointer-events: none;
+}
+.markdown-source-view.mod-cm6 .cm-content {
+	width: fit-content;
+}
+
+.markdown-preview-view {
+	padding-block: var(--file-margins);
+	padding-right: 10px;
+}
 
 /*--Emphasis--*/
 
@@ -286,28 +296,52 @@ hr {} /*Reading Mode*/
 code {}
 
 /*Inline Code*/
-.cm-s-obsidian span.cm-inline-code {} /*Source Mode*/
-.markdown-preview-view code {} /*Reading Mode*/
+.cm-s-obsidian span.cm-inline-code,
+.markdown-preview-view code {
+  font-size: 0.9em;
+  color: var(--code-inline);
+}
 
 /*Codeblock (no language specified) */
-.markdown-preview-view pre {} /*Reading Mode*/
-.cm-s-obsidian pre.HyperMD-codeblock {} /*Source Mode*/
+.markdown-preview-view pre code {
+  color: inherit;
+}
+.cm-s-obsidian pre.HyperMD-codeblock {
+  background-color: var(--code-background)
+}
 
 /*Codeblock: Language Specified: ```js*/
 .markdown-preview-view pre[class*=language-] {} /*Reading Mode*/
 .markdown-preview-view code[class*=language-] {} /*Reading Mode*/
 
-
+/* Make Live Preview mode code show better when not selected */
+.cm-inline-code:not(.cm-formatting):not(.cm-formatting + .cm-inline-code) {
+	color: var(--code-inline);
+	background-color: var(--code-background) !important;
+	padding: 0.1em 0.25em;
+	border-radius: var(--radius-s);
+}
 
 
 /*--Links--*/
 .cm-s-obsidian span.cm-hmd-internal-link {} /*Source Mode*/
 
 /*Wiki Links*/
-a.internal-link {} /*Reading Mode*/
+a.internal-link {
+  color: var(--text-link);
+}
+a.internal-link:hover {
+  color: var(--text-link-hover)
+}
 
 /*Markdown Links*/
-a.external-link {} /*Reading Mode*/
+a.external-link {
+  color: var(--text-link-external);
+}
+  a.external-link:hover {
+  color: var(--text-link-external-hover);
+}
+
 
 /*Link to No Page*/
 a.internal-link.is-unresolved {} /*Reading Mode*/
@@ -326,11 +360,18 @@ span.cm-formatting-list-ol {} /*Source Mode*/
 /*Bullet Lists*/
 ul {} /*Reading Mode*/
 
+ul::before,
+ol::before {
+	opacity: 0.5;
+  border-right: 2px solid var(--fg-blue) !important;
+}
+
 /*Bullet List Text*/
 ul li {} /*Reading Mode*/
 
 /*Bullet List Symbol*/
 ul li::marker {} /*Reading Mode*/
+
 
 /*Numbered Lists*/
 ol {} /*Reading Mode*/
@@ -349,22 +390,39 @@ input[type=checkbox i] {} /*Reading Mode*/
 .markdown-preview-view .task-list-item-checkbox:checked {} /*Reading Mode*/
 input[type=checkbox]:checked {} /*Reading Mode*/
 
+.empty-state-container:hover {
+    background-color: var(--bg-green);
+    border: 5px solid var(--interactive-accent) ;
+}
 
+.checkbox-container {
+    background-color: var(--interactive-before);
+}
 
+.checkbox-container:after
+{
+    background-color: var(--interactive-accent);
+}
 
+.checkbox-container.is-enabled:after {
+    background-color: var(--bg3);
+}
 
 /*--Blockquotes--*/
-.markdown-preview-view blockquote {}
-
-
-
-
+.markdown-preview-view blockquote {
+  padding-block: 0.25em;
+}
 
 /*--Tables--*/
-table {} /*Reading Mode*/
+table {
+  background-color: var(--bg1);
+} /*Reading Mode*/
 
 /*Table Headers*/
-table th {} /*Reading Mode*/
+table th {
+  background-color: var(--bg-green) !important;
+}
+
 
 /*Table Column*/
 table td {} /*Reading Mode*/
@@ -377,12 +435,14 @@ table tr {} /*Reading Mode*/
 
 
 /*--Tags--*/
-a.tag {} /*Reading Mode*/
-.cm-s-obsidian span.cm-hashtag {} /*Source Mode*/
-
-
-
-
+/*Reading Mode*/
+a.tag {
+  font-weight: 500;
+}
+/*Source Mode*/
+.cm-s-obsidian span.cm-hashtag {
+  font-weight: 500;
+}
 
 /*--Frontmatter/Metadata/Yaml--*/
 .frontmatter-container {} /*Reading Mode*/
@@ -391,12 +451,10 @@ a.tag {} /*Reading Mode*/
 /*Frontmatter Tag*/
 .frontmatter-container .frontmatter-alias {} /*Reading Mode*/
 
-
-
-
-
 /*--Embeds--*/
-.markdown-preview-view .markdown-embed {} /*Reading Mode*/
+.markdown-preview-view .markdown-embed {
+  background-color: var(--blockquote-background-color);
+} /*Reading Mode*/
 .internal-embed.is-loaded:not(.image-embed) {} /*Reading Mode*/
 
 .markdown-source-view.mod-cm6 .cm-embed-block {} /*Live Preview Mode*/
@@ -481,9 +539,7 @@ a.tag {} /*Reading Mode*/
 .graph-controls {} /*Graph Menu*/
 
 /* Cursor */
-.cm-cursorLayer .cm-cursor {
-	/* border-left: ... */
-}
+.cm-cursorLayer .cm-cursor {}
 
 /* animation of the blinking */
 .cm-cursorLayer {
@@ -500,4 +556,145 @@ a.tag {} /*Reading Mode*/
 .cm-cursorLayer .cm-cursor {
 	animation-duration: 2200ms;
 	animation-name: phase-blink;
+}
+
+
+
+/**** Extra Fixes ****/
+
+/** Callouts **/
+
+.callout[data-callout="math"] {
+  --callout-color: 174, 213, 129; /* material color 300 */
+  --callout-icon: lucide-sigma;
+}
+.callout[data-callout="math"] .callout-content {
+padding: 0 !important;
+}
+.callout[data-callout="math"] .callout-content .math-block {
+border: none
+}
+
+.callout[data-callout="graph"] {
+  --callout-color: 255, 213, 79;
+  --callout-icon: lucide-line-chart;
+}
+
+.callout[data-callout="image"] {
+  --callout-color: 255, 255, 255;
+  --callout-icon: lucide-image;
+}
+.callout[data-callout="image"] .callout-content {
+padding: 0 !important;
+}
+
+.callout[data-callout="code"] {
+  --callout-color: 200, 255, 200;
+  --callout-icon: lucide-curly-braces;
+}
+.callout[data-callout="code"] .callout-content {
+padding: 0 !important;
+}
+.callout[data-callout="code"] .callout-content > pre {
+padding:.5em !important;
+margin-block: 0;
+background-color: var(--code-background);
+}
+
+
+/* Fix all the callouts to be better */
+.callout {
+  mix-blend-mode: normal !important;
+  padding: 0;
+  border: none;
+  border-left: 0.125rem solid rgba(var(--callout-color), 0.7);
+}
+.callout-title {
+  padding: .5em 1em;
+  background-color: rgba(var(--callout-color), 0.1);
+}
+.callout-fold {
+  margin-left: auto;
+  cursor: pointer;
+}
+.callout-content {
+  padding: .75em !important;
+  background-color: #1e282cff;
+}
+.callout-content > * {
+  margin: 0;
+}
+.callout-content > * + * {
+  margin-top: .5em;
+}
+
+/** Misc. **/
+
+:root {
+  --list-indent: 18px;
+}
+
+/* Hide page scrollbar */
+.view-content ::-webkit-scrollbar {
+	display: none !important;
+}
+
+/* Fix Dataview markers */
+.dataview.list-view-ul li {
+	list-style-type: none;
+}
+.dataview.list-view-ul li::before {
+  visibility: visible;
+  position: absolute;
+  content: '\200B';
+  pointer-events: none;
+  border-radius: var(--list-bullet-radius);
+  width: var(--list-bullet-size);
+  height: var(--list-bullet-size);
+  border: var(--list-bullet-border);
+  transform: translate(-.85em, .6em);
+  background-color: var(--list-marker-color);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.table-view-table > tbody > tr:hover {
+	background-color: #aaa1 !important;
+}
+
+/* Make math display better */
+div.math-block {
+  padding-block: .125em;
+  border: 1px solid #fff2;
+  border-radius: 5px
+}
+/* Make the weird span ones also work */
+span.math-block > mjx-container {
+  padding-block: 1rem;
+  border: 1px solid #fff2;
+  border-radius: 5px
+}
+
+/* Make MathJax text bigger */
+.MJX-TEX {
+	font-size: 110%;
+}
+
+/* Make print break hr elements */
+hr.page-break {
+	opacity: 0.5;
+	height: 1.5rem;
+	display: flex;
+	border-top: 4px dotted;
+	color: white;
+	background-color: unset;
+}
+hr.page-break::before {
+    content: 'Page Break';
+	font-size: .75em;
+    margin-inline: auto;
+}
+@media print {
+	hr.page-break {
+		visibility: hidden;
+		page-break-after: always;
+	}
 }
