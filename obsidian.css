@@ -121,59 +121,8 @@ body:is(.theme-dark, .theme-light) {
   --statusline2: #E67E80;
 }
 
-
-//.theme-dark {
-
-    
-    --scrollbar-bg: rgba(255, 255, 255, 0.05); /*Scrollbar Gutter Background*/
-    --scrollbar-thumb-bg: rgba(255, 255, 255, 0.1); /*Scrollbar Color*/
-    --scrollbar-active-thumb-bg: rgba(255, 255, 255, 0.2); /*Scrollbar Dragged Color*/
-}
-
-/*----Startup Progress Bar Screen----*/
-/*Startup Progress Bar Window*/
-.progress-bar {}
-
-/*Startup Text*/
-.progress-bar .progress-bar-message {}
-
-/*Startup Progress Bar Background*/
-.progress-bar-indicator .progress-bar-line {}
-
-/*Startup Progress Bar Moving Line*/
-.progress-bar-indicator .progress-bar-subline {}
-
-
-/*----Settings----*/
-/*All Popup Windows: Settings*/
-.modal {}
-
-/*Command Palette & Quick Switcher*/
-.prompt {}
-
-/*The notifications in the top right*/
-.notice {}
-
-/*Context Menu (Right CLick sth)*/
-.menu {}
-
-/*Setting Dropdown*/
-.dropdown {}
-
-/*Community Themes Browser*/
-.community-theme {}
-
-/*Community Plugins Browser*/
-.community-plugin {}
-
-
-/*--Extras--*/
-
-/*Tooltip Popup*/
-.tooltip {}
-
-
 /*Buttons*/
+
 /*Default Buttons*/
 button {}
 /*Settings Buttons*/
@@ -247,52 +196,8 @@ strong {} /*Reading View*/
 em {} /*Reading View*/
 .cm-em {} /*Editing View*/
 
-/*Highlight*/
-.markdown-preview-view mark {} /*Reading View*/
-.cm-s-obsidian .cm-highlight {} /*Editing View*/
-.cm-s-obsidian .cm-formatting-highlight {} /*Editing View highlight symbols/syntax*/
-
-/*Strikethrough*/
-.cm-strikethrough {} /*Editing View*/
-del {} /*Reading View*/
-
-/*--Headers/Headings--*/
-h1 {} /*Reading Mode*/
-h2 {} /*Reading Mode*/
-h3 {} /*Reading Mode*/
-h4 {} /*Reading Mode*/
-h5 {} /*Reading Mode*/
-h6 {} /*Reading Mode*/
-.cm-header-1 {} /*Source Mode*/
-.cm-header-2 {} /*Source Mode*/
-.cm-header-3 {} /*Source Mode*/
-.cm-header-4 {} /*Source Mode*/
-.cm-header-5 {} /*Source Mode*/
-.cm-header-6 {} /*Source Mode*/
-
-.cm-header {} /* applies to all source mode headings */
-
-
-
-/*--Horizontal Line--*/
-hr {} /*Reading Mode*/
-.hr.cm-line {} /*Source Mode*/
-.HyperMD-hr-bg {} /*Source Mode*/
-
-/*HR Line Text*/
-.cm-s-obsidian pre.HyperMD-hr {} /*Source Mode*/
-
-
-
-
-/*--Comments--*/
-/* html comments and obsidian style comments */
-.cm-comment {}
-
-
-
-
 /*--Code--*/
+
 code {}
 
 /*Inline Code*/
@@ -454,8 +359,10 @@ a.tag {
 /*--Embeds--*/
 .markdown-preview-view .markdown-embed {
   background-color: var(--blockquote-background-color);
-} /*Reading Mode*/
-.internal-embed.is-loaded:not(.image-embed) {} /*Reading Mode*/
+}
+.internal-embed.is-loaded:not(.image-embed) {
+  background-color: var(--blockquote-background-color);
+}
 
 .markdown-source-view.mod-cm6 .cm-embed-block {} /*Live Preview Mode*/
 .markdown-source-view .markdown-embed:not(.mod-empty) {} /*Live Preview Mode*/
