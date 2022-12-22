@@ -229,7 +229,9 @@ code {}
 
 
 /*--Links--*/
-.cm-s-obsidian span.cm-hmd-internal-link {} /*Source Mode*/
+.cm-s-obsidian span.cm-hmd-internal-link {
+  color: var(--text-link);
+} /*Source Mode*/
 
 /*Wiki Links*/
 a.internal-link {
