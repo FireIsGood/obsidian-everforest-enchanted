@@ -200,10 +200,15 @@ em {} /*Reading View*/
 
 code {}
 
-/*Inline Code*/
-.cm-s-obsidian span.cm-inline-code,
+/* Inline Code */
+.cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-formatting + .cm-inline-code),
 .markdown-preview-view code {
   font-size: 0.9em;
+	background-color: var(--code-background) !important;
+	padding: 0.1em 0.25em;
+	border-radius: var(--radius-s)
+}
+.cm-s-obsidian span.cm-inline-code:not(.cm-formatting) {
   color: var(--code-inline);
 }
 
