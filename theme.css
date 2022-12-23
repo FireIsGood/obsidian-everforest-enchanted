@@ -92,7 +92,7 @@ body:is(.theme-dark, .theme-light) {
 /**** Theme Colors ****/
 
 
-/** Dark Theme **/
+/** Dark Theme (Soft) **/
 .theme-dark {
   --bg-dim:      #293136;
   --bg0:         #333C43;
@@ -136,8 +136,48 @@ body:is(.theme-dark, .theme-light) {
 }
 
 
-/** Light Theme **/
-.theme-light {}
+/** Light Theme (Hard) **/
+.theme-light {
+  --bg-dim:      #F2EFDF;
+  --bg0:         #FFFBEF;
+  --bg1:         #F8F5E4;
+  --bg2:         #F2EFDF;
+  --bg3:         #EDEADA;
+  --bg4:         #E8E5D5;
+  --bg5:         #BEC5B2;
+  
+  --bg-visual:   #F0F2D4;
+  --bg-red:      #FFE7DE;
+  --bg-green:    #F3F5D9;
+  --bg-blue:     #ECF5ED;
+  --bg-yellow:   #FEF2D5;
+  
+  --fg:          #5C6A72;
+  
+  --fg-red:      #F85552;
+  --fg-orange:   #F57D26;
+  --fg-yellow:   #DFA000;
+  --fg-green:    #8DA101;
+  --fg-aqua:     #35A77C;
+  --fg-blue:     #3A94C5;
+  --fg-purple:   #DF69BA;
+
+  --header-red:       #f85552;
+  --header-orange:    #f88f44;
+  --header-yellow:    #f3b931;
+  --header-green:     #abd113;
+  --header-aqua:      #569d79;
+  --header-blue:      #5a93a2;
+  --header-purple:    #dd2b8d;
+  
+  --grey0:       #A6B0A0;
+  --grey1:       #939F91;
+  --grey2:       #829181;
+
+  --statusline0: #93B259;
+  --statusline1: #708089;
+  --statusline2: #E66868;
+}
 
 
 
