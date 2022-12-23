@@ -371,14 +371,14 @@ table {
 /** Tags **/
 
 .cm-s-obsidian span.cm-hashtag,
-a.tag{
+a.tag {
   font-weight: 500;
 }
 
 
 /** Embeds **/
 
-.markdown-embed {  
+.markdown-embed {
   padding-inline: 10px;
 }
 
@@ -473,10 +473,10 @@ a.tag{
   --callout-icon: lucide-sigma;
 }
 .callout[data-callout="math"] .callout-content {
-padding: 0 !important;
+  padding: 0 !important;
 }
 .callout[data-callout="math"] .callout-content .math-block {
-border: none
+  border: none
 }
 .callout[data-callout="graph"] {
   --callout-color: 255, 213, 79;
@@ -487,19 +487,19 @@ border: none
   --callout-icon: lucide-image;
 }
 .callout[data-callout="image"] .callout-content {
-padding: 0 !important;
+  padding: 0 !important;
 }
 .callout[data-callout="code"] {
   --callout-color: 200, 255, 200;
   --callout-icon: lucide-curly-braces;
 }
 .callout[data-callout="code"] .callout-content {
-padding: 0 !important;
+  padding: 0 !important;
 }
 .callout[data-callout="code"] .callout-content > pre {
-padding:.5em !important;
-margin-block: 0;
-background-color: var(--code-background);
+  padding:.5em !important;
+  margin-block: 0;
+  background-color: var(--code-background);
 }
 
 /* Fix all the callouts to be better */
@@ -551,19 +551,15 @@ img {
 .image-embed[src~="1/4"] > img  {
   --img-width: 25%;
 }
- 
 .image-embed[src~="1/3"] > img  {
   --img-width: 33.3%;
 }
- 
 .image-embed[src~="1/2"] > img {
   --img-width: 50%;
 }
- 
 .image-embed[src~="2/3"] > img  {
   --img-width: 66.6%;
 }
- 
 .image-embed[src~="3/4"] > img  {
   --img-width: 75%;
 }
@@ -575,6 +571,7 @@ img {
 .image-embed[src~="right"] > img  {
   margin-left: calc((100% - var(--img-width)));
 }
+
 /* Image Alt Text Other Modifications */
 .image-embed[src~="white"] > img  {
   background-color: white;
@@ -601,11 +598,11 @@ img {
 
 /* Alt text as caption under image */
 body:not(.no-image-alttext-caption) .image-embed:not([alt*=".png"], [alt*=".jpg"], [alt*=".jpeg"], [alt*=".tiff"], [alt*=".avif"])::after {
-    display: block;
-    content: attr(alt);
-    color: var(--text-muted);
-    margin-block: 0.25em;
-    text-align: center;
+  display: block;
+  content: attr(alt);
+  color: var(--text-muted);
+  margin-block: 0.25em;
+  text-align: center;
 }
 
 
