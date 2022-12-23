@@ -320,10 +320,11 @@ ol::before {
 
 /*Checkbox List*/
 ul > li.task-list-item .task-list-item-checkbox {
-  margin-inline-start: calc(var(--checkbox-size) * -1.35);
+  margin-inline-start: calc(var(--checkbox-size) * -1.51);
 }
-input.task-list-item-checkbox {
+.markdown-source-view.mod-cm6 input.task-list-item-checkbox {
   border-width: 1px;
+  margin-left: 1px;
 }
 input.task-list-item-checkbox:hover {
   border-color: var(--header-blue);
@@ -609,10 +610,6 @@ body:not(.no-image-alttext-caption) .image-embed:not([alt*=".png"], [alt*=".jpg"
 
 
 /** Misc. **/
-
-:root {
-  --list-indent: 18px;
-}
 
 /* Hide page scrollbar */
 .view-content ::-webkit-scrollbar {
