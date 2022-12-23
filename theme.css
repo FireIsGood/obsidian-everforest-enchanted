@@ -149,7 +149,7 @@ body:is(.theme-dark, .theme-light) {
 
 /* Title Bar */
 .workspace-leaf .view-header {
-	box-shadow: 0 0 8px -4px var(--divider-color); 
+  box-shadow: 0 0 8px -4px var(--divider-color); 
 }
 
 /* Title Text */
@@ -159,16 +159,16 @@ body:is(.theme-dark, .theme-light) {
 
 /* Gutters */
 .markdown-source-view.mod-cm6 .cm-gutters {
-	z-index: -1 !important;
-	margin-inline-start: calc(0px - var(--file-folding-offset) - 12px); 
-	pointer-events: none;
+  z-index: -1 !important;
+  margin-inline-start: calc(0px - var(--file-folding-offset) - 12px); 
+  pointer-events: none;
 }
 .markdown-source-view.mod-cm6 .cm-content {
-	width: fit-content;
+  width: fit-content;
 }
 .markdown-preview-view {
-	padding-block: var(--file-margins);
-	padding-right: 10px;
+  padding-block: var(--file-margins);
+  padding-right: 10px;
 }
 
 
@@ -182,13 +182,13 @@ body:is(.theme-dark, .theme-light) {
 /* Bold */
 .cm-s-obsidian .cm-strong,
 strong {
-	color: var(--fg-orange);
+  color: var(--fg-orange);
 }
 
 /* Italic/Emphasis */
 .cm-em,
 em {
-	color: var(--fg-purple);
+  color: var(--fg-purple);
 }
 
 
@@ -201,12 +201,12 @@ code {}
 .cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-formatting + .cm-inline-code),
 .markdown-preview-view code {
   font-size: 0.9em;
-	background-color: var(--code-background) !important;
-	padding: 0.1em 0.25em;
-	border-radius: var(--radius-s)
+  background-color: var(--code-background) !important;
+  padding: 0.1em 0.25em;
+  border-radius: var(--radius-s)
 }
 .cm-s-obsidian span.cm-inline-code:not(.cm-formatting) {
-	color: var(--code-inline);
+  color: var(--code-inline);
 }
 
 /* Codeblock (no language specified) */
@@ -239,13 +239,18 @@ a.external-link {
   color: var(--text-link-external-hover);
 }
 
+/* Unresolved Links */
+.is-unresolved {
+  --link-unresolved-decoration-style: wavy;
+  text-decoration-thickness: 1px;
+}
 
 /** Bullet Lists **/
 
 .cm-indent::before,
 ul::before,
 ol::before {
-	opacity: 0.5;
+  opacity: 0.5;
   border-right: 2px solid var(--fg-blue) !important;
 }
 
@@ -314,22 +319,22 @@ a.tag{
 
 .graph-view.color-circle,
 .graph-view.color-fill-highlight {
-	color: var(--text-muted);
+  color: var(--text-muted);
 }
 .graph-view.color-arrow {
-	color: var(--text-normal);
-	opacity: 0.5;
+  color: var(--text-normal);
+  opacity: 0.5;
 }
 .graph-view.color-line {
-	color: var(--background-modifier-border);
+  color: var(--background-modifier-border);
 }
 .graph-view.color-fill-highlight,
 .graph-view.color-line-highlight {
-	color: var(--interactive-accent);
+  color: var(--interactive-accent);
 }
 .graph-view.color-fill-unresolved {
-	color: var(--text-muted);
-	opacity: 0.4;
+  color: var(--text-muted);
+  opacity: 0.4;
 }
 
 
@@ -341,19 +346,19 @@ a.tag{
 
 /* animation of the blinking */
 .cm-cursorLayer {
-	/* deactivate built-in animation from CodeMirror */
-	animation-name: none !important; /* important needed */
+  /* deactivate built-in animation from CodeMirror */
+  animation-name: none !important; /* important needed */
 }
 
 @keyframes phase-blink {
-	15% { opacity: 1 }
-	50% { opacity: 0 }
-	85% { opacity: 1 }
+  15% { opacity: 1 }
+  50% { opacity: 0 }
+  85% { opacity: 1 }
 }
 
 .cm-cursorLayer .cm-cursor {
-	animation-duration: 2200ms;
-	animation-name: phase-blink;
+  animation-duration: 2200ms;
+  animation-name: phase-blink;
 }
 
 
@@ -431,12 +436,12 @@ background-color: var(--code-background);
 
 /* Hide page scrollbar */
 .view-content ::-webkit-scrollbar {
-	display: none !important;
+  display: none !important;
 }
 
 /* Fix Dataview markers */
 .dataview.list-view-ul li {
-	list-style-type: none;
+  list-style-type: none;
 }
 .dataview.list-view-ul li::before {
   visibility: visible;
@@ -452,7 +457,7 @@ background-color: var(--code-background);
   transition: transform 0.15s, box-shadow 0.15s;
 }
 .table-view-table > tbody > tr:hover {
-	background-color: #aaa1 !important;
+  background-color: #aaa1 !important;
 }
 
 /* Make math display better */
@@ -470,26 +475,26 @@ span.math-block > mjx-container {
 
 /* Make MathJax text bigger */
 .MJX-TEX {
-	font-size: 110%;
+  font-size: 110%;
 }
 
 /* Make print break hr elements */
 hr.page-break {
-	opacity: 0.5;
-	height: 1.5rem;
-	display: flex;
-	border-top: 4px dotted;
-	color: white;
-	background-color: unset;
+  opacity: 0.5;
+  height: 1.5rem;
+  display: flex;
+  border-top: 4px dotted;
+  color: white;
+  background-color: unset;
 }
 hr.page-break::before {
     content: 'Page Break';
-	font-size: .75em;
+  font-size: .75em;
     margin-inline: auto;
 }
 @media print {
-	hr.page-break {
-		visibility: hidden;
-		page-break-after: always;
-	}
+  hr.page-break {
+    visibility: hidden;
+    page-break-after: always;
+  }
 }
