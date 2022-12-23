@@ -15,6 +15,7 @@
 *? 5. Cursor
 *? 6. Extra Fixes
 *?   - Callouts
+*?   - Image Formatting 
 *?   - Misc.
 *?
  **--------------------**/
@@ -26,6 +27,8 @@ body:is(.theme-dark, .theme-light) {
   /** Fonts **/
 
   --font-monospace: "Fira Code", "Source Code Pro", monospace;
+
+  --checkbox-size: 1.325em;
 
   /** Backgrounds **/
 
@@ -41,7 +44,7 @@ body:is(.theme-dark, .theme-light) {
   --text-normal:              var(--fg);
   --text-muted:               var(--color-base-70);
   --text-faint:               var(--grey1);
-  --text-selection:           var(--bg3);
+  --text-selection:           var(--bg-visual);
 
   --text-link:                var(--header-aqua);
   --text-link-hover:          var(--fg-aqua);
@@ -240,10 +243,22 @@ ol::before {
   border-right: 2px solid var(--fg-blue) !important;
 }
 
-.empty-state-container:hover {
-    background-color: var(--bg-green);
-    border: 5px solid var(--interactive-accent) ;
+/*Checkbox List*/
+ul > li.task-list-item .task-list-item-checkbox {
+  margin-inline-start: calc(var(--checkbox-size) * -1.35);
 }
+input.task-list-item-checkbox {
+  border-width: 1px;
+}
+input.task-list-item-checkbox:hover {
+  border-color: var(--header-blue);
+}
+input.task-list-item-checkbox:checked
+{
+  background-color: var(--fg-blue);
+  box-shadow: inset 0 0 0 1px var(--background-primary);
+}
+
 .checkbox-container {
     background-color: var(--interactive-before);
 }
@@ -256,6 +271,7 @@ ol::before {
 
 
 /** Blockquotes **/
+
 .markdown-preview-view blockquote {
   padding-block: 0.25em;
 }
