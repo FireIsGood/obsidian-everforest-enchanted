@@ -74,6 +74,8 @@ body:is(.theme-dark, .theme-light) {
   
   --text-highlight-bg: var(--bg-yellow);
 
+  --heading-formatting: ;
+
   --h1-color: var(--header-red);
   --h2-color: var(--header-orange);
   --h3-color: var(--header-yellow);
