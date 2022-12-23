@@ -20,7 +20,10 @@
 *?
  **--------------------**/
 
+
+
 /**** Implementation ****/
+
 
 body:is(.theme-dark, .theme-light) {
 
@@ -28,7 +31,7 @@ body:is(.theme-dark, .theme-light) {
 
   --font-monospace: "Fira Code", "Source Code Pro", monospace;
 
-  --checkbox-size: 1.325em;
+  --checkbox-size: 1.125em;
 
   /** Backgrounds **/
 
@@ -93,6 +96,7 @@ body:is(.theme-dark, .theme-light) {
 
 
 /** Dark Theme (Soft) **/
+
 .theme-dark {
   --bg-dim:      #293136;
   --bg0:         #333C43;
@@ -137,6 +141,7 @@ body:is(.theme-dark, .theme-light) {
 
 
 /** Light Theme (Hard) **/
+
 .theme-light {
   --bg-dim:      #F2EFDF;
   --bg0:         #FFFBEF;
@@ -186,7 +191,6 @@ body:is(.theme-dark, .theme-light) {
 
 /** Workspace **/
 
-
 /* Title Bar */
 .workspace-leaf .view-header {
   box-shadow: 0 0 8px -4px var(--divider-color); 
@@ -218,7 +222,6 @@ body:is(.theme-dark, .theme-light) {
 
 /** Emphasis **/
 
-
 /* Bold */
 .cm-s-obsidian .cm-strong,
 strong {
@@ -232,10 +235,7 @@ em {
 }
 
 
-
 /** Code **/
-
-code {}
 
 /* Inline Code */
 .cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-formatting + .cm-inline-code),
@@ -260,6 +260,7 @@ code {}
 
 
 /** Links **/
+
 .cm-s-obsidian span.cm-hmd-internal-link {
   color: var(--text-link);
 }
@@ -285,6 +286,7 @@ a.external-link {
   --link-unresolved-decoration-style: wavy;
   text-decoration-thickness: 1px;
 }
+
 
 /** Bullet Lists **/
 
@@ -348,8 +350,8 @@ a.tag{
   font-weight: 500;
 }
 
-/** Embeds **/
 
+/** Embeds **/
 
 .markdown-embed {  
   padding-inline: 10px;
@@ -374,6 +376,7 @@ a.tag{
 .markdown-preview-section p:last-of-type {
   margin-bottom: 0.5em;
 }
+
 
 /** Graph **/
 
