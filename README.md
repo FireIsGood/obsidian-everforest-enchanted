@@ -7,18 +7,16 @@ I had some issues with the styling of the other project but the codebase was ver
 ## Features
 
 - Improved and custom callouts
-- Dark theme (light themm soon™)
+- Light and Dark themes
 
 ## Installation
 
 1. Download this repo
 2. Move Obsidian.css file into your `.obsidian/themes` folder
-3. Rename the file to `Everforest` so it has a unique name
+3. Rename the file to `Everforest.css` so it has a unique name
 4. Open **Settings > Appearance** in your vault
 5. Select the theme under the Themes dropdown
 
 ## TODO
 
-- Add light theme
 - Add screenshots
-- Add custom image stuff
