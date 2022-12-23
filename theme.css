@@ -429,6 +429,82 @@ background-color: var(--code-background);
   margin-top: .5em;
 }
 
+
+/** Image Formatting **/
+
+/*
+  This snippet adds modification in the [[link# modification|caption]] format
+  Excalidraw is not supported as it has its own format of using alt text set max width in pixels
+*/
+
+/* Sizing */
+.image-embed > img {
+  display: block;
+  width: var(--img-width, 100%);
+  margin-inline: auto;
+  margin-left: calc((100% - var(--img-width)) / 2);
+}
+.image-embed[src~="1/4"] > img  {
+  --img-width: 25%;
+}
+ 
+.image-embed[src~="1/3"] > img  {
+  --img-width: 33.3%;
+}
+ 
+.image-embed[src~="1/2"] > img {
+  --img-width: 50%;
+}
+ 
+.image-embed[src~="2/3"] > img  {
+  --img-width: 66.6%;
+}
+ 
+.image-embed[src~="3/4"] > img  {
+  --img-width: 75%;
+}
+
+/* Alignment */
+.image-embed[src~="left"] > img  {
+  margin-left: 0;
+}
+.image-embed[src~="right"] > img  {
+  margin-left: calc((100% - var(--img-width)));
+}
+/* Image Alt Text Other Modifications */
+.image-embed[src~="white"] > img  {
+  background-color: white;
+}
+.image-embed[src~="black"] > img  {
+  background-color: black;
+}
+.image-embed[src~="border"] > img  {
+  border: .25rem solid #757575;
+}
+.image-embed[src~="shadow"] > img  {
+  box-shadow: 2px 2px 4px #0007;
+}
+.image-embed[src~="rounded"] > img  {
+  border-radius: 0.5rem;
+}
+.image-embed[src~="blur"] > img  {
+  filter: blur(5px);
+  transition: filter 500ms 250ms ease;
+}
+.image-embed[src~="blur"] > img:hover {
+  filter: blur(0); 
+}
+
+/* Alt text as caption under image */
+body:not(.no-image-alttext-caption) .image-embed:not([alt*=".png"], [alt*=".jpg"], [alt*=".jpeg"], [alt*=".tiff"], [alt*=".avif"])::after {
+    display: block;
+    content: attr(alt);
+    color: var(--text-muted);
+    margin-block: 0.25em;
+    text-align: center;
+}
+
+
 /** Misc. **/
 
 :root {
