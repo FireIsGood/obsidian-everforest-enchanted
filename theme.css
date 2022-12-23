@@ -239,13 +239,13 @@ body:is(.theme-dark, .theme-light) {
 /** Emphasis **/
 
 /* Bold */
-.cm-s-obsidian .cm-strong,
+.cm-s-obsidian .cm-line .cm-strong,
 strong {
   color: var(--fg-aqua);
 }
 
 /* Italic/Emphasis */
-.cm-em,
+.cm-s-obsidian .cm-line .cm-em,
 em {
   color: var(--fg-purple);
 }
