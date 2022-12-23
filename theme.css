@@ -178,13 +178,19 @@ body:is(.theme-dark, .theme-light) {
 
 /** Emphasis **/
 
+
 /* Bold */
 .cm-s-obsidian .cm-strong,
-strong {}
+strong {
+	color: var(--fg-orange);
+}
 
 /* Italic/Emphasis */
 .cm-em,
-em {}
+em {
+	color: var(--fg-purple);
+}
+
 
 
 /** Code **/
