@@ -12,6 +12,13 @@
 *?   - Emphasis
 *?   - Code
 *?   - Links
+*?   - Lists
+*?   - Blockquotes
+*?   - Tables
+*?   - Tags
+*?   - Embeds
+*?   - YAML
+*?   - Graph
 *? 5. Cursor
 *? 6. Extra Fixes
 *?   - Callouts
@@ -297,12 +304,13 @@ a.external-link {
 }
 
 
-/** Bullet Lists **/
+/** Lists **/
 
 .list-bullet::after {
   font-size: 19px;
 }
 
+/* Indentation Lines*/
 .cm-indent::before,
 ul::before,
 ol::before {
