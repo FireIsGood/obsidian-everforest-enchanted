@@ -232,6 +232,16 @@ body:is(.theme-dark, .theme-light) {
   padding-right: 10px;
 }
 
+/* Collapse Indicator */
+.markdown-source-view.mod-cm6 .cm-fold-indicator .collapse-indicator {
+  padding-right: .45rem;
+}
+.markdown-source-view.mod-cm6 .cm-line:not(.cm-active):not(.HyperMD-header):not(.HyperMD-task-line, .HyperMD-list-line-1) .cm-fold-indicator .collapse-indicator {
+  padding-right: 0;
+}
+div ul.has-list-bullet ul.has-list-bullet .collapse-indicator {
+  margin-left: -2.75rem;
+}
 
 
 /**** Markdown ****/
