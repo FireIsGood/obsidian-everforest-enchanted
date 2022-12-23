@@ -432,6 +432,11 @@ background-color: var(--code-background);
 
 /** Image Formatting **/
 
+img {
+  display: block;
+  margin-inline: auto;
+}
+
 /*
   This snippet adds modification in the [[link# modification|caption]] format
   Excalidraw is not supported as it has its own format of using alt text set max width in pixels
