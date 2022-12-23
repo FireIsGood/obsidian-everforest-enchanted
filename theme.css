@@ -394,7 +394,19 @@ a.tag{
 }
 
 
-/** Graph **/
+/** YAML **/
+
+/* Frontmatter error */
+.markdown-rendered .frontmatter.mod-failed:after {
+  height: 0;
+}
+.mod-error {
+  font-weight: 500;
+}
+
+
+
+/**** Graph ****/
 
 .graph-view.color-circle,
 .graph-view.color-fill-highlight {
