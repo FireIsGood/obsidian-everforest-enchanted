@@ -4,6 +4,8 @@ An Obsidian port of the [Everforest](https://github.com/sainnhe/everforest) them
 
 I had some issues with the styling of the other project but the codebase was very different to what the semantics of the official theme area, so I decided to remake the entire thing froms scratch
 
+![](asssets/theme%20screenshots.png)
+
 ## Features
 
 - Everforest style color palette
@@ -11,6 +13,12 @@ I had some issues with the styling of the other project but the codebase was ver
 - Light and Dark themes
 - Image styling based on ID
 - Alt text as image captions
+
+## Themes
+
+| Dark | Light |
+|-|-|
+| ![](asssets/theme%20dark.png) |  ![](asssets/theme%20light.png) |
 
 ## Installation
 
@@ -23,7 +31,3 @@ I had some issues with the styling of the other project but the codebase was ver
 ## Feedback
 
 If you want to add more features, add it as an issue or pull request.
-
-## TODO
-
-- Add screenshots
