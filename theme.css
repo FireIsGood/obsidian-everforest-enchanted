@@ -230,7 +230,7 @@ body:is(.theme-dark, .theme-light) {
 /* Bold */
 .cm-s-obsidian .cm-strong,
 strong {
-  color: var(--fg-orange);
+  color: var(--fg-aqua);
 }
 
 /* Italic/Emphasis */
