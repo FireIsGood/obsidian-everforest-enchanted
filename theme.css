@@ -33,6 +33,8 @@ body:is(.theme-dark, .theme-light) {
 
   --checkbox-size: 1.125em;
 
+  --list-indent: 24px;
+
   /** Backgrounds **/
 
   --background-modifier-border: var(--bg5);
@@ -296,6 +298,10 @@ a.external-link {
 
 
 /** Bullet Lists **/
+
+.list-bullet::after {
+  font-size: 19px;
+}
 
 .cm-indent::before,
 ul::before,
