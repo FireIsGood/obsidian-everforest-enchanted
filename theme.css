@@ -205,7 +205,8 @@ code {}
   padding: 0.1em 0.25em;
   border-radius: var(--radius-s)
 }
-.cm-s-obsidian span.cm-inline-code:not(.cm-formatting) {
+.cm-s-obsidian span.cm-inline-code:not(.cm-formatting),
+.markdown-preview-view code {
   color: var(--code-inline);
 }
 
