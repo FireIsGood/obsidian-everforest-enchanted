@@ -302,19 +302,38 @@ table th {
 
 
 /** Tags **/
+
 .cm-s-obsidian span.cm-hashtag,
 a.tag{
   font-weight: 500;
 }
 
 /** Embeds **/
-.markdown-preview-view .markdown-embed {
-  background-color: var(--blockquote-background-color);
+
+
+.markdown-embed {  
+  padding-inline: 10px;
 }
-.internal-embed.is-loaded:not(.image-embed) {
+
+/*Embed Titles*/
+.markdown-embed-title {
+  display: none;
+}
+
+/* Embed Backgrounds */
+.internal-embed.is-loaded:not(.image-embed, [src$=".excalidraw"]) {
   background-color: var(--blockquote-background-color);
 }
 
+/* Embed First h1 */
+.markdown-preview-section h1:first-of-type {
+  margin-top: 0.5rem;
+}
+
+/* Embed Last p */
+.markdown-preview-section p:last-of-type {
+  margin-bottom: 0.5em;
+}
 
 /** Graph **/
 
