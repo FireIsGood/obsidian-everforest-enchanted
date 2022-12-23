@@ -60,7 +60,12 @@ body:is(.theme-dark, .theme-light) {
   --code-normal: var(--text-muted);
   --code-inline: var(--fg-blue);
 
-  --table-border-color: var(--bg5);
+  --table-background: var(--bg2);
+  --table-column-alt-background: unset;
+  --table-row-alt-background: var(--bg1);
+  --table-header-background: var(--bg-green);
+  --table-header-background-hover: var(--bg-green);
+  --table-row-background-hover: var(--bg4);
   
   --interactive-before: var(--bg4);
   --interactive-hover: var(--fg-aqua);
@@ -337,9 +342,12 @@ table {
   background-color: var(--bg1);
 }
 
-/* Table Headers */
-table th {
-  background-color: var(--bg-green) !important;
+/* Fix Borders From Dataview */
+.markdown-rendered .table-view-table > tbody > tr > td + td {
+  border-left: var(--table-border-width) solid var(--table-border-color);
+}
+.markdown-rendered .table-view-table > tbody > tr + tr {
+  border-top: var(--table-border-width) solid var(--table-border-color);
 }
 
 
@@ -601,7 +609,7 @@ body:not(.no-image-alttext-caption) .image-embed:not([alt*=".png"], [alt*=".jpg"
   transition: transform 0.15s, box-shadow 0.15s;
 }
 .table-view-table > tbody > tr:hover {
-  background-color: #aaa1 !important;
+  background-color: var(--table-row-background-hover) !important;
 }
 
 /* Make math display better */
