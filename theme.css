@@ -539,8 +539,41 @@ a.tag {
 
 /** Callouts **/
 
+.callout {
+  mix-blend-mode: normal !important;
+  padding: 0;
+  border: none;
+  border-left: 0.125rem solid rgba(var(--callout-color), 0.7);
+}
+.callout-title {
+  --bg-clr: rgba(var(--callout-color), 0.3);
+  padding: .5em 1em;
+  background: linear-gradient(var(--bg-clr), var(--bg-clr)), linear-gradient(var(--bg-dim), var(--bg-dim));
+}
+.callout-icon svg.svg-icon {
+  color: rgb(var(--callout-color));
+}
+.callout-title-inner {
+}
+.callout-fold {
+  margin-left: auto;
+  cursor: pointer;
+}
+.callout-content {
+  padding: .75em !important;
+  background-color: var(--bg-dim);
+}
+.callout-content > * {
+  margin: 0;
+}
+.callout-content > * + * {
+  margin-top: .5em;
+}
+
+/* Custom Callouts */
+/* Uses Material Colors 300-500 */
 .callout[data-callout="math"] {
-  --callout-color: 174, 213, 129; /* material color 300 */
+  --callout-color: 38, 166, 154; 
   --callout-icon: lucide-sigma;
 }
 .callout[data-callout="math"] .callout-content {
@@ -550,18 +583,18 @@ a.tag {
   border: none
 }
 .callout[data-callout="graph"] {
-  --callout-color: 255, 213, 79;
+  --callout-color: 255, 152, 0;
   --callout-icon: lucide-line-chart;
 }
 .callout[data-callout="image"] {
-  --callout-color: 255, 255, 255;
+  --callout-color: 149, 117, 205;
   --callout-icon: lucide-image;
 }
 .callout[data-callout="image"] .callout-content {
   padding: 0 !important;
 }
 .callout[data-callout="code"] {
-  --callout-color: 200, 255, 200;
+  --callout-color: 76, 175, 80;
   --callout-icon: lucide-curly-braces;
 }
 .callout[data-callout="code"] .callout-content {
@@ -571,32 +604,6 @@ a.tag {
   padding:.5em !important;
   margin-block: 0;
   background-color: var(--code-background);
-}
-
-/* Fix all the callouts to be better */
-.callout {
-  mix-blend-mode: normal !important;
-  padding: 0;
-  border: none;
-  border-left: 0.125rem solid rgba(var(--callout-color), 0.7);
-}
-.callout-title {
-  padding: .5em 1em;
-  background-color: rgba(var(--callout-color), 0.1);
-}
-.callout-fold {
-  margin-left: auto;
-  cursor: pointer;
-}
-.callout-content {
-  padding: .75em !important;
-  background-color: #1e282cff;
-}
-.callout-content > * {
-  margin: 0;
-}
-.callout-content > * + * {
-  margin-top: .5em;
 }
 
 
