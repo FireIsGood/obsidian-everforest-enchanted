@@ -707,11 +707,6 @@ body:not(.no-image-alttext-caption) .image-embed:not([alt*=".png"], [alt*=".jpg"
 
 /** Misc. **/
 
-/* Hide page scrollbar */
-.view-content ::-webkit-scrollbar {
-  display: none !important;
-}
-
 /* Fix Dataview markers */
 .dataview.list-view-ul li {
   list-style-type: none;
