@@ -9,16 +9,26 @@ I had some issues with the styling of the other project but the codebase was ver
 ## Features
 
 - Everforest style color palette
-- Improved and custom callouts
 - Light and Dark themes
 - [Image styling](image_styling.md) based on ID
-- Alt text as image captions
+  - Alt text as image captions
+- Improved and custom callouts
 
-## Themes
+### Themes
 
-| Dark | Light |
-|-|-|
+|             Dark              |             Light              |
+|:-----------------------------:|:------------------------------:|
 | ![](asssets/theme%20dark.png) | ![](asssets/theme%20light.png) |
+
+### Image styling
+
+|              Dark              |              Light              |
+|:------------------------------:|:-------------------------------:|
+| ![](asssets/images%20dark.png) | ![](asssets/images%20light.png) |
+
+### Improved and Custom Callouts
+
+Image goes here...
 
 ## Installation
 
