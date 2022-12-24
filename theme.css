@@ -308,7 +308,7 @@ pre[class^="language-"]::after {
   font-size: .75rem;
   color: var(--text-muted);
 }
-.markdown-rendered button.copy-code-button {
+.markdown-rendered pre[class^="language-"] button.copy-code-button {
   top: calc(var(--size-4-4) + .75em * var(--line-height-normal));
 }
 
