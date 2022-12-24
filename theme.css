@@ -553,57 +553,72 @@ img {
 */
 
 /* Sizing */
-.image-embed > img {
+.image-embed > img,
+img[src^="http"] {
   display: block;
   width: var(--img-width, 100%);
-  margin-inline: auto;
+  margin-right: auto;
   margin-left: calc((100% - var(--img-width)) / 2);
 }
-.image-embed[src~="1/4"] > img  {
+.image-embed[src~="1/4"] > img,
+img[src^="http"][alt~="1/4"] {
   --img-width: 25%;
 }
-.image-embed[src~="1/3"] > img  {
+.image-embed[src~="1/3"] > img,
+img[src^="http"][alt~="1/3"] {
   --img-width: 33.3%;
 }
-.image-embed[src~="1/2"] > img {
+.image-embed[src~="1/2"] > img,
+img[src^="http"][alt~="1/2"] {
   --img-width: 50%;
 }
-.image-embed[src~="2/3"] > img  {
+.image-embed[src~="2/3"] > img,
+img[src^="http"][alt~="2/3"] {
   --img-width: 66.6%;
 }
-.image-embed[src~="3/4"] > img  {
+.image-embed[src~="3/4"] > img,
+img[src^="http"][alt~="3/4"] {
   --img-width: 75%;
 }
 
 /* Alignment */
-.image-embed[src~="left"] > img  {
+.image-embed[src~="left"] > img,
+img[src^="http"][alt~="left"] {
   margin-left: 0;
 }
-.image-embed[src~="right"] > img  {
-  margin-left: calc((100% - var(--img-width)));
+.image-embed[src~="right"] > img,
+.app-container.app-container  img[src^="http"][alt~="right"] {
+  margin-left: calc((100% - var(--img-width))) !important;
 }
 
 /* Image Alt Text Other Modifications */
-.image-embed[src~="white"] > img  {
+.image-embed[src~="white"] > img,
+img[src^="http"][alt~="white"] {
   background-color: white;
 }
-.image-embed[src~="black"] > img  {
+.image-embed[src~="black"] > img,
+img[src^="http"][alt~="black"] {
   background-color: black;
 }
-.image-embed[src~="border"] > img  {
-  border: .25rem solid #757575;
+.image-embed[src~="border"] > img,
+img[src^="http"][alt~="border"] {
+  border: .25rem solid var(--background-modifier-border);
 }
-.image-embed[src~="shadow"] > img  {
+.image-embed[src~="shadow"] > img,
+img[src^="http"][alt~="shadow"] {
   box-shadow: 2px 2px 4px #0007;
 }
-.image-embed[src~="rounded"] > img  {
+.image-embed[src~="rounded"] > img,
+img[src^="http"][alt~="rounded"] {
   border-radius: 0.5rem;
 }
-.image-embed[src~="blur"] > img  {
+.image-embed[src~="blur"] > img,
+img[src^="http"][alt~="blur"] {
   filter: blur(5px);
   transition: filter 500ms 250ms ease;
 }
-.image-embed[src~="blur"] > img:hover {
+.image-embed[src~="blur"] > img:hover,
+img[src^="http"][alt~="blur"]:hover {
   filter: blur(0); 
 }
 
