@@ -630,6 +630,12 @@ body:not(.no-image-alttext-caption) .image-embed:not([alt*=".png"], [alt*=".jpg"
   margin-block: 0.25em;
   text-align: center;
 }
+body:not(.no-image-alttext-caption) .image-embed:not([alt*=".png"], [alt*=".jpg"], [alt*=".jpeg"], [alt*=".tiff"], [alt*=".avif"])[src~="left"]::after {
+  text-align: left;
+}
+body:not(.no-image-alttext-caption) .image-embed:not([alt*=".png"], [alt*=".jpg"], [alt*=".jpeg"], [alt*=".tiff"], [alt*=".avif"])[src~="right"]::after {
+  text-align: right;
+}
 
 
 /** Misc. **/
