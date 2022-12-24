@@ -13,6 +13,7 @@ I had some issues with the styling of the other project but the codebase was ver
 - [Image styling](image_styling.md) based on ID
   - Alt text as image captions
 - Improved and custom callouts
+- Codeblock Language Labels
 
 ### Themes
 
@@ -28,7 +29,15 @@ I had some issues with the styling of the other project but the codebase was ver
 
 ### Improved and Custom Callouts
 
-Image goes here...
+|               Dark               |               Light               |
+|:--------------------------------:|:---------------------------------:|
+| ![](asssets/callouts%20dark.png) | ![](asssets/callouts%20light.png) |
+
+### Codeblock Language Lables
+
+|                Dark                |                Light                |
+|:----------------------------------:|:-----------------------------------:|
+| ![](asssets/codeblocks%20dark.png) | ![](asssets/codeblocks%20light.png) |
 
 ## Installation
 
