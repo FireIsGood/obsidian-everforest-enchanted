@@ -249,13 +249,9 @@ div ul.has-list-bullet ul.has-list-bullet .collapse-indicator {
 
 /** Emphasis **/
 
-/* Bold */
+/* Bold and Italic*/
 .cm-s-obsidian .cm-line .cm-strong,
-strong {
-  color: var(--fg-aqua);
-}
-
-/* Italic/Emphasis */
+strong,
 .cm-s-obsidian .cm-line .cm-em,
 em {
   color: var(--fg-purple);
