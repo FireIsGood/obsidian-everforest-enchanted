@@ -282,6 +282,11 @@ em {
   background-color: var(--code-background)
 }
 
+/* Disable Wrap on Language Blocks */
+.markdown-reading-view .markdown-preview-view pre:not(.frontmatter) code {
+	white-space: pre;
+}
+
 /* Codeblock Language Labels */
 pre[class^="language-"] {
   padding-top: calc(var(--size-4-4) + 1em * var(--line-height-normal));
