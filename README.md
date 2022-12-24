@@ -11,14 +11,14 @@ I had some issues with the styling of the other project but the codebase was ver
 - Everforest style color palette
 - Improved and custom callouts
 - Light and Dark themes
-- Image styling based on ID
+- [Image styling](image_styling.md) based on ID
 - Alt text as image captions
 
 ## Themes
 
 | Dark | Light |
 |-|-|
-| ![](asssets/theme%20dark.png) |  ![](asssets/theme%20light.png) |
+| ![](asssets/theme%20dark.png) | ![](asssets/theme%20light.png) |
 
 ## Installation
 
