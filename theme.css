@@ -382,9 +382,16 @@ a.external-link {
 
 /** Lists **/
 
-.list-bullet::after {
+.markdown-source-view span.list-bullet {
+  padding-right: .3rem;
+}
+.markdown-preview-view .list-bullet::after {
   font-size: 19px;
 }
+.markdown-source-view .list-bullet::after {
+  font-size: 19px;
+}
+
 
 /* Indentation Lines*/
 .cm-indent::before,
