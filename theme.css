@@ -758,6 +758,12 @@ span.math-block > mjx-container {
   font-size: 110%;
 }
 
+/* Add Outline to Math */
+.math.math-block.cm-embed-block{
+  border: 1px solid #fff2;
+  border-radius: 5px
+}
+
 /* Make print break hr elements */
 hr.page-break {
   opacity: 0.5;
