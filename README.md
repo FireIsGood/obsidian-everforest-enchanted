@@ -14,6 +14,8 @@ I had some issues with the styling of the other project, but the codebase was ve
   - Alt text as image captions
 - Improved and custom callouts
 - Code block Language Labels
+- Custom CSS classes
+  - Customized Dashboard (Inspired by the [Dashboard++ snippet](https://github.com/TfTHacker/DashboardPlusPlus))
 
 ### Themes
 
@@ -38,6 +40,24 @@ I had some issues with the styling of the other project, but the codebase was ve
 |                Dark                |                Light                |
 |:----------------------------------:|:-----------------------------------:|
 | ![](asssets/codeblocks%20dark.png) | ![](asssets/codeblocks%20light.png) |
+
+### CSS Classes
+
+Add them to the YAML frontmatter to activate custom features
+
+```
+---
+cssclass: some-class, another-class
+---
+```
+
+Implemented CSS Classes:
+
+| Class        | Effect                                                                  |
+| ------------ | ----------------------------------------------------------------------- |
+| `full-width` | Makes the note full width                                               |
+| `columns`    | Converts ordered lists into columns                                     |
+| `dashboard`  | Converts the page into a dashboard, turning level 1 headings into cards |
 
 ## Installation
 

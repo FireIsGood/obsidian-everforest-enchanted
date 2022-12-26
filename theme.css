@@ -717,6 +717,85 @@ body:not(.no-image-alttext-caption) .image-embed:not([alt*=".png"], [alt*=".jpg"
 }
 
 
+/** CSS Classes **/
+
+/* Full Width Layout */
+.full-width {
+	--file-line-width: 100%;
+}
+
+/* Numbered Lists to Columns in Read Mode */
+.columns :where(div, li) > ol {
+  list-style: none;
+  display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: .5rem;
+padding-left: 0;
+}
+.columns :where(div, li) > ol > li { 
+outline: 1px solid var(--color-base-40);
+padding: .5rem .75rem;
+}
+.columns :where(div, li) > ol > li > ul { 
+background: none;
+}
+.columns :where(div, li) > ol > li > .list-collapse-indicator { 
+display: none;
+}
+.columns :where(div, li) > ol > li > :where(ul, ol):before { 
+border-right: none !important;
+}
+
+/* Custom Dashboard */
+.dashboard {
+  padding-left: 25px !important;
+  padding-right: 25px !important;
+  padding-top: 20px !important;
+}
+.dashboard.is-readable-line-width:not(.full-width) .markdown-preview-section {
+  width: 100% !important;
+  max-width: 800px !important;
+}
+/* Title at top of the document */
+.dashboard .markdown-preview-section .title {
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  font-size: 26pt !important;
+  font-weight: bolder;
+  letter-spacing: 8px;
+}
+
+.dashboard h1 {
+  border-bottom-style: dotted !important;
+  border-width: 1px !important;
+  padding-bottom: 3px !important;
+}
+
+.dashboard div > ul:not(.dataview) {
+  list-style: none;
+  display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: .5rem;
+padding-left: 0;
+}
+
+.dashboard div > ul:not(.dataview) > li {
+outline: 1px solid #fff2;
+padding: .5rem .25rem;
+}
+.dashboard div > ul > li > .list-bullet {
+display: none;
+}
+.dashboard div > ul > li > .list-collapse-indicator {
+display: none;
+}
+.dashboard div > ul > li > ul:before {
+border-right: none !important;
+}
+
+
 /** Misc. **/
 
 /* Fix Dataview markers */
