@@ -752,9 +752,7 @@ border-right: none !important;
 
 /* Custom Dashboard */
 .dashboard {
-  padding-left: 25px !important;
-  padding-right: 25px !important;
-  padding-top: 20px !important;
+  padding: 25px 20px !important;
 }
 .dashboard.is-readable-line-width:not(.full-width) .markdown-preview-section {
   width: 100% !important;
