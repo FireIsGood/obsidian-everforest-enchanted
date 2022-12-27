@@ -719,9 +719,13 @@ body:not(.no-image-alttext-caption) .image-embed:not([alt*=".png"], [alt*=".jpg"
 
 /** CSS Classes **/
 
-/* Full Width Layout */
+/* Custom Width Layout */
 .full-width {
 	--file-line-width: 100%;
+}
+.wide-width {
+	--file-line-width: 1000px;
+
 }
 
 /* Numbered Lists to Columns in Read Mode */
@@ -754,7 +758,6 @@ border-right: none !important;
 }
 .dashboard.is-readable-line-width:not(.full-width) .markdown-preview-section {
   width: 100% !important;
-  max-width: 800px !important;
 }
 /* Title at top of the document */
 .dashboard .markdown-preview-section .title {

@@ -56,6 +56,7 @@ Implemented CSS Classes:
 | Class        | Effect                                                                  |
 | ------------ | ----------------------------------------------------------------------- |
 | `full-width` | Makes the note full width                                               |
+| `wide-width` | Makes the note a bit wider                                              |
 | `columns`    | Converts ordered lists into columns                                     |
 | `dashboard`  | Converts the page into a dashboard, turning level 1 headings into cards |
 
