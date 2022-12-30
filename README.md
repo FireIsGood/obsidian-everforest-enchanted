@@ -10,6 +10,7 @@ I had some issues with the styling of the other project, but the codebase was ve
 
 - Everforest style color palette
 - Light and Dark themes
+- Different colors for internal and external links
 - [Image styling](image_styling.md) based on ID
   - Alt text as image captions
 - Improved and custom callouts
