@@ -613,7 +613,6 @@ a.tag {
   padding: 0 !important;
 }
 .callout[data-callout="code"] .callout-content > pre {
-  padding:.5em !important;
   margin-block: 0;
   background-color: var(--code-background);
 }
