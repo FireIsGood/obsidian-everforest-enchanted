@@ -247,14 +247,6 @@ div ul.has-list-bullet ul.has-list-bullet .collapse-indicator {
 
 /**** Markdown ****/
 
-
-/** Headers **/
-
-.HyperMD-header.HyperMD-header.cm-line {
-  margin-bottom: 0.125em !important;
-}
-
-
 /** Emphasis **/
 
 /* Bold and Italic*/
