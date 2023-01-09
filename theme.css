@@ -862,3 +862,8 @@ hr.page-break::before {
     page-break-after: always;
   }
 }
+
+/* Fix non-active lines with escape characters */
+.cm-s-obsidian :not(div.cm-active) > span.cm-hmd-escape-char {
+	color: unset;
+}
