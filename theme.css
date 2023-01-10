@@ -373,9 +373,10 @@ a.external-link {
 }
 
 /* Unresolved Links */
-.is-unresolved {
+a.is-unresolved,
+.markdown-source-view.mod-cm6 span.is-unresolved > span.cm-underline {
   --link-unresolved-decoration-style: wavy;
-  text-decoration-thickness: 1px;
+  text-decoration-thickness: 2px;
 }
 
 
