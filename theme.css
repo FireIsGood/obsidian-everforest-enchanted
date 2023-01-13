@@ -476,12 +476,12 @@ a.tag {
 }
 
 /* Embed First h1 */
-.markdown-preview-section h1:first-of-type {
+.markdown-embed-content .markdown-preview-section h1:first-of-type {
   margin-top: 0.5rem;
 }
 
 /* Embed Last p */
-.markdown-preview-section p:last-of-type {
+.markdown-embed-content .markdown-preview-section p:last-of-type {
   margin-bottom: 0.125em;
 }
 
