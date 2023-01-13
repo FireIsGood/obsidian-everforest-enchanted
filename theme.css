@@ -849,7 +849,6 @@ hr.page-break {
   height: 1.5rem;
   display: flex;
   border-top: 4px dotted;
-  color: white;
   background-color: unset;
 }
 hr.page-break::before {
