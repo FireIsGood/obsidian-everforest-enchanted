@@ -826,7 +826,7 @@ div.math-block {
   border-radius: 5px
 }
 /* Make the weird span ones also work */
-span.math-block > mjx-container {
+p span.math-block > mjx-container {
   padding-block: 1rem;
   border: 1px solid #fff2;
   border-radius: 5px
@@ -872,4 +872,9 @@ hr.page-break::before {
 
 .ͼ1 .cm-lineNumbers .cm-gutterElement {
   line-height: normal !important;
+}
+
+/* Fix weird OL bug */
+ol > li > p {
+  margin: 0;
 }
