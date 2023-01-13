@@ -868,3 +868,9 @@ hr.page-break::before {
 .cm-s-obsidian :not(div.cm-active) > span.cm-hmd-escape-char {
 	color: unset;
 }
+
+/* Fix gutter number vertical cutoff */
+
+.ͼ1 .cm-lineNumbers .cm-gutterElement {
+  line-height: normal !important;
+}
