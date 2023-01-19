@@ -360,6 +360,7 @@ pre.language-vim::after { content: "vimrc" }
 a.internal-link {
   color: var(--text-link);
 }
+.cm-s-obsidian span.cm-hmd-internal-link:hover,
 a.internal-link:hover {
   color: var(--text-link-hover)
 }
@@ -368,7 +369,9 @@ a.internal-link:hover {
 a.external-link {
   color: var(--text-link-external);
 }
-  a.external-link:hover {
+.markdown-source-view.mod-cm6 .cm-link .cm-underline:hover,
+.markdown-source-view.mod-cm6 .cm-url .cm-underline:hover,
+a.external-link:hover {
   color: var(--text-link-external-hover);
 }
 
