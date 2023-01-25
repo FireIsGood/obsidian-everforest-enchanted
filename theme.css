@@ -839,6 +839,10 @@ p span.math-block > mjx-container {
 .MJX-TEX {
   font-size: 110%;
 }
+/* Make \overline{} display on higher resolution screens*/
+mjx-stretchy-h.mjx-c2013 mjx-ext mjx-c::before {
+  font-weight: 900;
+}
 
 /* Add Outline to Math */
 .math.math-block.cm-embed-block{
