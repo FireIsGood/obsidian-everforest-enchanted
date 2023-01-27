@@ -250,9 +250,9 @@ div ul.has-list-bullet ul.has-list-bullet .collapse-indicator {
 /** Emphasis **/
 
 /* Bold and Italic*/
-.cm-s-obsidian .cm-strong,
+.cm-s-obsidian span.cm-strong,
 strong,
-.cm-s-obsidian .cm-em,
+.cm-s-obsidian span.cm-em,
 em {
   color: var(--fg-purple);
 }
