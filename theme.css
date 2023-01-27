@@ -637,29 +637,28 @@ img {
 .image-embed > img,
 img[src^="http"] {
   display: block;
-  width: var(--img-width, 100%);
+  width: calc(var(--img-width, 100) / 100 * min(100%, var(--file-line-width)));
   margin-right: auto;
-  margin-left: calc((100% - var(--img-width)) / 2);
 }
 .image-embed[src~="1/4"] > img,
 img[src^="http"][alt~="1/4"] {
-  --img-width: 25%;
+  --img-width: 25;
 }
 .image-embed[src~="1/3"] > img,
 img[src^="http"][alt~="1/3"] {
-  --img-width: 33.3%;
+  --img-width: 33.3;
 }
 .image-embed[src~="1/2"] > img,
 img[src^="http"][alt~="1/2"] {
-  --img-width: 50%;
+  --img-width: 50;
 }
 .image-embed[src~="2/3"] > img,
 img[src^="http"][alt~="2/3"] {
-  --img-width: 66.6%;
+  --img-width: 66.6;
 }
 .image-embed[src~="3/4"] > img,
 img[src^="http"][alt~="3/4"] {
-  --img-width: 75%;
+  --img-width: 75;
 }
 
 /* Alignment */
@@ -669,7 +668,7 @@ img[src^="http"][alt~="left"] {
 }
 .image-embed[src~="right"] > img,
 .app-container.app-container  img[src^="http"][alt~="right"] {
-  margin-left: calc((100% - var(--img-width))) !important;
+  margin-left: calc((100% - var(--img-width) / 100 * min(100%, var(--file-line-width)))) !important;
 }
 
 /* Image Alt Text Other Modifications */
