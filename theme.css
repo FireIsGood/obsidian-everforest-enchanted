@@ -247,6 +247,14 @@ div ul.has-list-bullet ul.has-list-bullet .collapse-indicator {
 
 /**** Markdown ****/
 
+/** Headers **/
+
+/* Fix update formatting coloring */
+.cm-formatting-header {
+  color: unset;
+}
+
+
 /** Emphasis **/
 
 /* Bold and Italic*/
