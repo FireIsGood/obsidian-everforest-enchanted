@@ -257,11 +257,12 @@ div ul.has-list-bullet ul.has-list-bullet .collapse-indicator {
 
 /** Emphasis **/
 
-/* Bold and Italic*/
+/* Bold, Italic and Strike through */
 .cm-s-obsidian span.cm-strong,
 strong,
 .cm-s-obsidian span.cm-em,
-em {
+em ,
+.cm-formatting-strikethrough {
   color: var(--fg-purple);
 }
 
