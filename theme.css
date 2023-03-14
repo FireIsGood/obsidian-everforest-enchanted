@@ -243,6 +243,9 @@ body:is(.theme-dark, .theme-light) {
 div ul.has-list-bullet ul.has-list-bullet .collapse-indicator {
   margin-left: -2.75rem;
 }
+.markdown-rendered .list-collapse-indicator {
+  padding-right: 1rem;
+}
 
 
 /**** Markdown ****/
