@@ -2,7 +2,7 @@
 
 An Obsidian port of the [Everforest](https://github.com/sainnhe/everforest) theme family. Heavily inspired by [another project of the same name](https://github.com/0xGlitchbyte/obsidian_everforest) with my custom additions.
 
-I had some issues with the styling of the other project, but the codebase was very different to what the semantics of the official theme area, so I decided to remake the entire thing from scratch
+I had some issues with the styling of the other project, but the codebase was very different to what the semantics of the official theme area, so I decided to remake the entire thing from scratch.
 
 ![](asssets/theme%20screenshots.png)
 
@@ -44,7 +44,7 @@ I had some issues with the styling of the other project, but the codebase was ve
 
 ### CSS Classes
 
-Add them to the YAML frontmatter to activate custom features
+Add them to the YAML frontmatter to activate custom features.
 
 ```
 ---
