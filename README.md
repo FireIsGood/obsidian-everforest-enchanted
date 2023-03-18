@@ -8,7 +8,7 @@ I had some issues with the styling of the other project, but the codebase was ve
 
 ## Features
 
-- Everforest style color palette
+- [Everforest](https://github.com/sainnhe/everforest) style color palette
 - Light and Dark themes
 - Different colors for internal and external links
 - [Image styling](image_styling.md) based on ID
