@@ -78,6 +78,6 @@ Implemented CSS Classes:
 4. Open `Settings -> Appearance` in your vault
 5. Select the theme under the Themes dropdown
 
-## Feedback
+## Contributing
 
-If you want to add more features, add it as an issue or pull request.
+If you find a bug or have a feature you want added, feel free to add it as an issue or pull request.
