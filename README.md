@@ -63,10 +63,19 @@ Implemented CSS Classes:
 
 ## Installation
 
+### Obsidian Marketplace (Recommended)
+
+1. Open `Settings -> Appearance` in your vault
+2. Click `Manage` next to the themes dropdown
+3. Filter to `Everforest Enchanted`
+4. Click `Install and use`
+
+### Manual Download
+
 1. Download this repo
 2. Move `theme.css` file into your `/.obsidian/themes/` folder
-3. Rename the file to `Everforest.css` so it has a unique name
-4. Open **Settings > Appearance** in your vault
+3. Rename the file to `Everforest Enchanted.css` so it has a unique name
+4. Open `Settings -> Appearance` in your vault
 5. Select the theme under the Themes dropdown
 
 ## Feedback
