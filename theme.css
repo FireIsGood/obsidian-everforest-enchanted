@@ -651,7 +651,7 @@ img {
 
 /* Sizing */
 .image-embed > img:not([width]),
-img[src^="http"] {
+img[src^="http"]:not([width]) {
   display: block;
   width: calc(var(--img-width, 100) / 100 * min(100%, var(--file-line-width)));
   margin-right: auto;
