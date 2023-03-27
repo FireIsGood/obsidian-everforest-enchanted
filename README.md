@@ -54,21 +54,30 @@ cssclass: some-class, another-class
 
 Implemented CSS Classes:
 
-| Class        | Effect                                                                  |
-| ------------ | ----------------------------------------------------------------------- |
-| `full-width` | Makes the note full width                                               |
-| `wide-width` | Makes the note a bit wider                                              |
-| `columns`    | Converts ordered lists into columns                                     |
-| `dashboard`  | Converts the page into a dashboard, turning level 1 headings into cards |
+| Class        | Effect                                                                    |
+| ------------ | ------------------------------------------------------------------------- |
+| `full-width` | Makes the note full width                                                 |
+| `wide-width` | Makes the note a bit wider                                                |
+| `columns`    | Converts ordered lists into columns                                       |
+| `dashboard`  | Converts the page into a dashboard, turning level 1 list items into cards |
 
 ## Installation
 
+### Obsidian Marketplace (Recommended)
+
+1. Open `Settings -> Appearance` in your vault
+2. Click `Manage` next to the themes dropdown
+3. Filter to `Everforest Enchanted`
+4. Click `Install and use`
+
+### Manual Download
+
 1. Download this repo
 2. Move `theme.css` file into your `/.obsidian/themes/` folder
-3. Rename the file to `Everforest.css` so it has a unique name
-4. Open **Settings > Appearance** in your vault
+3. Rename the file to `Everforest Enchanted.css` so it has a unique name
+4. Open `Settings -> Appearance` in your vault
 5. Select the theme under the Themes dropdown
 
-## Feedback
+## Contributing
 
-If you want to add more features, add it as an issue or pull request.
+If you find a bug or have a feature you want added, feel free to add it as an issue or pull request.
