@@ -586,6 +586,12 @@ a.tag {
 }
 .callout-title-inner {
 }
+.theme-dark :is(.callout-icon svg.svg-icon, .callout-title-inner) {
+  filter: brightness(1.4);
+}
+.theme-light :is(.callout-icon svg.svg-icon, .callout-title-inner) {
+  filter: brightness(0.7);
+}
 .callout-fold {
   margin-left: auto;
   cursor: pointer;
