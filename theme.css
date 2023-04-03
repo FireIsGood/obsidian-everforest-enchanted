@@ -577,7 +577,9 @@ a.tag {
   padding: 0;
   border: none;
   border-left: 0.125rem solid rgba(var(--callout-color), 0.7);
-  box-shadow: 2px 2px 3px #0004;
+}
+.callout, .cm-callout {
+  box-shadow: 2px 2px 3px #0004 !important;
 }
 .callout-title {
   --bg-clr: rgba(var(--callout-color), 0.3);
