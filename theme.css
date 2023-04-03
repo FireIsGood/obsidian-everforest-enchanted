@@ -116,6 +116,7 @@ body:is(.theme-dark, .theme-light) {
 /** Dark Theme (Soft) **/
 
 .theme-dark {
+  --bg-dim-rgb: 41, 49, 54;
   --bg-dim:      #293136;
   --bg0:         #333C43;
   --bg1:         #3A464C;
@@ -161,6 +162,7 @@ body:is(.theme-dark, .theme-light) {
 /** Light Theme (Hard) **/
 
 .theme-light {
+  --bg-dim-rgb: 242, 239, 223;
   --bg-dim:      #F2EFDF;
   --bg0:         #FFFBEF;
   --bg1:         #F8F5E4;
@@ -575,6 +577,7 @@ a.tag {
   padding: 0;
   border: none;
   border-left: 0.125rem solid rgba(var(--callout-color), 0.7);
+  box-shadow: 2px 2px 3px #0004;
 }
 .callout-title {
   --bg-clr: rgba(var(--callout-color), 0.3);
@@ -598,7 +601,9 @@ a.tag {
 }
 .callout-content {
   padding: .75em !important;
-  background-color: var(--bg-dim);
+  background-color: rgba(var(--bg-dim-rgb), 0.3);
+  border-right: 1px solid rgba(var(--callout-color), 0.3);
+  border-bottom: 1px solid rgba(var(--callout-color), 0.3);
 }
 .callout-content > * {
   margin: 0;
