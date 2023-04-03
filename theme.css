@@ -613,9 +613,9 @@ a.tag {
 }
 
 /* Custom Callouts */
-/* Uses Material Colors 300-500 */
+/* Uses Material Colors 300-500 + A100 */
 .callout[data-callout="math"] {
-  --callout-color: 38, 166, 154; 
+  --callout-color: 132, 255, 255;
   --callout-icon: lucide-sigma;
 }
 .callout[data-callout="math"] .callout-content {
@@ -629,7 +629,7 @@ a.tag {
   --callout-icon: lucide-line-chart;
 }
 .callout[data-callout="image"] {
-  --callout-color: 149, 117, 205;
+  --callout-color: 234, 128, 252;
   --callout-icon: lucide-image;
 }
 .callout[data-callout="image"] .callout-content {
