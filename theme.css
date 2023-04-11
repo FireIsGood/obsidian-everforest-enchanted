@@ -456,6 +456,12 @@ input.task-list-item-checkbox:checked
   padding-block: 0.25em;
 }
 
+/* Make blockquotes work in source view */
+.markdown-source-view:not(.is-live-preview) .HyperMD-quote-1 {
+  background-color: var(--background-embed);
+  border-left: var(--blockquote-border-thickness) solid var(--blockquote-border-color);
+}
+
 
 /** Tables **/
 
