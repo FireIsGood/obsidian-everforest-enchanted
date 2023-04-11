@@ -457,10 +457,22 @@ input.task-list-item-checkbox:checked
 }
 
 /* Make blockquotes work in source view */
-.markdown-source-view:not(.is-live-preview) .HyperMD-quote-1 {
+.markdown-source-view:not(.is-live-preview) .HyperMD-quote {
   background-color: var(--background-embed);
   border-left: var(--blockquote-border-thickness) solid var(--blockquote-border-color);
 }
+.markdown-source-view:not(.is-live-preview) .cm-formatting-quote:not(.cm-formatting-quote-1) {
+  position: relative;
+}
+.markdown-source-view:not(.is-live-preview) .cm-formatting-quote:not(.cm-formatting-quote-1)::before {
+  content: "\200b";
+  position: absolute;
+  width: 1px;
+  border-left: var(--blockquote-border-thickness) solid var(--blockquote-border-color);
+  color: transparent;
+  left: -2px;
+}
+
 
 
 /** Tables **/
