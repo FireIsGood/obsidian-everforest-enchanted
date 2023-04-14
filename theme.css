@@ -171,7 +171,7 @@ body:is(.theme-dark, .theme-light) {
   --bg4:         #E8E5D5;
   --bg5:         #BEC5B2;
   
-  --bg-visual:   #F0F2D4;
+  --bg-visual:   #ded8db; /* Changed for visibility */
   --bg-red:      #FFE7DE;
   --bg-green:    #F3F5D9;
   --bg-blue:     #ECF5ED;
