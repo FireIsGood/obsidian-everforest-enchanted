@@ -296,7 +296,21 @@ del {
   color: inherit;
 }
 .cm-s-obsidian pre.HyperMD-codeblock {
-  background-color: var(--code-background)
+  background-color: var(--code-background);
+}
+pre {
+  border: 1px solid var(--code-header);
+}
+.HyperMD-codeblock {
+  border-color: var(--code-header);
+  border-style: solid;
+  border-width: 0 1px 0;
+}
+.HyperMD-codeblock-begin {
+  border-width: 1px 1px 0;
+}
+.HyperMD-codeblock-end {
+  border-width: 0 1px 1px;
 }
 
 /* Disable Wrap on Language Blocks */
@@ -304,9 +318,9 @@ del {
 	white-space: pre;
 }
 
-/* Codeblock Language Labels */
+/* Codeblock top bars */
 pre[class^="language-"] {
-  padding-top: calc(var(--size-4-4) + 1em * var(--line-height-normal));
+  padding-top: calc(var(--size-4-2) + var(--code-size) * var(--line-height-normal));
 }
 pre[class^="language-"]::before {
   content: "";
@@ -314,16 +328,36 @@ pre[class^="language-"]::before {
   top: 0;
   right: 0;
   left: 0;
-  height: calc(var(--size-4-4) + .625em * var(--line-height-normal));
+  height: calc(var(--code-size) * var(--line-height-normal));
   background-color: var(--code-header);  
 }
+.HyperMD-codeblock-begin-bg:not(:has(>.code-block-flair > *)):has(>.code-block-flair)::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--code-header);
+  border-radius: 4px 4px 0 0;
+}
+
+/* Codeblock language labels */
 pre[class^="language-"]::after {
   content: attr(class);
   position: absolute;
-  top: calc(var(--size-4-4) - .5rem);
-  right: var(--size-4-4);
-  font-size: .75rem;
-  color: var(--text-muted);
+  top: 0;
+  right: 6px;
+  padding: 0 4px;
+  height: calc(0.875rem * var(--line-height-normal));
+  display: flex;
+  place-items: center;
+  font-size: var(--font-ui-smaller);
+}
+.markdown-source-view.mod-cm6 .code-block-flair:not(:has(>svg)) {
+  top: 0;
+  padding: 0 4px;
+  height: calc(0.875rem * var(--line-height-normal));
+  display: flex;
+  place-items: center;
+  font-family: var(--font-monospace);
 }
 .markdown-rendered pre[class^="language-"] button.copy-code-button {
   top: calc(var(--size-4-4) + .75em * var(--line-height-normal));
