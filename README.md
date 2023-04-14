@@ -13,6 +13,7 @@ I had some issues with the styling of the other project, but the codebase was ve
 - Different colors for internal and external links
 - [Image styling](image_styling.md) based on ID
   - Alt text as image captions
+  - Image grids for multiple images placed inline
 - Improved and custom callouts
 - Code block Language Labels
 - Custom CSS classes
@@ -29,6 +30,7 @@ I had some issues with the styling of the other project, but the codebase was ve
 |              Dark              |              Light              |
 |:------------------------------:|:-------------------------------:|
 | ![](asssets/images%20dark.png) | ![](asssets/images%20light.png) |
+| ![](asssets/multi%20images%20dark.png) | ![](asssets/multi%20images%20light.png) |
 
 ### Improved and Custom Callouts
 
