@@ -592,10 +592,12 @@ a.tag {
 /** Callouts **/
 
 .callout {
+  --callout-content-padding: var(--size-4-2) var(--size-4-4);
   mix-blend-mode: normal !important;
   padding: 0;
   border: none;
   border-left: 0.125rem solid rgba(var(--callout-color), 0.7);
+  border-radius: 4px;
 }
 .callout, .cm-callout {
   box-shadow: 2px 2px 3px #0004;
@@ -621,10 +623,10 @@ a.tag {
   cursor: pointer;
 }
 .callout-content {
-  padding: .75em !important;
   background-color: rgba(var(--bg-dim-rgb), 0.3);
   border-right: 1px solid rgba(var(--callout-color), 0.3);
   border-bottom: 1px solid rgba(var(--callout-color), 0.3);
+  border-radius: 0 0 4px 4px;
 }
 .callout-content > * {
   margin: 0;
