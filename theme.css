@@ -282,7 +282,7 @@ del {
 .cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-formatting + .cm-inline-code),
 .markdown-preview-view code {
   font-size: 0.9em;
-  background-color: var(--code-background) !important;
+  background-color: var(--code-background);
   padding: 0.1em 0.25em;
   border-radius: var(--radius-s)
 }
@@ -598,7 +598,7 @@ a.tag {
   border-left: 0.125rem solid rgba(var(--callout-color), 0.7);
 }
 .callout, .cm-callout {
-  box-shadow: 2px 2px 3px #0004 !important;
+  box-shadow: 2px 2px 3px #0004;
 }
 .callout-title {
   --bg-clr: rgba(var(--callout-color), 0.3);
