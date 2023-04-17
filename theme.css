@@ -627,19 +627,28 @@ a.tag {
 
 .callout {
   --callout-content-padding: var(--size-4-2) var(--size-4-4);
-  mix-blend-mode: normal !important;
+  --callout-content-color: rgba(var(--bg-dim-rgb), 0.3);
+  --callout-border-solid: 1px solid rgba(var(--callout-color), 0.3);
+  --callout-border-dashed: 1px dashed rgba(var(--callout-color), 0.4);
   padding: 0;
-  border: none;
   border-left: 0.125rem solid rgba(var(--callout-color), 0.7);
+  border-top: var(--callout-border-solid);
+  border-right: var(--callout-border-solid);
+  border-bottom: var(--callout-border-solid);
   border-radius: 4px;
+  mix-blend-mode: normal !important;
 }
 .callout, .cm-callout {
   box-shadow: 2px 2px 3px #0004;
 }
 .callout-title {
-  --bg-clr: rgba(var(--callout-color), 0.3);
-  padding: .5em 1em;
-  background: linear-gradient(var(--bg-clr), var(--bg-clr)), linear-gradient(var(--bg-dim), var(--bg-dim));
+  padding: 0.5rem 0.75rem;
+  gap: 0.5rem;
+  border-radius: 4px 4px 0 0;
+  background-color: rgba(var(--callout-color), 0.2);
+}
+.callout.is-collapsible .callout-title {
+  cursor: pointer !important;
 }
 .callout-icon svg.svg-icon {
   color: rgb(var(--callout-color));
@@ -654,15 +663,13 @@ a.tag {
 }
 .callout-fold {
   margin-left: auto;
-  cursor: pointer;
 }
 .callout-content {
-  background-color: rgba(var(--bg-dim-rgb), 0.3);
-  border-right: 1px solid rgba(var(--callout-color), 0.3);
-  border-bottom: 1px solid rgba(var(--callout-color), 0.3);
+  border-top: var(--callout-border-dashed);
   border-radius: 0 0 4px 4px;
+  background-color: rgba(var(--bg-dim-rgb), 0.3);
 }
-.callout-content > * {
+.callout-content > :is(p:first-child, p:last-child) {
   margin: 0;
 }
 .callout-content > * + * {
