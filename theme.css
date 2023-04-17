@@ -672,8 +672,25 @@ a.tag {
 .callout-content > :is(p:first-child, p:last-child) {
   margin: 0;
 }
-.callout-content > * + * {
-  margin-top: .5em;
+
+/* Quote callout */
+.callout[data-callout="quote"] {
+  display: flex;
+  flex-direction: column-reverse;
+  position: relative;
+}
+.callout[data-callout="quote"] .callout-title {
+  background-color: var(--callout-content-color);
+  padding: 0 1ch 1ch;
+  display: block;
+  text-align: right;
+}
+.callout[data-callout="quote"] .callout-title .callout-icon {
+  display: none;
+}
+.callout[data-callout="quote"] .callout-content {
+  border: none;
+  padding-top: var(--size-4-4);
 }
 
 /* Custom Callouts */
