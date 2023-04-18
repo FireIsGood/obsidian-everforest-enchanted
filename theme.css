@@ -115,7 +115,7 @@ body:is(.theme-dark, .theme-light) {
 
 /** Dark Theme (Soft) **/
 
-.theme-dark {
+:root .theme-dark {
   --bg-dim-rgb: 41, 49, 54;
   --bg-dim:      #293136;
   --bg0:         #333C43;
@@ -156,12 +156,14 @@ body:is(.theme-dark, .theme-light) {
   --statusline0: #A7C080;
   --statusline1: #D3C6AA;
   --statusline2: #E67E80;
+  
+  --background-embed: rgb(73 93 96 / 30%);
 }
 
 
 /** Light Theme (Hard) **/
 
-.theme-light {
+:root .theme-light {
   --bg-dim-rgb: 242, 239, 223;
   --bg-dim:      #F2EFDF;
   --bg0:         #FFFBEF;
@@ -202,6 +204,8 @@ body:is(.theme-dark, .theme-light) {
   --statusline0: #93B259;
   --statusline1: #708089;
   --statusline2: #E66868;
+
+  --background-embed: rgb(232 229 203 / 30%);
 }
 
 
