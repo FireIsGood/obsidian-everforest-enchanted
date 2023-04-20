@@ -105,6 +105,7 @@ body:is(.theme-dark, .theme-light) {
   --h2-weight: 500;
   --h3-weight: 500;
   --h4-weight: 500;
+  --h5-weight: 500;
   --h6-weight: 500;
 }
 
