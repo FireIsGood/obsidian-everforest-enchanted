@@ -64,7 +64,7 @@ body:is(.theme-dark, .theme-light) {
   --text-accent:              var(--header-blue);
   --text-accent-hover:        var(--header-purple);
 
-  --code-header: #0002;
+  --code-header: #0004;
   --code-background: var(--bg-dim);
   --code-normal: var(--text-muted);
   --code-inline: var(--fg-blue);
