@@ -35,9 +35,7 @@
 
 body:is(.theme-dark, .theme-light) {
 
-  /** Fonts **/
-
-  --font-monospace: "Fira Code", "Source Code Pro", monospace;
+  /** Miscellaneous **/
 
   --checkbox-size: 1.125em;
 
