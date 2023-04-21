@@ -758,16 +758,16 @@ img {
 }
 
 /* Makes multiple images on the same line appear in a flex grid */
-.cm-line:not(.cm-active):has(.image-embed ~ .image-embed),
-p:has(.image-embed ~ .image-embed) {
+.cm-line:not(.cm-active):has(.image-embed ~ .image-embed, img:not(.cm-widgetBuffer) ~ img:not(.cm-widgetBuffer)),
+p:has(.image-embed ~ .image-embed, img ~ img) {
   display: flex;
   gap: 0.5rem;
 }
-.cm-line:not(.cm-active):has(.image-embed ~ .image-embed) :is(.cm-widgetBuffer,span) {
+.cm-line:not(.cm-active):has(.image-embed ~ .image-embed, img:not(.cm-widgetBuffer) ~ img:not(.cm-widgetBuffer)) :is(.cm-widgetBuffer,span) {
   display: none !important;
 }
 /* Makes a highlighted line shrink the image */
-:root:root .cm-line.cm-active > .image-embed {
+:root:root .cm-line.cm-active > :is(.image-embed, img) {
   width: 100px;
   display: inline-block;
 }
@@ -786,7 +786,7 @@ p > .image-embed {
 
 /* Sizing */
 .image-embed > img:not([width]),
-img[src^="http"]:not([width]) {
+span > img[src^="http"]:not([width]) {
   display: block;
   width: calc(var(--img-width, 100) / 100 * min(100%, var(--file-line-width)));
   margin-right: auto;
@@ -814,12 +814,18 @@ img[src^="http"][alt~="3/4"] {
 
 /* Alignment */
 .image-embed[src~="left"] > img,
+.markdown-source-view.mod-cm6 .cm-content img[src^="http"][alt~="left"],
 img[src^="http"][alt~="left"] {
-  margin-left: 0;
+  margin-left: 0 !important;
 }
 .image-embed[src~="right"] > img,
+.markdown-source-view.mod-cm6 .cm-content img[src^="http"][alt~="right"],
 img[src^="http"][alt~="right"] {
-  margin-right: 0;
+  margin-right: 0 !important;
+}
+/* External images */
+.markdown-source-view.mod-cm6 .cm-content > img {
+  margin-inline: auto !important;
 }
 
 /* Floats */
