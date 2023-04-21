@@ -23,7 +23,7 @@
 *? 5. Cursor
 *? 6. Extra Fixes
 *?   - Callouts
-*?   - Image Formatting 
+*?   - Image Formatting
 *?   - Misc.
 *?
  **---------------------**/
@@ -216,7 +216,7 @@ body:is(.theme-dark, .theme-light) {
 
 /* Title Bar */
 .workspace-leaf .view-header {
-  box-shadow: 0 0 8px -4px var(--divider-color); 
+  box-shadow: 0 0 8px -4px var(--divider-color);
 }
 
 /* Title Text */
@@ -227,7 +227,7 @@ body:is(.theme-dark, .theme-light) {
 /* Gutters */
 .markdown-source-view.mod-cm6 .cm-gutters {
   z-index: -1 !important;
-  margin-inline-start: calc(0px - var(--file-folding-offset) - 12px); 
+  margin-inline-start: calc(0px - var(--file-folding-offset) - 12px);
   pointer-events: none;
 }
 .markdown-source-view.mod-cm6 .cm-content {
@@ -335,7 +335,7 @@ pre[class^="language-"]::before {
   right: 0;
   left: 0;
   height: calc(var(--code-size) * var(--line-height-normal));
-  background-color: var(--code-header);  
+  background-color: var(--code-header);
 }
 .HyperMD-codeblock-begin-bg:not(:has(>.code-block-flair > *)):has(>.code-block-flair)::before {
   content: "";
@@ -867,7 +867,7 @@ img[src^="http"][alt~="blur"] {
 }
 .image-embed[src~="blur"] > img:hover,
 img[src^="http"][alt~="blur"]:hover {
-  filter: blur(0); 
+  filter: blur(0);
 }
 
 /* Alt text as caption under image */
