@@ -819,7 +819,7 @@ img[src^="http"][alt~="left"] {
 }
 .image-embed[src~="right"] > img,
 img[src^="http"][alt~="right"] {
-  margin-left: calc((100% - var(--img-width) / 100 * min(100%, var(--file-line-width)))) !important;
+  margin-right: 0;
 }
 
 /* Floats */
