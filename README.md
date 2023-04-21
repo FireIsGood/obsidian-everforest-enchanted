@@ -27,10 +27,11 @@ I had some issues with the styling of the other project, but the codebase was ve
 
 ### Image styling
 
-|              Dark              |              Light              |
-|:------------------------------:|:-------------------------------:|
-| ![](asssets/images%20dark.png) | ![](asssets/images%20light.png) |
+|                  Dark                  |                  Light                  |
+|:--------------------------------------:|:---------------------------------------:|
+|     ![](asssets/images%20dark.png)     |     ![](asssets/images%20light.png)     |
 | ![](asssets/multi%20images%20dark.png) | ![](asssets/multi%20images%20light.png) |
+| ![](asssets/float%20images%20dark.png) | ![](asssets/float%20images%20light.png) |
 
 ### Improved and Custom Callouts
 

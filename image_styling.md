@@ -1,12 +1,20 @@
 # Image styling syntax
 
-## Format
+## Format and Captions
 
-Modifications are placed after a `#` symbol followed by a space after the link. Remote images can also be modified, but follow a slightly different syntax
+Modifications are placed after a `#` symbol followed by a space after the link. Remote images can also be modified, but follow a slightly different syntax and are a bit bugged in the current release.
 
-Local: `![[image.png# 1/2 left shadow]]`
+Captions are placed after a `|` symbol. They cannot be used on remote images.
 
-Remote: `![1/2 left shadow](https://example.com/image.png)`
+Local:
+
+- `![[image.png# 1/2 left shadow|This is a caption.]]`
+- `![[image.png# right|This is also a caption.|300]]` (300px using [default sizing](https://help.obsidian.md/How+to/Embed+files#Resize+images))
+
+Remote:
+
+- `![](https://example.com/image.png)`
+- `![1/2 left shadow](https://example.com/image.png)`
 
 ## Size
 
@@ -32,6 +40,17 @@ Not sure what you expect for the descriptions...
 | ------- | ------------ |
 | `left`  | Aligns left  |
 | `right` | Aligns right |
+
+## Floating
+
+Images can be floated over all other content. This is limited to Reading Mode due to issues with Live Preview.
+
+Simply add `float` with the direction to have the images float.
+
+| keyword       | description  |
+| ------------- | ------------ |
+| `float left`  | Floats left  |
+| `float right` | Floats right |
 
 ## Fun
 
