@@ -237,6 +237,9 @@ body:is(.theme-dark, .theme-light) {
   padding-block: var(--file-margins);
   padding-right: 10px;
 }
+.cm-gutter .cm-active {
+  color: var(--text-normal);
+}
 
 /* Collapse Indicator */
 .markdown-source-view.mod-cm6 .cm-fold-indicator .collapse-indicator {
