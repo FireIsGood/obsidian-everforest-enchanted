@@ -564,6 +564,21 @@ a.tag {
   margin-bottom: 0.125em;
 }
 
+/*
+  This snippet adds modification in the [[markdown link# modification|caption]] format
+*/
+
+/* Clean embed (no background, padding, borders) */
+.markdown-embed[alt~="clean"] {
+  --blockquote-background-color: transparent;
+  border: none;
+  padding: 0;
+}
+/* Removes the first title  */
+.markdown-embed[alt~="no-title"] .markdown-preview-section > .mod-header + div:has(h1,h2,h3,h4,h5,h6) {
+  display: none;
+}
+
 
 /** YAML **/
 
