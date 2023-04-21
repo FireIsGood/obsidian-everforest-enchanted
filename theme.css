@@ -366,7 +366,7 @@ pre[class^="language-"]::after {
   font-family: var(--font-monospace);
 }
 .markdown-rendered pre[class^="language-"] button.copy-code-button {
-  top: calc(var(--size-4-4) + .75em * var(--line-height-normal));
+  top: calc(6px + var(--code-size) * var(--line-height-normal));
 }
 
 pre.language-c::after { content: "C" }
