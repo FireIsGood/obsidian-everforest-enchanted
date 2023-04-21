@@ -13,8 +13,8 @@ Local:
 
 Remote:
 
-- `![](https://example.com/image.png)`
 - `![1/2 left shadow](https://example.com/image.png)`
+- `![|400](https://example.com/image.png)` (400px using [default sizing](https://help.obsidian.md/How+to/Embed+files#Resize+images))
 
 ## Size
 
