@@ -575,7 +575,7 @@ a.tag {
   border: none;
   padding: 0;
 }
-/* Removes the first title  */
+/* Removes the first title */
 .markdown-embed[alt~="no-title"] .markdown-preview-section > .mod-header + div:has(h1,h2,h3,h4,h5,h6) {
   display: none;
 }
@@ -617,7 +617,7 @@ a.tag {
 
 
 
-/****  Cursor ****/
+/**** Cursor ****/
 
 
 .cm-cursorLayer .cm-cursor {}
@@ -880,7 +880,7 @@ img[src^="http"][alt~="blur"]:hover {
 }
 
 /* Alt text as caption under image */
-body:not(.no-image-alttext-caption)  .image-embed:not([alt*=".png"], [alt*=".jpg"], [alt*=".jpeg"], [alt*=".tiff"], [alt*=".avif"])::after {
+body:not(.no-image-alttext-caption) .image-embed:not([alt*=".png"], [alt*=".jpg"], [alt*=".jpeg"], [alt*=".tiff"], [alt*=".avif"])::after {
   display: block;
   content: attr(alt);
   color: var(--text-muted);
