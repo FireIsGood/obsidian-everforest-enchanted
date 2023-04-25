@@ -628,13 +628,14 @@ a.tag {
 }
 
 @keyframes phase-blink {
-  15% { opacity: 1 }
-  50% { opacity: 0 }
+  15%, 49% { opacity: 1 }
+  50%, 84% { opacity: 0 }
   85% { opacity: 1 }
 }
 
 .cm-cursorLayer .cm-cursor {
-  animation-duration: 2200ms;
+  animation-iteration-count: infinite;
+  animation-duration: 1100ms;
   animation-name: phase-blink;
 }
 
