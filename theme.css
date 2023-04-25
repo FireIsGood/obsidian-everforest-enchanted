@@ -256,7 +256,9 @@ div ul.has-list-bullet ul.has-list-bullet .collapse-indicator {
 }
 
 
+
 /**** Markdown ****/
+
 
 /** Headers **/
 
@@ -281,6 +283,7 @@ em {
 del {
   color: var(--text-faint);
 }
+
 
 /** Code **/
 
@@ -407,7 +410,6 @@ pre.language-haskell::after { content: "Haskell" }
 pre.language-vim::after { content: "vimrc" }
 
 
-
 /** Links **/
 
 .cm-s-obsidian span.cm-hmd-internal-link {
@@ -452,7 +454,6 @@ a.is-unresolved,
 .markdown-source-view .list-bullet::after {
   font-size: 19px;
 }
-
 
 /* Indentation Lines*/
 .cm-indent::before,
@@ -512,7 +513,6 @@ input.task-list-item-checkbox:checked
   color: transparent;
   left: -2px;
 }
-
 
 
 /** Tables **/
@@ -618,7 +618,6 @@ a.tag {
 
 
 /**** Cursor ****/
-
 
 .cm-cursorLayer .cm-cursor {}
 
