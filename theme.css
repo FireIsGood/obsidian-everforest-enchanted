@@ -1054,7 +1054,7 @@ hr.page-break::before {
 }
 
 /* Fix non-active lines with escape characters */
-.cm-s-obsidian :not(div.cm-active) > span.cm-hmd-escape-char {
+.cm-s-obsidian :not(div.cm-active) > span.cm-hmd-escape-char:not(.cm-strong, .cm-em) {
 	color: unset;
 }
 
