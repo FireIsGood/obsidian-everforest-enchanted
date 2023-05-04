@@ -473,8 +473,7 @@ a.external-link:hover {
 /* Unresolved Links */
 :root:root a.is-unresolved,
 .markdown-source-view.mod-cm6 span.is-unresolved > span.cm-underline {
-  --link-unresolved-decoration-style: wavy;
-  text-decoration-thickness: 0.0625em;
+  --link-unresolved-decoration-style: dashed;
   text-decoration-color: var(--bg-red);
 }
 :root:root a.is-unresolved:hover,
