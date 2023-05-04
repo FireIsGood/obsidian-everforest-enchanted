@@ -41,6 +41,8 @@ body:is(.theme-dark, .theme-light) {
 
   --list-indent: 24px;
 
+  --shadow-l: 0 4px 14px -2px hsla(0,0%,0%,40%);
+
   /** Backgrounds **/
 
   --background-modifier-border: var(--bg5);
