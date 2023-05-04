@@ -87,6 +87,10 @@ body:is(.theme-dark, .theme-light) {
 
   --heading-formatting: ;
 
+  --tag-color: var(--header-blue);
+  --tag-background: hsla(var(--tag-color-hsl), 0.1);
+  --tag-background-hover: hsla(var(--tag-color-hsl), 0.2);
+
   --h1-color: var(--header-red);
   --h2-color: var(--header-orange);
   --h3-color: var(--header-yellow);
@@ -159,6 +163,7 @@ body:is(.theme-dark, .theme-light) {
   --statusline2: #E67E80;
   
   --background-embed: rgb(73 93 96 / 30%);
+  --tag-color-hsl: 193, 29%, 49%;
 }
 
 
@@ -207,6 +212,7 @@ body:is(.theme-dark, .theme-light) {
   --statusline2: #E66868;
 
   --background-embed: rgb(232 229 203 / 30%);
+  --tag-color-hsl: 193, 29%, 49%;
 }
 
 
