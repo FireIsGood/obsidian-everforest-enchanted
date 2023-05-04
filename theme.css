@@ -270,7 +270,7 @@ div ul.has-list-bullet ul.has-list-bullet .collapse-indicator {
 select:hover,
 select:focus-within,
 button:hover {
-  transition: background-color var(--anim-duration-superfast), color var(--anim-duration-fast);
+  transition: background-color var(--anim-duration-superfast) ease-out;
 }
 
 
