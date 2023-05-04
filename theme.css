@@ -483,13 +483,13 @@ input.task-list-item-checkbox:checked
 }
 
 .checkbox-container {
-    background-color: var(--interactive-before);
+  background-color: var(--interactive-before);
 }
 .checkbox-container:after {
-    background-color: var(--interactive-accent);
+  background-color: var(--interactive-accent);
 }
 .checkbox-container.is-enabled:after {
-    background-color: var(--bg3);
+  background-color: var(--bg3);
 }
 
 
