@@ -587,6 +587,7 @@ a.tag {
 
 .markdown-embed {
   padding-inline: 10px;
+  padding-block: 0.25rem;
 }
 
 /*Embed Titles*/
@@ -599,14 +600,14 @@ a.tag {
   background-color: var(--blockquote-background-color);
 }
 
-/* Embed First h1 */
-.markdown-embed-content .markdown-preview-section h1:first-of-type {
-  margin-top: 0.5rem;
+/* Embed First Header */
+.markdown-embed-content .markdown-preview-section .mod-header + div :is(h1,h2,h3,h4,h5,h6) {
+  margin-top: 0;
 }
 
 /* Embed Last p */
 .markdown-embed-content .markdown-preview-section p:last-of-type {
-  margin-bottom: 0.125em;
+  margin-bottom: 0;
 }
 
 /*
