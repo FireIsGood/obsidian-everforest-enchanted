@@ -448,10 +448,18 @@ a.external-link:hover {
 }
 
 /* Unresolved Links */
-a.is-unresolved,
+:root:root a.is-unresolved,
 .markdown-source-view.mod-cm6 span.is-unresolved > span.cm-underline {
   --link-unresolved-decoration-style: wavy;
   text-decoration-thickness: 0.0625em;
+  text-decoration-color: var(--bg-red);
+}
+:root:root a.is-unresolved:hover,
+.markdown-source-view.mod-cm6 span.is-unresolved > span.cm-underline:hover {
+  text-decoration-color: var(--fg-red);
+}
+.cm-s-obsidian span.cm-hmd-internal-link:hover {
+  text-decoration: none;
 }
 
 
