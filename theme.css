@@ -163,7 +163,7 @@ body:is(.theme-dark, .theme-light) {
   --statusline2: #E67E80;
   
   --background-embed: rgb(73 93 96 / 30%);
-  --tag-color-hsl: 193, 29%, 49%;
+  --tag-color-hsl: 331, 43%, 72%;
 }
 
 
@@ -212,7 +212,7 @@ body:is(.theme-dark, .theme-light) {
   --statusline2: #E66868;
 
   --background-embed: rgb(232 229 203 / 30%);
-  --tag-color-hsl: 193, 29%, 49%;
+  --tag-color-hsl: 319, 65%, 64%;
 }
 
 
