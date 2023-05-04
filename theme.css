@@ -931,7 +931,6 @@ body:not(.no-image-alttext-caption) .image-embed:not([alt*=".png"], [alt*=".jpg"
 }
 .wide-width {
 	--file-line-width: 1000px;
-
 }
 
 /* Numbered Lists to Columns in Read Mode */
@@ -973,13 +972,11 @@ border-right: none !important;
   font-weight: bolder;
   letter-spacing: 8px;
 }
-
 .dashboard h1 {
   border-bottom-style: dotted !important;
   border-width: 1px !important;
   padding-bottom: 3px !important;
 }
-
 .dashboard div > ul:not(.dataview) {
   list-style: none;
   display: grid;
@@ -987,7 +984,6 @@ grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: .5rem;
 padding-left: 0;
 }
-
 .dashboard div > ul:not(.dataview) > li {
 outline: 1px solid #fff2;
 padding: .5rem .25rem;
@@ -1063,9 +1059,9 @@ hr.page-break {
   background-color: unset;
 }
 hr.page-break::before {
-    content: 'Page Break';
+  content: 'Page Break';
   font-size: .75em;
-    margin-inline: auto;
+  margin-inline: auto;
 }
 @media print {
   hr.page-break {
@@ -1075,7 +1071,6 @@ hr.page-break::before {
 }
 
 /* Fix gutter number vertical cutoff */
-
 .ͼ1 .cm-lineNumbers .cm-gutterElement {
   line-height: normal !important;
 }
@@ -1086,7 +1081,6 @@ ol > li > p {
 }
 
 /* Make Backlinks padding more consistent */
-
 .markdown-preview-view .embedded-backlinks {
   margin-top: 100px;
 }
