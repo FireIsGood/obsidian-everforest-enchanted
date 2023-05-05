@@ -605,7 +605,7 @@ a.tag {
 }
 
 /* Embed Last p */
-.markdown-embed-content .markdown-preview-section p:last-of-type {
+.markdown-embed-content .markdown-preview-section > div:last-child p {
   margin-bottom: 0;
 }
 
