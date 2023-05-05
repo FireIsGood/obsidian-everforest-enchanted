@@ -585,6 +585,7 @@ a.tag {
 /** Embeds **/
 
 .markdown-embed {
+  --icon-opacity: 0.25;
   padding-inline: 10px;
   padding-block: 0.25rem;
 }
