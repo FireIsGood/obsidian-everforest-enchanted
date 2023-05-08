@@ -672,16 +672,12 @@ a.tag {
   animation-name: none !important; /* important needed */
 }
 
-@keyframes phase-blink {
-  15%, 49% { opacity: 1 }
-  50%, 84% { opacity: 0 }
-  85% { opacity: 1 }
-}
-
-.cm-cursorLayer .cm-cursor {
+.cm-cursorLayer .cm-cursor-secondary {
+  border-left-color: var(--text-accent) !important;
   animation-iteration-count: infinite;
-  animation-duration: 1100ms;
-  animation-name: phase-blink;
+  animation-duration: 1200ms;
+  animation-timing-function: steps(1);
+  animation-name: cm-blink;
 }
 
 
