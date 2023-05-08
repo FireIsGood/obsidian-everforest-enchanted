@@ -8,7 +8,8 @@
       {
         "ignore": [
           "width: fit-content",
-          "text-decoration-thickness"
+          "text-decoration-thickness",
+          "translate"
         ]
       }
     ]
