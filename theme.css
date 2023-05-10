@@ -531,7 +531,7 @@ input.task-list-item-checkbox:checked
 
 .checkbox-container {
   background-color: var(--interactive-before);
-  transition: background-color var(--anim-duration-moderate);
+  transition: background-color var(--anim-duration-moderate) cubic-bezier(0, 0.5, 0, 1);
 }
 .checkbox-container:after {
   background-color: var(--interactive-accent);
