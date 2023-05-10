@@ -105,6 +105,13 @@ body:is(.theme-dark, .theme-light) {
   --h5-size: 1.125rem;
   --h6-size: 1.000rem;
 
+  --h1-line-height: 1.5;
+  --h2-line-height: 1.5;
+  --h3-line-height: 1.5;
+  --h4-line-height: 1.5;
+  --h5-line-height: 1.5;
+  --h6-line-height: 1.5;
+
   --h1-weight: 500;
   --h2-weight: 500;
   --h3-weight: 500;
