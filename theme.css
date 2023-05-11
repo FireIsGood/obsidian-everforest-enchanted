@@ -737,10 +737,10 @@ a.tag {
   border-radius: 0 0 4px 4px;
   background-color: rgba(var(--bg-dim-rgb), 0.3);
 }
-.callout-content > p:first-child {
+.callout-content > *:first-child {
   margin-top: 0;
 }
-.callout-content > p:last-child {
+.callout-content > *:last-child {
   margin-bottom: 0;
 }
 
