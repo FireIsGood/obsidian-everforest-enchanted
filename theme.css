@@ -569,7 +569,6 @@ input.task-list-item-checkbox:checked
 
 .markdown-rendered table {
   background-color: var(--bg1);
-  margin-block: 0;
 }
 
 /* Fix Borders From Dataview */
