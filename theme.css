@@ -470,6 +470,7 @@ a.internal-link:hover {
 /* Markdown Links */
 a.external-link {
   color: var(--text-link-external);
+  word-break: break-all;
 }
 .markdown-source-view.mod-cm6 .cm-link .cm-underline:hover,
 .markdown-source-view.mod-cm6 .cm-url .cm-underline:hover,
