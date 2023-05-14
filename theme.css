@@ -588,6 +588,14 @@ a.tag {
   font-weight: 500;
 }
 
+/* Remove spacing between h1 + tag */
+div:has(+div>p>.tag)>h1 {
+  margin-bottom: 0;
+}
+div:has(h1)+div p:has(.tag) {
+  margin-top: 0;
+}
+
 
 /** Embeds **/
 
