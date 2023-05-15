@@ -47,6 +47,7 @@ body:is(.theme-dark, .theme-light) {
   /** Backgrounds **/
 
   --background-modifier-border: var(--bg5);
+  --background-modifier-border-hover: var(--bg3);
   --background-embed: var(--bg1);
   --blockquote-background-color: var(--background-embed);
 
