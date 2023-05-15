@@ -49,6 +49,7 @@ body:is(.theme-dark, .theme-light) {
   --background-modifier-border: var(--bg5);
   --background-modifier-border-hover: var(--bg3);
   --background-embed: var(--bg1);
+  --embed-block-shadow-hover: var(--shadow-l);
   --blockquote-background-color: var(--background-embed);
 
   --background-primary:       var(--bg0);
@@ -269,6 +270,11 @@ div ul.has-list-bullet ul.has-list-bullet .collapse-indicator {
 }
 .markdown-rendered .list-collapse-indicator {
   padding-right: 1rem;
+}
+
+/* Workspace tabs */
+.workspace-tab-header:has(+.is-active) > .workspace-tab-header-inner::after {
+  visibility: hidden;
 }
 
 
@@ -563,6 +569,14 @@ input.task-list-item-checkbox:checked
   border-left: var(--blockquote-border-thickness) solid var(--blockquote-border-color);
   color: transparent;
   left: -2px;
+}
+
+/* Reduce embed edit button opacity */
+.markdown-source-view.mod-cm6 .cm-embed-block:hover .edit-block-button {
+  opacity: 0.5;
+}
+.markdown-source-view.mod-cm6 .cm-embed-block:hover .edit-block-button:hover {
+  opacity: 1;
 }
 
 
