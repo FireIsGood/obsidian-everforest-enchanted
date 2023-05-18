@@ -122,13 +122,25 @@
   --h6-weight: 500;
 }
 
-/* Mobile mode fixes */
+
+/** Mobile mode fixes **/
 :root body.is-mobile {
-  --interactive-normal: var(--color-base-30);
-  --background-modifier-form-field: var(--bg-dim);
+  --input-shadow-hover: var(--input-shadow);
+  --input-border-width: 1px;
+}
+/* Dark mode */
+:root body.is-mobile.theme-dark {
   --input-shadow: inset 0 1px 1px 0.5px rgba(255,255,255, 0.1),
-    0 2px 4px rgba(0,0,0,0.5);
-  --input-shadow-hover: var(--input-shadow)
+  0 2px 4px rgba(0,0,0,0.4);
+  --interactive-normal: var(--color-base-30);
+  --background-modifier-form-field: var(--color-base-25);
+}
+/* Light mode */
+:root body.is-mobile.theme-light {
+  --input-shadow: inset 0 0 0.5px 1px rgba(0,0,0, 0.1),
+  0 2px 3px rgba(0,0,0,0.1);
+  --interactive-normal: var(--color-base-00);
+  --background-modifier-form-field: var(--color-base-00);
 }
 
 
