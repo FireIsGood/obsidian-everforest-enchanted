@@ -954,7 +954,6 @@ body:not(.no-image-alttext-caption) .image-embed:not([alt*=".png"], [alt*=".jpg"
   display: block;
   content: attr(alt);
   color: var(--text-muted);
-  margin-block: 0.25em;
   margin-inline: auto;
   text-align: center;
 }
