@@ -34,7 +34,7 @@
 /**** Implementation ****/
 
 
-body:is(.theme-dark, .theme-light) {
+:root body:is(.theme-dark, .theme-light) {
 
   /** Miscellaneous **/
 
@@ -120,6 +120,15 @@ body:is(.theme-dark, .theme-light) {
   --h4-weight: 500;
   --h5-weight: 500;
   --h6-weight: 500;
+}
+
+/* Mobile mode fixes */
+:root body.is-mobile {
+  --interactive-normal: var(--color-base-30);
+  --background-modifier-form-field: var(--bg-dim);
+  --input-shadow: inset 0 1px 1px 0.5px rgba(255,255,255, 0.1),
+    0 2px 4px rgba(0,0,0,0.5);
+  --input-shadow-hover: var(--input-shadow)
 }
 
 
