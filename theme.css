@@ -607,6 +607,10 @@ input.task-list-item-checkbox:checked
   background-color: var(--bg1);
 }
 
+/* Fix margins in source mode */
+.markdown-source-view table {
+  margin-block: 0;
+}
 /* Fix Borders From Dataview */
 .markdown-rendered .table-view-table > tbody > tr > td + td {
   border-left: var(--table-border-width) solid var(--table-border-color);
