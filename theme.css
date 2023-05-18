@@ -252,12 +252,12 @@
 
 /** Workspace **/
 
-/* Title Bar */
+/* Title bar */
 .workspace-leaf .view-header {
   box-shadow: 0 0 8px -4px var(--divider-color);
 }
 
-/* Title Text */
+/* Title text */
 .view-header-title {
   font-weight: 600;
 }
@@ -279,7 +279,7 @@
   color: var(--text-normal);
 }
 
-/* Collapse Indicator */
+/* Collapse indicator */
 .markdown-source-view.mod-cm6 .cm-fold-indicator .collapse-indicator {
   padding-right: .45rem;
 }
@@ -340,7 +340,7 @@ button:hover {
 
 /** Emphasis **/
 
-/* Bold and Italic */
+/* Bold and italic */
 .cm-s-obsidian span.cm-strong,
 strong,
 .cm-s-obsidian span.cm-em,
@@ -357,7 +357,7 @@ del {
 
 /** Code **/
 
-/* Inline Code */
+/* Inline code */
 .cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-formatting + .cm-inline-code),
 .markdown-preview-view code {
   font-size: 0.9em;
@@ -392,7 +392,7 @@ pre {
   border-width: 0 1px 1px;
 }
 
-/* Disable Wrap on Language Blocks */
+/* Disable wrap on language blocks */
 .markdown-reading-view .markdown-preview-view pre:not(.frontmatter) code {
 	white-space: pre;
 }
@@ -486,7 +486,7 @@ pre.language-vim::after { content: "vimrc" }
   color: var(--text-link);
 }
 
-/* Wiki Links */
+/* Wiki links */
 a.internal-link {
   color: var(--text-link);
 }
@@ -495,7 +495,7 @@ a.internal-link:hover {
   color: var(--text-link-hover)
 }
 
-/* Markdown Links */
+/* Markdown links */
 a.external-link {
   color: var(--text-link-external);
 }
@@ -505,7 +505,7 @@ a.external-link:hover {
   color: var(--text-link-external-hover);
 }
 
-/* Unresolved Links */
+/* Unresolved links */
 :root:root a.is-unresolved,
 .markdown-source-view.mod-cm6 span.is-unresolved > span.cm-underline {
   --link-unresolved-decoration-style: dashed;
@@ -532,7 +532,7 @@ a.external-link:hover {
   font-size: 19px;
 }
 
-/* Indentation Lines*/
+/* Indentation lines*/
 .cm-indent::before,
 ul::before,
 ol::before {
@@ -540,7 +540,7 @@ ol::before {
   border-right: 2px solid var(--fg-blue) !important;
 }
 
-/*Checkbox List*/
+/*Checkbox list*/
 ul > li.task-list-item .task-list-item-checkbox {
   margin-inline-start: calc(var(--checkbox-size) * -1.51);
 }
@@ -611,7 +611,7 @@ input.task-list-item-checkbox:checked
 .markdown-source-view table {
   margin-block: 0;
 }
-/* Fix Borders From Dataview */
+/* Fix borders from Dataview */
 .markdown-rendered .table-view-table > tbody > tr > td + td {
   border-left: var(--table-border-width) solid var(--table-border-color);
 }
@@ -644,22 +644,22 @@ div:has(h1)+div p:has(.tag) {
   padding-block: 0.25rem;
 }
 
-/*Embed Titles*/
+/*Embed titles*/
 .markdown-embed-title {
   display: none;
 }
 
-/* Embed Backgrounds */
+/* Embed backgrounds */
 .internal-embed.is-loaded:not(.image-embed, [src$=".excalidraw"]) {
   background-color: var(--blockquote-background-color);
 }
 
-/* Embed First Header */
+/* Embed first header */
 .markdown-embed-content .markdown-preview-section .mod-header + div :is(h1,h2,h3,h4,h5,h6) {
   margin-top: 0;
 }
 
-/* Embed Last p */
+/* Embed last p */
 .markdown-embed-content .markdown-preview-section > div:last-child p {
   margin-bottom: 0;
 }
@@ -812,7 +812,7 @@ div:has(h1)+div p:has(.tag) {
   padding-top: var(--size-4-4);
 }
 
-/* Custom Callouts */
+/* Custom callouts */
 /* Uses Material Colors 300-500 + A100 */
 .callout[data-callout="math"] {
   --callout-color: 132, 255, 255;
@@ -943,7 +943,7 @@ img[src^="http"][alt~="right"] {
   margin-left: 2%;
 }
 
-/* Image Alt Text Other Modifications */
+/* Image alt text other modifications */
 .image-embed[src~="white"] > img,
 img[src^="http"][alt~="white"] {
   background-color: white;
@@ -998,7 +998,7 @@ body:not(.no-image-alttext-caption) .image-embed:not([alt*=".png"], [alt*=".jpg"
 
 /** CSS Classes **/
 
-/* Custom Width Layout */
+/* Custom width layouts */
 .full-width {
 	--file-line-width: 100%;
 }
@@ -1006,7 +1006,7 @@ body:not(.no-image-alttext-caption) .image-embed:not([alt*=".png"], [alt*=".jpg"
 	--file-line-width: 1000px;
 }
 
-/* Numbered Lists to Columns in Read Mode */
+/* Numbered lists to columns in read mode */
 .columns :where(div, li) > ol {
   list-style: none;
   display: grid;
@@ -1028,7 +1028,7 @@ body:not(.no-image-alttext-caption) .image-embed:not([alt*=".png"], [alt*=".jpg"
   border-right: none !important;
 }
 
-/* Custom Dashboard */
+/* Custom dashboard */
 .dashboard {
   padding: 25px 20px !important;
 }
@@ -1152,12 +1152,12 @@ hr.page-break::before {
   line-height: normal !important;
 }
 
-/* Fix weird OL bug */
+/* Fix weird ol bug */
 ol > li > p {
   margin: 0;
 }
 
-/* Make Backlinks padding more consistent */
+/* Make backlinks padding more consistent */
 .markdown-preview-view .embedded-backlinks {
   margin-top: 100px;
 }
