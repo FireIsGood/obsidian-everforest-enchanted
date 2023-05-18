@@ -1069,6 +1069,10 @@ border-right: none !important;
 .table-view-table > tbody > tr:hover {
   background-color: var(--table-row-background-hover) !important;
 }
+/* Remove dataview table columns */
+table.dataview {
+  margin: 0;
+}
 
 /* Make math display better */
 div.math-block {
