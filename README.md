@@ -27,6 +27,8 @@ I had some issues with the styling of the other project, but the codebase was ve
 
 ### Image styling
 
+A full list of styles can be found at [image styling](image_styling.md).
+
 |                  Dark                  |                  Light                  |
 |:--------------------------------------:|:---------------------------------------:|
 |     ![](asssets/images%20dark.png)     |     ![](asssets/images%20light.png)     |
