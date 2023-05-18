@@ -48,7 +48,7 @@
 
   --background-modifier-border: var(--bg5);
   --background-modifier-border-hover: var(--bg3);
-  --background-embed: var(--bg1);
+  --background-embed: var(--background-embed-transparent);
   --embed-block-shadow-hover: var(--shadow-l);
   --blockquote-background-color: var(--background-embed);
 
@@ -192,7 +192,7 @@
   --statusline1: #D3C6AA;
   --statusline2: #E67E80;
 
-  --background-embed: rgb(73 93 96 / 30%);
+  --background-embed-transparent: rgb(73 93 96 / 30%);
   --tag-color-hsl: 254, 80%, 68%;
 }
 
@@ -241,7 +241,7 @@
   --statusline1: #708089;
   --statusline2: #E66868;
 
-  --background-embed: rgb(232 229 203 / 30%);
+  --background-embed-transparent: rgb(232 229 203 / 30%);
   --tag-color-hsl: 254, 80%, 68%;
 }
 
