@@ -366,14 +366,11 @@ del {
   border-radius: var(--radius-s)
 }
 .cm-s-obsidian span.cm-inline-code:not(.cm-formatting),
-.markdown-rendered code {
+.markdown-rendered :is(table, p) code {
   color: var(--code-inline);
 }
 
 /* Codeblock */
-.markdown-preview-view pre code {
-  color: inherit;
-}
 .cm-s-obsidian pre.HyperMD-codeblock {
   background-color: var(--code-background);
 }
