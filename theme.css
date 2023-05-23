@@ -641,6 +641,11 @@ div:has(h1)+div p:has(.tag) {
   padding-block: 0.25rem;
 }
 
+/* Fix overflow blocks ruining margin collapse */
+.markdown-embed .markdown-preview-sizer > div {
+  overflow-x: unset !important;
+}
+
 /*Embed titles*/
 .markdown-embed-title {
   display: none;
