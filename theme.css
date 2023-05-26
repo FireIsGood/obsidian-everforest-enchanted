@@ -42,6 +42,8 @@
 
   --list-indent: 24px;
 
+  --file-folding-offset: 12px;
+
   --shadow-l: 0 4px 14px -2px hsla(0,0%,0%,40%);
 
   /** Backgrounds **/
@@ -265,15 +267,26 @@
 /* Gutters */
 .markdown-source-view.mod-cm6 .cm-gutters {
   z-index: -1 !important;
-  margin-inline-start: calc(0px - var(--file-folding-offset) - 12px);
   pointer-events: none;
 }
-.markdown-source-view.mod-cm6 .cm-content {
-  width: fit-content;
+.cm-gutter .cm-active {
+  color: var(--text-normal);
 }
-.markdown-reading-view .markdown-preview-view {
-  padding-block: var(--file-margins);
-  padding-right: 10px;
+
+/* Make gutters not affect the content flow */
+.cm-contentContainer {
+  display: grid !important;
+}
+.cm-gutters,
+.cm-content {
+  grid-area: 1 / -1;
+}
+.cm-content {
+  width: unset !important;
+}
+.cm-gutters {
+  justify-self: left;
+  translate: -100% 0;
 }
 
 /* Smaller margins for stacked tabs */
