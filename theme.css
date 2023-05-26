@@ -308,7 +308,7 @@ div ul.has-list-bullet ul.has-list-bullet .collapse-indicator {
   padding-right: 1rem;
 }
 
-/* Workspace tabs */
+/* Hide extra tab dividers */
 .workspace-tab-header:has(+.is-active) > .workspace-tab-header-inner::after {
   visibility: hidden;
 }
