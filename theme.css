@@ -275,8 +275,10 @@
   padding-block: var(--file-margins);
   padding-right: 10px;
 }
-.cm-gutter .cm-active {
-  color: var(--text-normal);
+
+/* Smaller margins for stacked tabs */
+.mod-stacked {
+  --file-margins: 32px 12px;
 }
 
 /* Collapse indicator */
