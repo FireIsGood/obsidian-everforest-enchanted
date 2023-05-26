@@ -608,6 +608,10 @@ input.task-list-item-checkbox:checked
 .markdown-source-view table {
   margin-block: 0;
 }
+/* Fix table margin collapse bug */
+div:has(>table) {
+  overflow: unset !important;
+}
 /* Fix borders from Dataview */
 .markdown-rendered .table-view-table > tbody > tr > td + td {
   border-left: var(--table-border-width) solid var(--table-border-color);
@@ -1095,10 +1099,6 @@ body:not(.no-image-alttext-caption) .image-embed:not([alt*=".png"], [alt*=".gif"
 }
 .table-view-table > tbody > tr:hover {
   background-color: var(--table-row-background-hover) !important;
-}
-/* Remove dataview table columns */
-table.dataview {
-  margin: 0;
 }
 
 /* Make math display better */
