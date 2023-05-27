@@ -745,6 +745,20 @@ div:has(h1)+div p:has(.tag) {
 
 
 
+/**** Mobile ****/
+
+
+/* Add shadow to mobile navbar */
+.mobile-navbar {
+  box-shadow: 0 0 8px -4px var(--divider-color);
+}
+/* Remove new tab button backgrounds */
+.is-mobile .empty-state-action {
+  background-color: unset;
+}
+
+
+
 /**** Cursor ****/
 
 .cm-cursorLayer .cm-cursor {}
