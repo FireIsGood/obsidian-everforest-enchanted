@@ -129,6 +129,7 @@
 :root body.is-mobile {
   --input-shadow-hover: var(--input-shadow);
   --input-border-width: 1px;
+  --file-margins: 16px 20px;
 }
 /* Dark mode */
 :root body.is-mobile.theme-dark {
