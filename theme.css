@@ -352,6 +352,12 @@ button:hover {
   color: unset;
 }
 
+/* Remove top padding from the first element in reading mode (presumably a header) */
+.mod-header + div:has(pre.frontmatter) + div > *,
+.mod-header + div > * {
+  margin-top: 0;
+}
+
 
 /** Emphasis **/
 
