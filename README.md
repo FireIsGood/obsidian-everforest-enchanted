@@ -16,8 +16,11 @@ I had some issues with the styling of the other project, but the codebase was ve
   - Image grids for multiple images placed inline
 - Improved and custom callouts
 - Code block Language Labels
+- Style Settings for extra features
+  - [Custom background images](custom_background_image.md) with support for external and local images
+  - [Custom stacked panes](custom_stacked_panes.md) based on count rather than pixels
 - Custom CSS classes
-  - Customized Dashboard (Inspired by the [Dashboard++ snippet](https://github.com/TfTHacker/DashboardPlusPlus))
+  - Customized Dashboard *(Inspired by the [Dashboard++ snippet](https://github.com/TfTHacker/DashboardPlusPlus))*
 
 ### Themes
 
