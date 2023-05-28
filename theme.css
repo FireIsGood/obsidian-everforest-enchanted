@@ -268,7 +268,6 @@
 
 /* Gutters */
 .markdown-source-view.mod-cm6 .cm-gutters {
-  z-index: -1 !important;
   pointer-events: none;
 }
 .cm-gutter .cm-active {
