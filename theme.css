@@ -623,9 +623,7 @@ input.task-list-item-checkbox:checked
 
 /** Tables **/
 
-.markdown-rendered table {
-  background-color: var(--bg1);
-}
+.markdown-rendered table {}
 
 /* Fix margins in source mode */
 .markdown-source-view table {
