@@ -196,7 +196,7 @@
   --statusline1: #D3C6AA;
   --statusline2: #E67E80;
 
-  --background-embed-transparent: rgb(73 93 96 / 30%);
+  --background-embed-transparent: rgba(62, 75, 80, 0.7);
   --tag-color-hsl: 254, 80%, 68%;
 }
 
@@ -245,7 +245,7 @@
   --statusline1: #708089;
   --statusline2: #E66868;
 
-  --background-embed-transparent: rgb(232 229 203 / 30%);
+  --background-embed-transparent: rgb(238 236 213 / 70%); /* Using bg2 */
   --tag-color-hsl: 254, 80%, 68%;
 }
 
