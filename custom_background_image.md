@@ -20,28 +20,53 @@ Mostly self-explanatory.
 
 ## External Images
 
-Simply type in the url text as a link to any image file. Some good sources might be [Pexels](https://www.pexels.com/) or [Unsplash](https://unsplash.com/). After that, place the URL within the quotes of the url function `url()`.
+Simply type in the url text as a link to any image file. Some good sources might be [Pexels](https://www.pexels.com/) or [Unsplash](https://unsplash.com/). After that, place the URL within the quotes of the url function `url()`. Simply drag the image preview to a new tab and remove text after the question mark `?` to get the shortest link.
 
 You can use extra parameters in the url of these two sites to get smaller images. Just replace all the content after the question mark `?` if there is any or just add in the string with `?w=1920&q=80` for a width of 1920 pixels and a quality of 80. You can lower the width or quality to make it load faster.
 
-Examples:
+### Examples
 
-https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?w=1920&q=80
+Image we want:
+
+> ![Green Tree](https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?w=1920&q=80)
+> *Photo by Pixabay from Pexels: <https://www.pexels.com/photo/green-tree-268533/>*
+
+We would use the following link:
+
+<https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?w=1920&q=80>
+
+And place it in the URL function:
 
 ```
 url("https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?w=1920&q=80")
 ```
 
-![](https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?w=1920&q=80)
+Turns into:
 
-https://images.pexels.com/photos/997567/pexels-photo-997567.jpeg?w=1920&q=80
+![Theme dark with an image background](asssets/theme%20dark%20image.png)
 
+---
+
+Image we want:
+
+> ![Selective Focus Photography of White Petaled Flower Plant](https://images.pexels.com/photos/997567/pexels-photo-997567.jpeg?w=1920&q=80)
+> *Photo by Alissa Nabiullina from Pexels: <https://www.pexels.com/photo/selective-focus-photography-of-white-petaled-flower-plant-997567/>*
+
+We would use the following link:
+
+<https://images.pexels.com/photos/997567/pexels-photo-997567.jpeg?w=1920&q=80>
+
+And place it in the URL function:
 
 ```
 url("https://images.pexels.com/photos/997567/pexels-photo-997567.jpeg?w=1920&q=80")
 ```
 
-![](https://images.pexels.com/photos/997567/pexels-photo-997567.jpeg?w=1920&q=80)
+Turns into:
+
+<img src="./asssets/theme%20light%20image.png" width="400" />
+
+![Theme light with an image background](asssets/theme%20light%20image.png)
 
 ## Local Images
 
