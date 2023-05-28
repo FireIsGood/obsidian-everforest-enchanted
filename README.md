@@ -24,9 +24,10 @@ I had some issues with the styling of the other project, but the codebase was ve
 
 ### Themes
 
-|             Dark              |             Light              |
-|:-----------------------------:|:------------------------------:|
-| ![](asssets/theme%20dark.png) | ![](asssets/theme%20light.png) |
+|                 Dark                  |                 Light                  |
+|:-------------------------------------:|:--------------------------------------:|
+|     ![](asssets/theme%20dark.png)     |     ![](asssets/theme%20light.png)     |
+| ![](asssets/theme%20dark%20image.png) | ![](asssets/theme%20light%20image.png) |
 
 ### Image styling
 
@@ -49,6 +50,14 @@ A full list of styles can be found at [image styling](image_styling.md).
 |                Dark                |                Light                |
 |:----------------------------------:|:-----------------------------------:|
 | ![](asssets/codeblocks%20dark.png) | ![](asssets/codeblocks%20light.png) |
+
+## Custom Background Images
+
+External and local images can be used. More information can be found at [custom background images](custom_background_image.md).
+
+![](asssets/theme%20dark%20image.png)
+
+![](asssets/theme%20light%20image.png)
 
 ### CSS Classes
 
