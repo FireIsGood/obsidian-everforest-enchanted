@@ -50,6 +50,8 @@
 
   --shadow-l: 0 4px 14px -2px hsla(0,0%,0%,40%);
 
+  --file-line-width: var(--readable-line-length-custom, 700px); /* Adjusted in Style Settings */
+
   /** Backgrounds **/
 
   --background-modifier-border: var(--bg5);
@@ -59,6 +61,7 @@
   --blockquote-background-color: var(--background-embed);
 
   --background-primary:       var(--bg0);
+  --background-primary-rgb:   var(--bg0-rgb);
   --background-primary-alt:   var(--bg0);
   --background-secondary:     var(--bg0);
   --background-secondary-alt: var(--bg0);
@@ -199,6 +202,7 @@
   --statusline1: #D3C6AA;
   --statusline2: #E67E80;
 
+  --bg0-rgb: 51, 60, 67;
   --background-embed-transparent: rgba(62, 75, 80, 0.7);
   --tag-color-hsl: 254, 80%, 68%;
 }
@@ -248,6 +252,7 @@
   --statusline1: #708089;
   --statusline2: #E66868;
 
+  --bg0-rgb: 255, 251, 239;
   --background-embed-transparent: rgb(238 236 213 / 70%); /* Using bg2 */
   --tag-color-hsl: 254, 80%, 68%;
 }
@@ -774,6 +779,243 @@ div:has(h1)+div p:has(.tag) {
   animation-duration: 1200ms;
   animation-timing-function: steps(1);
   animation-name: cm-blink;
+}
+
+
+
+/**** Style Settings ****/
+
+/* @settings
+
+name: Everforest Enchanted
+id: everforest-enchanted-theme
+settings:
+-
+  id: test-main-description
+  title: Welcome!
+  description: |
+    Use these settings to adjust basic extra settings or various extra elements of the theme. Visit the [GitHub Repo](https://github.com/FireIsGood/obsidian-everforest-enchanted) for more information.
+  type: info-text
+  markdown: true
+-
+  id: readable-line-length-custom
+  title: Readable line length value
+  description: Set the text size in px!
+  type: variable-number
+  default: 700
+  format: px
+-
+  id: custom-stacked-panes
+  title: Custom Stacked Panes
+  type: heading
+  level: 1
+  collapsed: true
+-
+  id: custom-stacked-panes-enabled
+  title: Enable Custom Stacked Panes
+  description: Changes stacked panes to fit a certian number on screen instead of using pixel values
+  type: class-toggle
+-
+  id: custom-stacked-panes-count
+  title: Pane Count
+  description: The number of panes to show up at once
+  type: variable-number-slider
+  default: 2
+  min: 1
+  max: 5
+  step: 1
+-
+  id: background-image
+  title: Custom Background Image
+  type: heading
+  level: 1
+  collapsed: true
+-
+  id: test-main-description
+  title: Info
+  description: |
+    Background images are easiest with an external URL. If you want to use local images for offline access, you'll have to use a snippet. Check the [GitHub Repo page]() for more infomation on this.
+  type: info-text
+  markdown: true
+-
+  id: background-image-enabled
+  title: Background Image
+  description: Enables the background image
+  type: class-toggle
+-
+  id: background-image-dark-url
+  title: Dark Mode Background URL
+  description: Set an online background image.
+  type: variable-text
+  default: url("http://")
+-
+  id: background-image-light-url
+  title: Light Mode Background URL
+  description: Set an online background image.
+  type: variable-text
+  default: url("http://")
+-
+  id: background-image-position
+  title: Backgorund Position
+  description: Change where the image is centered
+  type: variable-select
+  default: center
+  options:
+    -
+      label: Center
+      value: center
+    -
+      label: Top
+      value: top
+    -
+      label: Bottom
+      value: bottom
+    -
+      label: Left
+      value: left
+    -
+      label: Right
+      value: right
+    -
+      label: Top Left
+      value: top left
+    -
+      label: Top Right
+      value: top right
+    -
+      label: Bottom Left
+      value: bottom left
+    -
+      label: Bottom Right
+      value: bottom right
+-
+  id: pane-opacity
+  title: Pane Opacity
+  description: How opaque page backgrounds are
+  type: variable-number-slider
+  default: 0.85
+  min: 0
+  max: 1
+  step: 0.05
+-
+  id: ui-opacity
+  title: UI Opacity
+  description: How opaque UI backgrounds are
+  type: variable-number-slider
+  default: 0.85
+  min: 0
+  max: 1
+  step: 0.05
+-
+  id: tab-opacity
+  title: Tab Opacity
+  description: How opaque STACKED TAB backgrounds are
+  type: variable-number-slider
+  default: 0.85
+  min: 0
+  max: 1
+  step: 0.05
+-
+  id: background-image-fun
+  title: Fun Settings
+  type: heading
+  level: 2
+  collapsed: true
+-
+  id: background-image-pane-view
+  title: Pane view
+  description: Changes pages to be panes on a transparent background. BEST USED WITH UI OPACITY 0!
+  type: class-toggle
+
+*/
+
+/** Custom Stacked Panes **/
+
+.custom-stacked-panes-enabled .mod-vertical .mod-stacked .workspace-leaf {
+  max-width: calc((100% / var(--custom-stacked-panes-count, 2)) - 2.5rem) !important;
+  width: 100% !important;
+}
+
+/** Custom Background Image **/
+
+.theme-dark {--background-image-url: var(--background-image-dark-url)}
+.theme-light {--background-image-url: var(--background-image-light-url)}
+
+body.background-image-enabled {
+  --background-transparent: rgba(var(--background-primary-rgb), var(--pane-opacity, 0.85));
+  --background-partially-transparent: rgba(var(--background-primary-rgb), var(--ui-opacity, 0.85));
+  --background-tabs-transparent: rgba(var(--background-primary-rgb), var(--tab-opacity, 0.85));
+}
+
+/* Apply the background image */
+.background-image-enabled .horizontal-main-container {
+  background-color: var(--background-primary);
+  background-image: var(--background-image-url);
+  background-position: var(--background-image-position);
+  background-size: cover;
+}
+
+/* Make panes transparent */
+.workspace-tab-container::-webkit-scrollbar-track,
+.background-image-enabled :is(.mod-root .view-content, .view-header) {
+  background-color: var(--background-transparent) !important;
+}
+
+/* Make workspace UI elements transparent */
+.background-image-enabled :is(
+  .mod-vertical .workspace-tab-header-container,
+  .workspace-ribbon,
+  .workspace-split,
+  .graph-controls,
+  .popover),
+.workspace-ribbon::before {
+  background-color: var(--background-partially-transparent) !important;
+}
+
+/* Make stacked tab headers transparent */
+.background-image-enabled .workspace-tab-container .workspace-tab-header:not(.mod-active),
+.background-image-enabled .workspace-tab-container .workspace-tab-header.mod-active {
+  background-color: var(--background-tabs-transparent) !important;
+}
+
+/* Remove other backgrounds */
+.background-image-enabled :is(
+  .titlebar-button-container,
+  .mod-vertical .workspace-tab-header,
+  .document-search-container,
+  .workspace-leaf,
+  .horizontal-main-container > .workspace,
+  .pdf-sidebar-container,
+  .pdf-container,
+  .pdf-toolbar),
+.background-image-enabled .workspace-split:not(.mod-left-split, .mod-right-split) {
+  background-color: transparent !important;
+}
+
+/* Remove tabs weird gradients and exterior curves */
+.background-image-enabled .workspace-tab-header.is-active::before,
+.background-image-enabled .workspace-tab-header.is-active::after,
+.background-image-enabled .view-header-title-container:not(.mod-at-end):after {
+  display: none;
+}
+
+/* Pane view */
+.background-image-pane-view .view-content:has(.markdown-reading-view) {
+  background-color: transparent !important;
+}
+.background-image-pane-view .view-content .cm-sizer,
+.background-image-pane-view .view-content > .markdown-reading-view > .markdown-rendered > .markdown-preview-sizer {
+  box-sizing: content-box;
+  padding-inline: 2rem;
+  padding-top: 2rem;
+  border-radius: 1rem;
+  background-color: var(--background-transparent) !important;
+}
+.background-image-pane-view .cm-gutters {
+  filter: drop-shadow(0 0 4px var(--background-primary)));
+}
+:root .background-image-pane-view .view-header  {
+  background-color: var(--background-partially-transparent) !important;
 }
 
 
