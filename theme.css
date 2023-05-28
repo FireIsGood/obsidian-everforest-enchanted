@@ -811,6 +811,13 @@ settings:
   level: 1
   collapsed: true
 -
+  id: custom-stacked-panes-description
+  title: Info
+  description: |
+    Custom stacked panes. These will convert the sizes of stacked panes from pixels to a percentage of the screen based on the cound. Check the [GitHub Repo documentation](https://github.com/FireIsGood/obsidian-everforest-enchanted/blob/main/custom_stacked_panes.md) for more infomation.
+  type: info-text
+  markdown: true
+-
   id: custom-stacked-panes-enabled
   title: Enable Custom Stacked Panes
   description: Changes stacked panes to fit a certian number on screen instead of using pixel values
@@ -831,10 +838,10 @@ settings:
   level: 1
   collapsed: true
 -
-  id: test-main-description
+  id: background-image-description
   title: Info
   description: |
-    Background images are easiest with an external URL. If you want to use local images for offline access, you'll have to use a snippet. Check the [GitHub Repo page]() for more infomation on this.
+    Background images are easiest with an external URL. If you want to use local images for offline access, you'll have to use a snippet. Check the [GitHub Repo documentation](https://github.com/FireIsGood/obsidian-everforest-enchanted/blob/main/custom_background_image.md) for more infomation.
   type: info-text
   markdown: true
 -
