@@ -55,7 +55,7 @@ If you want **different images** for both dark and light modes, you should use t
 :root body.theme-dark {
   --background-image-url: url("")
 }
-:root body.theme-dark {
+:root body.theme-light {
   --background-image-url: url("")
 }
 ```
