@@ -64,8 +64,6 @@ url("https://images.pexels.com/photos/997567/pexels-photo-997567.jpeg?w=1920&q=8
 
 Turns into:
 
-<img src="./asssets/theme%20light%20image.png" width="400" />
-
 ![Theme light with an image background](asssets/theme%20light%20image.png)
 
 ## Local Images
