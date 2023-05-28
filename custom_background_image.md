@@ -47,7 +47,9 @@ url("https://images.pexels.com/photos/997567/pexels-photo-997567.jpeg?w=1920&q=8
 
 Local images are a bit harder and you'll need to know how to create and use  snippets due to security changes in 1.3 with how Obsidian allows file system access.
 
-You can leave the Style Settings variables as snippets are always higher priority than style settings.
+You can leave the Style Settings variables alone when using local images since snippets are always higher priority than style settings.
+
+Using large local images **can cause lag**. If you're having issues, you can try using smaller images sizes and formats like avif. You may also want to just use one image for both modes so you aren't loading extra images for no reason.
 
 If you want **different images** for both dark and light modes, you should use the following template:
 
@@ -68,6 +70,8 @@ If you want the **same image** for both modes, you should use the following temp
 }
 ```
 
-Now, you have to get yourself a [data URI](https://css-tricks.com/data-uris/) inside the quotation marks. Since the base64 text is really large and annoying to go back and edit, I would recommend resizing or doing any editing to the image to make it the size you want before the next step.
+Now, you have to get yourself a [data URI](https://css-tricks.com/data-uris/) inside the quotation marks. Since the base64 text is really large and annoying to go back and edit, I would recommend resizing or doing any editing to the image to make it the size you want before the next step. If you don't care about the background being blurred, you could reduce the resolution down to a width of 960px and convert to the AVIF file format. I found [an online converter](https://avif.io/) that works in your browser for this.
+
+Resizing and converting from a 1920x1080 PNG at 2.38 megabytes file to a 960x520 AVIF file at 56 kilobytes, a ~97% reduction! I personally use a high opacity and blurred background to increase legibility, so this was a worthwhile change.
 
 To get a data URI, you will have to encode your image into base64. An easy online converter I found was [a github repo by jpillora](https://jpillora.com/base64-encoder/). Drag your file in, copy the text box, and paste the text inside the quotation marks on the corresponding url function.
