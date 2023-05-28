@@ -970,7 +970,7 @@ body.background-image-enabled {
 
 /* Make workspace UI elements transparent */
 .background-image-enabled :is(
-  .mod-vertical .workspace-tab-header-container,
+  .mod-root .workspace-tab-header-container,
   .workspace-ribbon,
   .workspace-split,
   .graph-controls,
@@ -995,6 +995,7 @@ body.background-image-enabled {
   .pdf-sidebar-container,
   .pdf-container,
   .pdf-toolbar),
+.background-image-enabled .workspace-split:not(.mod-root) .workspace-tab-header-container,
 .background-image-enabled .workspace-split:not(.mod-left-split, .mod-right-split) {
   background-color: transparent !important;
 }
