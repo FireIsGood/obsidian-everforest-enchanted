@@ -396,7 +396,7 @@ del {
   border-radius: var(--radius-s)
 }
 .cm-s-obsidian span.cm-inline-code:not(.cm-formatting),
-.markdown-rendered :is(table, p) code {
+.markdown-rendered :is(table, p, li) code {
   color: var(--code-inline);
 }
 
