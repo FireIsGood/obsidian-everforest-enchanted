@@ -322,6 +322,14 @@ div ul.has-list-bullet ul.has-list-bullet .collapse-indicator {
   visibility: hidden;
 }
 
+/* Change outliner navigation highlight */
+.is-flashing {
+  background-color: transparent !important;
+  color: inherit;
+  border-radius: 0;
+  box-shadow: 0 4px 0 var(--text-highlight-bg);
+}
+
 
 /** Menus **/
 
@@ -599,6 +607,7 @@ input.task-list-item-checkbox:checked
 
 .markdown-preview-view blockquote {
   padding-block: 0.25em;
+  padding-left: 17px;
 }
 
 /* Make blockquotes work in source view */
