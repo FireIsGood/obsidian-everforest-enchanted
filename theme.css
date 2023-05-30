@@ -650,11 +650,25 @@ div:has(>table) {
   overflow: unset !important;
 }
 /* Fix borders from Dataview */
-.markdown-rendered .table-view-table > tbody > tr > td + td {
+.table-view-table > thead > tr > th {
+  border-left: var(--table-header-border-width) solid var(--table-header-border-color);
+  border-top: var(--table-header-border-width) solid var(--table-header-border-color);
+  border-right: var(--table-header-border-width) solid var(--table-header-border-color);
+}
+:root .table-view-table thead > tr > th {
+  border-width: var(--table-border-width) 0 3px var(--table-border-width);
+}
+:root .table-view-table thead > tr > th:last-child {
+  border-right-width: var(--table-border-width);
+}
+:root .table-view-table tbody > tr + tr > td {
+  border-top: var(--table-border-width) solid var(--table-border-color);
+}
+:root .table-view-table tbody > tr > td {
   border-left: var(--table-border-width) solid var(--table-border-color);
 }
-.markdown-rendered .table-view-table > tbody > tr + tr {
-  border-top: var(--table-border-width) solid var(--table-border-color);
+:root .table-view-table tbody > tr > td:last-child {
+  border-right: var(--table-border-width) solid var(--table-border-color);
 }
 
 
