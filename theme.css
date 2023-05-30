@@ -282,18 +282,23 @@
   color: var(--text-normal);
 }
 
-/* Make gutters not affect the content flow */
-.cm-contentContainer {
+/* Make gutters not affect the content flow for unstacked tabs */
+body:not(.stacked-panes-gutter-disable-float) .cm-contentContainer,
+body.stacked-panes-gutter-disable-float .workspace-tabs:not(.mod-stacked) .cm-contentContainer {
   display: grid !important;
 }
-.cm-gutters,
-.cm-content {
+body:not(.stacked-panes-gutter-disable-float) .cm-gutters,
+body:not(.stacked-panes-gutter-disable-float) .cm-content,
+body.stacked-panes-gutter-disable-float .workspace-tabs:not(.mod-stacked) .cm-gutters,
+body.stacked-panes-gutter-disable-float .workspace-tabs:not(.mod-stacked) .cm-content {
   grid-area: 1 / -1;
 }
-.cm-content {
+body:not(.stacked-panes-gutter-disable-float) .cm-content,
+body.stacked-panes-gutter-disable-float .workspace-tabs:not(.mod-stacked) .cm-content {
   width: unset !important;
 }
-.cm-gutters {
+body:not(.stacked-panes-gutter-disable-float) .cm-gutters,
+body.stacked-panes-gutter-disable-float .workspace-tabs:not(.mod-stacked) .cm-gutters {
   justify-self: left;
   translate: -100% 0;
 }
@@ -831,6 +836,11 @@ settings:
   type: variable-number
   default: 700
   format: px
+-
+  id: stacked-panes-gutter-disable-float
+  title: Disable stacked tabs floating gutters
+  description: Disables gutters from being floated left of content in stacked tabs. This makes gutters shift over the content in stacked tabs. Use this if your panes are too thin to show gutters.
+  type: class-toggle
 -
   id: custom-stacked-panes
   title: Custom Stacked Panes
