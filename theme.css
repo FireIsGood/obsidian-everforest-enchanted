@@ -842,6 +842,31 @@ settings:
   description: Disables gutters from being floated left of content in stacked tabs. This makes gutters shift over the content in stacked tabs. Use this if your panes are too thin to show gutters.
   type: class-toggle
 -
+  id: extra-appearance-settings
+  title: Extra Appearance Settings
+  type: heading
+  level: 1
+  collapsed: true
+-
+  id: extra-appearance-settings-description
+  title: Info
+  description: |
+    Various extra styles to change the asesthetic of certian elements.
+  type: info-text
+  markdown: true
+-
+  id: rounded-tables
+  title: Rounded Tables
+  description: Adds a rounded effect to table corners
+  type: class-toggle
+-
+  id: rounded-tables-radius
+  title: Rounded Tables Radius
+  description: The corner radius of rounded tables. You may need to reload tabs to see the effect.
+  type: variable-number
+  default: 8
+  format: px
+-
   id: custom-stacked-panes
   title: Custom Stacked Panes
   type: heading
@@ -972,6 +997,29 @@ settings:
   type: class-toggle
 
 */
+
+/** Extra Appearance Settings **/
+
+/* Rounded tables */
+.rounded-tables table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+.rounded-tables th:first-of-type {
+  border-top-left-radius: var(--rounded-tables-radius, 8px);
+}
+.rounded-tables th:last-of-type {
+  border-top-right-radius: var(--rounded-tables-radius, 8px);
+}
+.rounded-tables tr:last-of-type td:first-of-type {
+  border-bottom-left-radius: var(--rounded-tables-radius, 8px);
+}
+.rounded-tables tr:last-of-type td:last-of-type {
+  border-bottom-right-radius: var(--rounded-tables-radius, 8px);
+}
+.rounded-tables :is(td, th) {
+  border-width: 0 var(--table-border-width) var(--table-border-width) 0;
+}
 
 /** Custom Stacked Panes **/
 
