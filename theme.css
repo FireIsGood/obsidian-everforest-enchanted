@@ -813,7 +813,7 @@ settings:
 -
   id: readable-line-length-custom
   title: Readable line length value
-  description: Set the text size in px!
+  description: Sets a custom readable line width in pixels
   type: variable-number
   default: 700
   format: px
