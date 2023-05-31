@@ -998,6 +998,17 @@ settings:
 
 */
 
+/* Improve style setting appearance */
+[data-id="everforest-enchanted-theme"] + .style-settings-container .setting-item-heading {
+  margin-bottom: 0;
+}
+[data-id="everforest-enchanted-theme"] + .style-settings-container .setting-item-heading + .style-settings-container {
+  margin-top: 3px;
+  padding-top: 16px;
+  padding-left: 25px;
+  border-left: 1px dashed var(--background-modifier-border);
+}
+
 /** Extra Appearance Settings **/
 
 /* Rounded tables */
