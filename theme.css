@@ -45,6 +45,8 @@
   --checkbox-size: 1.125em;
 
   --list-indent: 24px;
+  --list-spacing: 0;
+  --list-bullet-size: 6px;
 
   --file-folding-offset: 22px;
 
