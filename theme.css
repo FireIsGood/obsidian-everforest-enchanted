@@ -1115,6 +1115,9 @@ body.background-image-enabled {
   border-radius: 1rem;
   background-color: var(--background-transparent) !important;
 }
+.background-image-pane-view .view-content .cm-sizer:has(.cm-gutters) {
+  padding-left: calc(2rem + 24px);
+}
 :root .background-image-pane-view .view-header  {
   background-color: var(--background-partially-transparent) !important;
 }
