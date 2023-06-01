@@ -1098,6 +1098,10 @@ body.background-image-enabled {
 .background-image-enabled .workspace-split:not(.mod-left-split, .mod-right-split) {
   background-color: transparent !important;
 }
+/* Fix double side headers */
+.background-image-enabled .workspace-tab-header-container {
+  background-color: unset;
+}
 
 /* Remove tabs weird gradients and exterior curves */
 .background-image-enabled .workspace-tab-header.is-active::before,
