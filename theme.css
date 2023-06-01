@@ -675,6 +675,9 @@ div:has(>table) {
 :root .table-view-table tbody > tr > td:last-child {
   border-right: var(--table-border-width) solid var(--table-border-color);
 }
+:root .table-view-table tbody > tr:last-child > td {
+  border-bottom: var(--table-border-width) solid var(--table-border-color);
+}
 
 
 /** Tags **/
