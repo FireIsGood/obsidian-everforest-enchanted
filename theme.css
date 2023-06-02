@@ -1009,10 +1009,13 @@ settings:
   margin-bottom: 0;
 }
 [data-id="everforest-enchanted-theme"] + .style-settings-container .setting-item-heading + .style-settings-container {
-  margin-top: 3px;
+  margin-top: 2px;
   padding-top: 16px;
   padding-left: 25px;
   border-left: 1px dashed var(--background-modifier-border);
+}
+.view-content .style-settings-container :is(.setting-item-control:has(input), input[type="text"]) {
+  width: 100%;
 }
 
 /** Extra Appearance Settings **/
