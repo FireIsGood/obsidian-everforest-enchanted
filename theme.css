@@ -68,6 +68,8 @@
   --background-secondary:     var(--bg0);
   --background-secondary-alt: var(--bg0);
 
+  /** General Colors **/
+
   --text-normal:              var(--fg);
   --text-muted:               var(--color-base-70);
   --text-faint:               var(--grey1);
@@ -103,6 +105,10 @@
   --tag-color: var(--header-blue);
   --tag-background: hsla(var(--tag-color-hsl), 0.1);
   --tag-background-hover: hsla(var(--tag-color-hsl), 0.2);
+
+  --checkbox-color: var(--fg-blue);
+
+  /** Headers **/
 
   --h1-color: var(--header-red);
   --h2-color: var(--header-orange);
@@ -590,7 +596,6 @@ input.task-list-item-checkbox:hover {
 }
 input.task-list-item-checkbox:checked
 {
-  background-color: var(--fg-blue);
   box-shadow: inset 0 0 0 1px var(--background-primary);
   transition: box-shadow 0s;
 }
