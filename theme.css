@@ -108,6 +108,9 @@
 
   --checkbox-color: var(--fg-blue);
 
+  --canvas-background: transparent;
+  --canvas-dot-pattern: var(--color-base-50);
+
   /** Headers **/
 
   --h1-color: var(--header-red);
