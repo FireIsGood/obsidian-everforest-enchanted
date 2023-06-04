@@ -9,6 +9,7 @@
 *? 2. General UI
 *?   - Workspace
 *?   - Menus
+*?   - Canvas
 *? 4. Markdown
 *?   - Emphasis
 *?   - Code
@@ -369,6 +370,16 @@ button:hover {
 @keyframes modal-in {
   0% {opacity: 0}
   100% {opacity: 1}
+}
+
+
+/** Canvas **/
+
+/* Custom dot pattern size (style settings) */
+.canvas-background > pattern > circle {
+  cx: var(--canvas-dot-size, 0.7);
+  cy: var(--canvas-dot-size, 0.7);
+  r: var(--canvas-dot-size, 0.7);
 }
 
 
@@ -874,6 +885,13 @@ settings:
   description: The corner radius of rounded tables. You may need to reload tabs to see the effect.
   type: variable-number
   default: 8
+  format: px
+-
+  id: canvas-dot-size
+  title: Canvas Background Dot Size
+  description: The size of dots on the canvas. It starts breaking past 10.
+  type: variable-number
+  default: 0.7
   format: px
 -
   id: custom-stacked-panes
