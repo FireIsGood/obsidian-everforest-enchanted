@@ -1016,6 +1016,7 @@ settings:
 }
 .view-content .style-settings-container :is(.setting-item-control:has(input), input[type="text"]) {
   width: 100%;
+  place-content: flex-start;
 }
 
 /** Extra Appearance Settings **/
