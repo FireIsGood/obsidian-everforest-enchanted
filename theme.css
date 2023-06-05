@@ -45,7 +45,7 @@
 
   --checkbox-size: 14px;
 
-  --list-indent: 24px;
+  --list-indent: var(--list-indent-custom, 24px); /* Adjusted in Style Settings */
   --list-spacing: 0;
   --list-bullet-size: 6px;
 
@@ -841,6 +841,7 @@ div:has(h1)+div p:has(.tag) {
 
 name: Everforest Enchanted
 id: everforest-enchanted-theme
+collapsed: false
 settings:
 -
   id: test-main-description
@@ -849,6 +850,13 @@ settings:
     Use these settings to adjust basic extra settings or various extra elements of the theme. Visit the [GitHub Repo](https://github.com/FireIsGood/obsidian-everforest-enchanted) for more information.
   type: info-text
   markdown: true
+-
+  id: workspace-settings
+  title: Workspace
+  description: Change the appearance of the user interface
+  type: heading
+  level: 1
+  collapsed: true
 -
   id: readable-line-length-custom
   title: Readable line length value
@@ -862,18 +870,19 @@ settings:
   description: Disables gutters from being floated left of content in stacked tabs. This makes gutters shift over the content in stacked tabs. Use this if your panes are too thin to show gutters.
   type: class-toggle
 -
-  id: extra-appearance-settings
-  title: Extra Appearance Settings
+  id: element-settings
+  title: Elements
+  description: Change the appearance of elements within the editor
   type: heading
   level: 1
   collapsed: true
 -
-  id: extra-appearance-settings-description
-  title: Info
-  description: |
-    Various extra styles to change the asesthetic of certian elements.
-  type: info-text
-  markdown: true
+  id: list-indent-custom
+  title: Custom list indent size
+  description: The size of list item indents. The default theme uses 32 px.
+  type: variable-number
+  default: 24
+  format: px
 -
   id: rounded-tables
   title: Rounded Tables
@@ -894,10 +903,17 @@ settings:
   default: 0.7
   format: px
 -
+  id: extra-appearance-settings
+  title: Extras
+  description: Additional options to customize the appearance
+  type: heading
+  level: 1
+  collapsed: true
+-
   id: custom-stacked-panes
   title: Custom Stacked Panes
   type: heading
-  level: 1
+  level: 2
   collapsed: true
 -
   id: custom-stacked-panes-description
@@ -924,7 +940,7 @@ settings:
   id: background-image
   title: Custom Background Image
   type: heading
-  level: 1
+  level: 2
   collapsed: true
 -
   id: background-image-description
@@ -1015,7 +1031,7 @@ settings:
   id: background-image-fun
   title: Fun Settings
   type: heading
-  level: 2
+  level: 3
   collapsed: true
 -
   id: background-image-pane-view
