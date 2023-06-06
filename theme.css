@@ -661,7 +661,9 @@ input.task-list-item-checkbox:checked
 
 /** Tables **/
 
-.markdown-rendered table {}
+.markdown-rendered table {
+  --line-height-tight: 1.375;
+}
 
 /* Fix margins in source mode */
 .markdown-source-view table {
