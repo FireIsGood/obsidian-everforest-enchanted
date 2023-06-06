@@ -854,14 +854,14 @@ settings:
   markdown: true
 -
   id: workspace-settings
-  title: Workspace
-  description: Change the appearance of the user interface
+  title: Editor
+  description: Line length, floating gutters
   type: heading
   level: 1
   collapsed: true
 -
   id: readable-line-length-custom
-  title: Readable line length value
+  title: Line length
   description: Sets a custom readable line width in pixels
   type: variable-number
   default: 700
@@ -869,37 +869,37 @@ settings:
 -
   id: stacked-panes-gutter-disable-float
   title: Disable stacked tabs floating gutters
-  description: Disables gutters from being floated left of content in stacked tabs. This makes gutters shift over the content in stacked tabs. Use this if your panes are too thin to show gutters.
+  description: Disables custom gutter floating in the stacked tab mode. This makes gutters shift over the content in stacked tabs. Use this if your panes are too thin to show gutters.
   type: class-toggle
 -
   id: element-settings
   title: Elements
-  description: Change the appearance of elements within the editor
+  description: Lists, tables, canvas
   type: heading
   level: 1
   collapsed: true
 -
   id: list-indent-custom
-  title: Custom list indent size
+  title: Lists - List indent size
   description: The size of list item indents. The default theme uses 32 px.
   type: variable-number
   default: 24
   format: px
 -
   id: rounded-tables
-  title: Rounded Tables
+  title: Tables - Rounded corners
   description: Adds a rounded effect to table corners
   type: class-toggle
 -
   id: rounded-tables-radius
-  title: Rounded Tables Radius
+  title: Tables - Rounded corners radius
   description: The corner radius of rounded tables. You may need to reload tabs to see the effect.
   type: variable-number
   default: 8
   format: px
 -
   id: canvas-dot-size
-  title: Canvas Background Dot Size
+  title: Canvas - Background dot size
   description: The size of dots on the canvas. It starts breaking past 10.
   type: variable-number
   default: 0.7
@@ -907,13 +907,13 @@ settings:
 -
   id: extra-appearance-settings
   title: Extras
-  description: Additional options to customize the appearance
+  description: Stacked pane count, background image
   type: heading
   level: 1
   collapsed: true
 -
   id: custom-stacked-panes
-  title: Custom Stacked Panes
+  title: Stacked Pane Count
   type: heading
   level: 2
   collapsed: true
@@ -921,7 +921,7 @@ settings:
   id: custom-stacked-panes-description
   title: Info
   description: |
-    Custom stacked panes. These will convert the sizes of stacked panes from pixels to a percentage of the screen based on the cound. Check the [GitHub Repo documentation](https://github.com/FireIsGood/obsidian-everforest-enchanted/blob/main/custom_stacked_panes.md) for more infomation.
+    This setting turns stacked panes from a pixel width to a number visible on screen at once. Check the [GitHub Repo documentation](https://github.com/FireIsGood/obsidian-everforest-enchanted/blob/main/custom_stacked_panes.md) for more infomation.
   type: info-text
   markdown: true
 -
@@ -940,7 +940,7 @@ settings:
   step: 1
 -
   id: background-image
-  title: Custom Background Image
+  title: Background Image
   type: heading
   level: 2
   collapsed: true
@@ -948,7 +948,7 @@ settings:
   id: background-image-description
   title: Info
   description: |
-    Background images are easiest with an external URL. If you want to use local images for offline access, you'll have to use a snippet. Check the [GitHub Repo documentation](https://github.com/FireIsGood/obsidian-everforest-enchanted/blob/main/custom_background_image.md) for more infomation.
+    Adds background images. This is easiest to do with an external URL. If you want to use local images for offline access, you'll have to use a snippet. Check the [GitHub Repo documentation](https://github.com/FireIsGood/obsidian-everforest-enchanted/blob/main/custom_background_image.md) for more infomation.
   type: info-text
   markdown: true
 -
