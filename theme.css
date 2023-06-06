@@ -1044,6 +1044,9 @@ settings:
 */
 
 /* Improve style setting appearance */
+[data-type="style-settings"] .view-content > div:last-child {
+  padding-bottom: 400px;
+}
 [data-id="everforest-enchanted-theme"] + .style-settings-container .setting-item-heading {
   margin-bottom: 0;
 }
@@ -1052,6 +1055,7 @@ settings:
   padding-top: 16px;
   padding-left: 25px;
   border-left: 1px dashed var(--background-modifier-border);
+  border-bottom: 1px dashed var(--background-modifier-border);
 }
 .view-content .style-settings-container :is(.setting-item-control:has(input), input[type="text"]) {
   width: 100%;
