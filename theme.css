@@ -1122,8 +1122,7 @@ body.background-image-enabled {
   .mod-root .workspace-tab-header-container,
   .workspace-ribbon,
   .workspace-split,
-  .graph-controls,
-  .popover),
+  .graph-controls),
 .workspace-ribbon::before {
   background-color: var(--background-partially-transparent) !important;
 }
