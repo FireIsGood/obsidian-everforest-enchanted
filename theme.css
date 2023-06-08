@@ -10,6 +10,7 @@
 *?   - Workspace
 *?   - Menus
 *?   - Canvas
+*?   - Loading Screen
 *? 4. Markdown
 *?   - Emphasis
 *?   - Code
@@ -381,6 +382,32 @@ button:hover {
   cy: var(--canvas-dot-size, 0.7);
   r: var(--canvas-dot-size, 0.7);
 }
+
+/** Loading Screen **/
+
+/* Text trees */
+.progress-bar-message::before {
+  content: '🌲 ';
+}
+.progress-bar-message::after {
+  content: ' 🌲';
+}
+
+
+/* Progress bars */
+.progress-bar-indicator {
+  height: 12px;
+  overflow-y: hidden;
+}
+.progress-bar-indicator {
+  border-radius: 12px;
+}
+.progress-bar-line,
+.progress-bar-subline {
+  overflow: hidden;
+  height: 100%;
+}
+
 
 
 
