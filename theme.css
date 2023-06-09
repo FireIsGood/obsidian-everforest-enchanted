@@ -393,13 +393,14 @@ button:hover {
   content: ' 🌲';
 }
 
-
 /* Progress bars */
 .progress-bar-indicator {
   height: 12px;
   overflow-y: hidden;
+  width: min(90vw, 1200px);
 }
-.progress-bar-indicator {
+.progress-bar-indicator,
+.progress-bar-subline {
   border-radius: 12px;
 }
 .progress-bar-line,
