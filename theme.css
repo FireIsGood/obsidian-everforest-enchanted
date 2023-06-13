@@ -1237,10 +1237,6 @@ body.background-image-enabled {
 .callout.is-collapsible .callout-title {
   cursor: pointer !important;
 }
-.callout-icon {
-  margin-top: unset;
-  align-self: center;
-}
 .callout-icon svg.svg-icon {
   color: rgb(var(--callout-color));
 }
