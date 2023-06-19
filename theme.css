@@ -882,7 +882,7 @@ settings:
 -
   id: workspace-settings
   title: Editor
-  description: Line length, floating gutters
+  description: Line length, floating gutters, highlighted active folders
   type: heading
   level: 1
   collapsed: true
@@ -897,6 +897,11 @@ settings:
   id: stacked-panes-gutter-disable-float
   title: Disable stacked tabs floating gutters
   description: Disables custom gutter floating in the stacked tab mode. This makes gutters shift over the content in stacked tabs. Use this if your panes are too thin to show gutters.
+  type: class-toggle
+-
+  id: highlighted-folders
+  title: Enable highlighted active folders
+  description: Adds a background on opened folders.
   type: class-toggle
 -
   id: element-settings
@@ -1110,6 +1115,12 @@ settings:
 }
 .rounded-tables :is(td, th) {
   border-width: 0 var(--table-border-width) var(--table-border-width) 0;
+}
+
+/* Highlighted folders */
+body.highlighted-folders .nav-folder:not(.is-collapsed, .mod-root) {
+  border-radius: var(--radius-s);
+  background-color: rgba(var(--mono-rgb-100), 0.05);
 }
 
 /** Custom Stacked Panes **/
