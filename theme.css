@@ -565,6 +565,7 @@ pre.language-regex::after { content: "Regex" }
 pre.language-lua::after { content: "Lua" }
 pre.language-haskell::after { content: "Haskell" }
 pre.language-vim::after { content: "vimrc" }
+pre.language-rust::after { content: "Rust" }
 
 
 /** Links **/
