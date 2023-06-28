@@ -896,6 +896,13 @@ settings:
   default: 700
   format: px
 -
+  id: wide-width-readable-line-length-custom
+  title: Wide Line length
+  description: Sets a custom readable line width for the CSS class "wide-width" in pixels
+  type: variable-number
+  default: 1000
+  format: px
+-
   id: stacked-panes-gutter-disable-float
   title: Disable stacked tabs floating gutters
   description: Disables custom gutter floating in the stacked tab mode. This makes gutters shift over the content in stacked tabs. Use this if your panes are too thin to show gutters.
@@ -1486,7 +1493,7 @@ body:not(.no-image-alttext-caption) .image-embed:not([alt*=".png"], [alt*=".gif"
 	--file-line-width: 100%;
 }
 .wide-width {
-	--file-line-width: 1000px;
+	--file-line-width: var(--wide-width-readable-line-length-custom, 1000px);
 }
 
 /* Numbered lists to columns in read mode */
