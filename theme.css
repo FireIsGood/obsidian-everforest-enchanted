@@ -1254,12 +1254,11 @@ body.background-image-enabled {
   color: rgb(var(--callout-color));
 }
 .callout-title-inner {
+  color: color-mix(in srgb, rgb(var(--callout-color)) 70%, var(--color-base-100));
+  filter: contrast(2);
 }
-.theme-dark :is(.callout-icon svg.svg-icon, .callout-title-inner) {
-  filter: brightness(1.4);
-}
-.theme-light :is(.callout-icon svg.svg-icon, .callout-title-inner) {
-  filter: brightness(0.7);
+.callout-title-inner > * {
+  filter: contrast(0.5);
 }
 .callout-fold {
   margin-left: auto;
