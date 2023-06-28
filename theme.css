@@ -454,8 +454,9 @@ del {
   padding: 0.1em 0.25em;
   border-radius: var(--radius-s)
 }
+/* Fix other elements' inline code */
 .cm-s-obsidian span.cm-inline-code:not(.cm-formatting),
-.markdown-rendered :is(table, p, li) code {
+.markdown-rendered :is(table, p, li, .callout-title-inner) code {
   color: var(--code-inline);
 }
 
@@ -529,43 +530,43 @@ pre[class^="language-"]::after {
   top: calc(6px + var(--code-size) * var(--line-height-normal));
 }
 
-pre.language-applescript::after { content: "AppleScript" }
-pre.language-bash::after { content: "Bash" }
 pre.language-c::after { content: "C" }
-pre.language-cpp::after { content: "C++" }
-pre.language-cs::after { content: "C#" }
+pre.language-python::after { content: "Python" }
+pre.language-py::after { content: "Python" }
+pre.language-nginx::after { content: "Nginx" }
 pre.language-css::after { content: "CSS" }
-pre.language-flow::after { content: "Flow" }
-pre.language-git::after { content: "GIT" }
-pre.language-haskell::after { content: "Haskell" }
-pre.language-html::after { content: "HTML" }
-pre.language-ini::after { content: "INI" }
-pre.language-java::after { content: "JAVA" }
+pre.language-node::after { content: "Node" }
+pre.language-react::after { content: "React" }
 pre.language-javascript::after { content: "JavaScript" }
 pre.language-js::after { content: "JavaScript" }
-pre.language-lua::after { content: "Lua" }
+pre.language-typescript::after { content: "TypeScript" }
+pre.language-ts::after { content: "TypeScript" }
+pre.language-php::after { content: "PHP" }
+pre.language-shell::after { content: "Shell" }
+pre.language-bash::after { content: "Bash" }
+pre.language-zsh::after { content: "zsh" }
+pre.language-flow::after { content: "Flow" }
+pre.language-sequence::after { content: "Sequence" }
+pre.language-sql::after { content: "SQL" }
+pre.language-yaml::after { content: "YAML" }
+pre.language-ini::after { content: "INI" }
+pre.language-xml::after { content: "XML" }
+pre.language-git::after { content: "GIT" }
+pre.language-cs::after { content: "C#" }
+pre.language-cpp::after { content: "C++" }
+pre.language-java::after { content: "JAVA" }
+pre.language-html::after { content: "HTML" }
+pre.language-txt::after { content: "Plain Text" }
+pre.language-text::after { content: "Plain Text" }
+pre.language-url::after { content: "URL" }
+pre.language-applescript::after { content: "AppleScript" }
 pre.language-markdown::after { content: "Markdown" }
 pre.language-md::after { content: "Markdown" }
-pre.language-nginx::after { content: "Nginx" }
-pre.language-node::after { content: "Node" }
-pre.language-php::after { content: "PHP" }
-pre.language-py::after { content: "Python" }
-pre.language-python::after { content: "Python" }
-pre.language-react::after { content: "React" }
 pre.language-regex::after { content: "Regex" }
-pre.language-rust::after { content: "Rust" }
-pre.language-sequence::after { content: "Sequence" }
-pre.language-shell::after { content: "Shell" }
-pre.language-sql::after { content: "SQL" }
-pre.language-text::after { content: "Plain Text" }
-pre.language-ts::after { content: "TypeScript" }
-pre.language-txt::after { content: "Plain Text" }
-pre.language-typescript::after { content: "TypeScript" }
-pre.language-url::after { content: "URL" }
+pre.language-lua::after { content: "Lua" }
+pre.language-haskell::after { content: "Haskell" }
 pre.language-vim::after { content: "vimrc" }
-pre.language-xml::after { content: "XML" }
-pre.language-yaml::after { content: "YAML" }
-pre.language-zsh::after { content: "zsh" }
+pre.language-rust::after { content: "Rust" }
 
 
 /** Links **/
