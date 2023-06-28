@@ -80,7 +80,7 @@ Implemented CSS Classes:
 | Class        | Effect                                                                    |
 | ------------ | ------------------------------------------------------------------------- |
 | `full-width` | Makes the note full width                                                 |
-| `wide-width` | Makes the note a bit wider                                                |
+| `wide-width` | Makes the note a bit wider (Customizable in Style Settings)               |
 | `columns`    | Converts ordered lists into columns                                       |
 | `dashboard`  | Converts the page into a dashboard, turning level 1 list items into cards |
 
