@@ -1085,7 +1085,8 @@ settings:
 */
 
 /* Improve style setting appearance */
-[data-type="style-settings"] .view-content > div:last-child {
+[data-type="style-settings"] .view-content > div:last-child,
+.vertical-tab-content > div:last-child {
   padding-bottom: 400px;
 }
 [data-id="everforest-enchanted-theme"] + .style-settings-container .setting-item-heading {
