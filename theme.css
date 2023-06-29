@@ -957,6 +957,16 @@ settings:
   level: 2
   collapsed: true
 -
+  id: centered-tables
+  title: Tables - Center alignment
+  description: Aligns tables to the center.
+  type: class-toggle
+-
+  id: full-width-tables
+  title: Tables - Full width
+  description: Makes tables fit the full width.
+  type: class-toggle
+-
   id: rounded-tables
   title: Tables - Rounded corners
   description: Adds a rounded effect to table corners.
@@ -1141,6 +1151,16 @@ settings:
 }
 
 /** Extra Appearance Settings **/
+
+/* Centered tables */
+.centered-tables table {
+  margin-inline: auto;
+}
+
+/* Full width tables */
+.full-width-tables table {
+  width: 100%;
+}
 
 /* Rounded tables */
 .rounded-tables table {
