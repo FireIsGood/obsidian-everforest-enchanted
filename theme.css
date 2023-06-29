@@ -884,9 +884,15 @@ settings:
 -
   id: workspace-settings
   title: Editor
-  description: Line length, floating gutters, highlighted active folders
+  description: Line length, line numbers, folders
   type: heading
   level: 1
+  collapsed: true
+-
+  id: line-length-settings
+  title: Line Length
+  type: heading
+  level: 2
   collapsed: true
 -
   id: readable-line-length-custom
@@ -903,10 +909,22 @@ settings:
   default: 1000
   format: px
 -
+  id: gutter-settings
+  title: Line Numbers
+  type: heading
+  level: 2
+  collapsed: true
+-
   id: stacked-panes-gutter-disable-float
-  title: Disable stacked tabs floating gutters
-  description: Disables custom gutter floating in the stacked tab mode. This makes gutters shift over the content in stacked tabs. Use this if your panes are too thin to show gutters.
+  title: Disable stacked tabs floating line numbers
+  description: Disables custom line number floating in the stacked tab mode. This makes the line numbers shift over the content in stacked tabs. Use this if your panes are too thin to show them.
   type: class-toggle
+-
+  id: folder-settings
+  title: Folders
+  type: heading
+  level: 2
+  collapsed: true
 -
   id: highlighted-folders
   title: Enable highlighted active folders
@@ -920,12 +938,24 @@ settings:
   level: 1
   collapsed: true
 -
+  id: list-settings
+  title: Lists
+  type: heading
+  level: 2
+  collapsed: true
+-
   id: list-indent-custom
   title: Lists - List indent size
   description: The size of list item indents. The default theme uses 32 px.
   type: variable-number
   default: 24
   format: px
+-
+  id: table-settings
+  title: Tables
+  type: heading
+  level: 2
+  collapsed: true
 -
   id: rounded-tables
   title: Tables - Rounded corners
@@ -938,6 +968,12 @@ settings:
   type: variable-number
   default: 8
   format: px
+-
+  id: canvas-settings
+  title: Canvas
+  type: heading
+  level: 2
+  collapsed: true
 -
   id: canvas-dot-size
   title: Canvas - Background dot size
