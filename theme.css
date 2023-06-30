@@ -957,6 +957,11 @@ settings:
   level: 2
   collapsed: true
 -
+  id: external-link-remove-icon
+  title: Links - Remove external link icon
+  description: Removes the link icon from external links.
+  type: class-toggle
+-
   id: list-settings
   title: Lists
   type: heading
@@ -1169,6 +1174,10 @@ body.highlighted-folders .nav-folder:not(.is-collapsed, .mod-root) {
 /* External links */
 .external-link-remove-icon .cm-formatting.external-link {
     display: none;
+}
+.external-link-remove-icon a.external-link {
+    background-image: none;
+    padding-right: unset;
 }
 
 /* Centered tables */
