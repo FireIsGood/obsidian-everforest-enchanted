@@ -882,12 +882,23 @@ settings:
   type: info-text
   markdown: true
 -
-  id: workspace-settings
+  id: editor-settings
   title: Editor
   description: Line length, line numbers, folders
   type: heading
   level: 1
   collapsed: true
+-
+  id: folder-settings
+  title: Folders
+  type: heading
+  level: 2
+  collapsed: true
+-
+  id: highlighted-folders
+  title: Enable highlighted active folders
+  description: Adds a background on opened folders.
+  type: class-toggle
 -
   id: line-length-settings
   title: Line Length
@@ -920,22 +931,30 @@ settings:
   description: Disables custom line number floating in the stacked tab mode. This makes the line numbers shift over the content in stacked tabs. Use this if your panes are too thin to show them.
   type: class-toggle
 -
-  id: folder-settings
-  title: Folders
-  type: heading
-  level: 2
-  collapsed: true
--
-  id: highlighted-folders
-  title: Enable highlighted active folders
-  description: Adds a background on opened folders.
-  type: class-toggle
--
   id: element-settings
   title: Elements
   description: Lists, tables, canvas
   type: heading
   level: 1
+  collapsed: true
+-
+  id: canvas-settings
+  title: Canvas
+  type: heading
+  level: 2
+  collapsed: true
+-
+  id: canvas-dot-size
+  title: Canvas - Background dot size
+  description: The size of dots on the canvas. It starts breaking past 10.
+  type: variable-number
+  default: 0.7
+  format: px
+-
+  id: link-settings
+  title: Links
+  type: heading
+  level: 2
   collapsed: true
 -
   id: list-settings
@@ -977,19 +996,6 @@ settings:
   description: The corner radius of rounded tables. You may need to reload tabs to see the effect.
   type: variable-number
   default: 8
-  format: px
--
-  id: canvas-settings
-  title: Canvas
-  type: heading
-  level: 2
-  collapsed: true
--
-  id: canvas-dot-size
-  title: Canvas - Background dot size
-  description: The size of dots on the canvas. It starts breaking past 10.
-  type: variable-number
-  default: 0.7
   format: px
 -
   id: extra-appearance-settings
@@ -1150,7 +1156,20 @@ settings:
   place-content: flex-start;
 }
 
-/** Extra Appearance Settings **/
+/** Editor Settings **/
+
+/* Highlighted folders */
+body.highlighted-folders .nav-folder:not(.is-collapsed, .mod-root) {
+  border-radius: var(--radius-s);
+  background-color: rgba(var(--mono-rgb-100), 0.05);
+}
+
+/** Element Settings **/
+
+/* External links */
+.external-link-remove-icon .cm-formatting.external-link {
+    display: none;
+}
 
 /* Centered tables */
 .centered-tables table {
@@ -1181,12 +1200,6 @@ settings:
 }
 .rounded-tables :is(td, th) {
   border-width: 0 var(--table-border-width) var(--table-border-width) 0;
-}
-
-/* Highlighted folders */
-body.highlighted-folders .nav-folder:not(.is-collapsed, .mod-root) {
-  border-radius: var(--radius-s);
-  background-color: rgba(var(--mono-rgb-100), 0.05);
 }
 
 /** Custom Stacked Panes **/
