@@ -1544,23 +1544,23 @@ img[src^="http"][alt~="blur"]:hover {
 }
 
 /* Alt text as caption under image */
-body:not(.no-image-alttext-caption) .image-embed:not([alt*=".png"], [alt*=".gif"], [alt*=".jpg"], [alt*=".jpeg"], [alt*=".tiff"], [alt*=".avif"])::after {
+body:not(.no-image-alttext-caption) .image-embed:not([alt*=".png"], [alt*=".gif"], [alt*=".jpg"], [alt*=".jpeg"], [alt*=".tiff"], [alt*=".avif"], [alt*=".webp"])::after {
   display: block;
   content: attr(alt);
   color: var(--text-muted);
   margin-inline: auto;
   text-align: center;
 }
-body:not(.no-image-alttext-caption) .image-embed:not([alt*=".png"], [alt*=".gif"], [alt*=".jpg"], [alt*=".jpeg"], [alt*=".tiff"], [alt*=".avif"], [width])::after {
+body:not(.no-image-alttext-caption) .image-embed:not([alt*=".png"], [alt*=".gif"], [alt*=".jpg"], [alt*=".jpeg"], [alt*=".tiff"], [alt*=".avif"], [alt*=".webp"], [width])::after {
   width: calc(var(--img-width, 100) / 100 * min(100%, var(--file-line-width)));
 }
-body:not(.no-image-alttext-caption) .markdown-reading-view .image-embed[src~="float"]:not([alt*=".png"], [alt*=".gif"], [alt*=".jpg"], [alt*=".jpeg"], [alt*=".tiff"], [alt*=".avif"], [width])::after {
+body:not(.no-image-alttext-caption) .markdown-reading-view .image-embed[src~="float"]:not([alt*=".png"], [alt*=".gif"], [alt*=".jpg"], [alt*=".jpeg"], [alt*=".tiff"], [alt*=".avif"], [alt*=".webp"], [width])::after {
   width: calc(var(--img-width, 100) / 100 * var(--file-line-width));
 }
-body:not(.no-image-alttext-caption) .image-embed:not([alt*=".png"], [alt*=".gif"], [alt*=".jpg"], [alt*=".jpeg"], [alt*=".tiff"], [alt*=".avif"], [width])[src~="left"]::after {
+body:not(.no-image-alttext-caption) .image-embed:not([alt*=".png"], [alt*=".gif"], [alt*=".jpg"], [alt*=".jpeg"], [alt*=".tiff"], [alt*=".avif"], [alt*=".webp"], [width])[src~="left"]::after {
   margin-inline: 0 auto;
 }
-body:not(.no-image-alttext-caption) .image-embed:not([alt*=".png"], [alt*=".gif"], [alt*=".jpg"], [alt*=".jpeg"], [alt*=".tiff"], [alt*=".avif"], [width])[src~="right"]::after {
+body:not(.no-image-alttext-caption) .image-embed:not([alt*=".png"], [alt*=".gif"], [alt*=".jpg"], [alt*=".jpeg"], [alt*=".tiff"], [alt*=".avif"], [alt*=".webp"], [width])[src~="right"]::after {
   margin-inline: auto 0;
 }
 
