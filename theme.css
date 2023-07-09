@@ -642,6 +642,9 @@ input.task-list-item-checkbox:checked {
   box-shadow: inset 0 0 0 calc(0.0625 * var(--font-text-size)) var(--background-primary);
   transition: box-shadow 0s;
 }
+input.task-list-item-checkbox:checked::after {
+  -webkit-mask-size: calc(50% + 1px);
+}
 
 .checkbox-container {
   background-color: var(--interactive-before);
