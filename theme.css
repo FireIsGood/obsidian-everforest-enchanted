@@ -44,7 +44,8 @@
 
   /** Miscellaneous **/
 
-  --checkbox-size: 14px;
+  --checkbox-size: calc(var(--font-text-size) - 2px);
+  --checkbox-radius: 25%;
 
   --list-indent: var(--list-indent-custom, 24px); /* Adjusted in Style Settings */
   --list-spacing: 0;
@@ -637,9 +638,8 @@ ol::before {
 input.task-list-item-checkbox:hover {
   border-color: var(--header-blue);
 }
-input.task-list-item-checkbox:checked
-{
-  box-shadow: inset 0 0 0 1px var(--background-primary);
+input.task-list-item-checkbox:checked {
+  box-shadow: inset 0 0 0 calc(0.0625 * var(--font-text-size)) var(--background-primary);
   transition: box-shadow 0s;
 }
 
