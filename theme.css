@@ -996,7 +996,7 @@ settings:
 -
   id: rounded-tables
   title: Tables - Rounded corners
-  description: Adds a rounded effect to table corners.
+  description: Adds a rounded effect to table corners. Automatically disabled when a table has rowspan as it is not possible to guarantee the correct corners are rounded.
   type: class-toggle
 -
   id: rounded-tables-radius
@@ -1194,25 +1194,26 @@ body.highlighted-folders .nav-folder:not(.is-collapsed, .mod-root) {
 }
 
 /* Rounded tables */
-.rounded-tables table {
+.rounded-tables table:not(:has([rowspan])) {
   border-collapse: separate;
   border-spacing: 0;
 }
-.rounded-tables th:first-of-type {
-  border-top-left-radius: var(--rounded-tables-radius, 8px);
-}
-.rounded-tables th:last-of-type {
-  border-top-right-radius: var(--rounded-tables-radius, 8px);
-}
-.rounded-tables tr:last-of-type td:first-of-type {
-  border-bottom-left-radius: var(--rounded-tables-radius, 8px);
-}
-.rounded-tables tr:last-of-type td:last-of-type {
-  border-bottom-right-radius: var(--rounded-tables-radius, 8px);
-}
-.rounded-tables :is(td, th) {
+.rounded-tables table:not(:has([rowspan])) :is(td, th) {
   border-width: 0 var(--table-border-width) var(--table-border-width) 0;
 }
+.rounded-tables table:not(:has([rowspan])) th:first-of-type {
+  border-top-left-radius: var(--rounded-tables-radius, 8px);
+}
+.rounded-tables table:not(:has([rowspan])) th:last-of-type {
+  border-top-right-radius: var(--rounded-tables-radius, 8px);
+}
+.rounded-tables table:not(:has([rowspan])) tr:last-of-type td:first-of-type {
+  border-bottom-left-radius: var(--rounded-tables-radius, 8px);
+}
+.rounded-tables table:not(:has([rowspan])) tr:last-of-type td:last-of-type {
+  border-bottom-right-radius: var(--rounded-tables-radius, 8px);
+}
+
 
 /** Custom Stacked Panes **/
 
