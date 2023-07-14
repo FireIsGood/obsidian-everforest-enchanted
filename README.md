@@ -27,7 +27,7 @@ You can get extra customization through the [Style Settings](https://github.com/
 ### Themes
 
 |                 Dark                  |                 Light                  |
-|:-------------------------------------:|:--------------------------------------:|
+| :-----------------------------------: | :------------------------------------: |
 |     ![](asssets/theme%20dark.png)     |     ![](asssets/theme%20light.png)     |
 | ![](asssets/theme%20dark%20image.png) | ![](asssets/theme%20light%20image.png) |
 
@@ -36,7 +36,7 @@ You can get extra customization through the [Style Settings](https://github.com/
 A full list of styles can be found at [image styling](image_styling.md).
 
 |                  Dark                  |                  Light                  |
-|:--------------------------------------:|:---------------------------------------:|
+| :------------------------------------: | :-------------------------------------: |
 |     ![](asssets/images%20dark.png)     |     ![](asssets/images%20light.png)     |
 | ![](asssets/multi%20images%20dark.png) | ![](asssets/multi%20images%20light.png) |
 | ![](asssets/float%20images%20dark.png) | ![](asssets/float%20images%20light.png) |
@@ -44,13 +44,13 @@ A full list of styles can be found at [image styling](image_styling.md).
 ### Improved and Custom Callouts
 
 |               Dark               |               Light               |
-|:--------------------------------:|:---------------------------------:|
+| :------------------------------: | :-------------------------------: |
 | ![](asssets/callouts%20dark.png) | ![](asssets/callouts%20light.png) |
 
 ### Code block Language Labels
 
 |                Dark                |                Light                |
-|:----------------------------------:|:-----------------------------------:|
+| :--------------------------------: | :---------------------------------: |
 | ![](asssets/codeblocks%20dark.png) | ![](asssets/codeblocks%20light.png) |
 
 ## Custom Background Images
