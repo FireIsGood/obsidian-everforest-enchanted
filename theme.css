@@ -1428,8 +1428,8 @@ img {
 }
 
 /* Makes multiple images on the same line appear in a flex grid */
-.cm-line:not(.cm-active):has(.image-embed ~ .image-embed, img:not(.cm-widgetBuffer) ~ img:not(.cm-widgetBuffer)),
-p:has(.image-embed ~ .image-embed, img ~ img) {
+.cm-line:not(.cm-active):has(.image-embed ~ .image-embed, img:not(.cm-widgetBuffer) ~ img:not(.cm-widgetBuffer)):not(>[alt="inline"]),
+p:has(.image-embed ~ .image-embed, img ~ img):not(>[alt="inline"]) {
   display: flex;
   gap: 0.5rem;
 }
@@ -1437,16 +1437,21 @@ p:has(.image-embed ~ .image-embed, img ~ img) {
   display: none !important;
 }
 /* Makes a highlighted line shrink the image */
-:root:root .cm-line.cm-active > :is(.image-embed, img) {
+:root:root .cm-line.cm-active > :is(.image-embed:not([alt="inline"]), img:not([alt="inline"])) {
   width: 100px;
   display: inline-block;
 }
 /* Centers the image if it is modified */
-:root:root .cm-line:not(.cm-active) > .image-embed,
-p > .image-embed {
+:root:root .cm-line:not(.cm-active) > .image-embed:not([alt="inline"]),
+p > .image-embed:not([alt="inline"]) {
   display: flex;
   place-items: center;
   flex-direction: column;
+}
+
+/* Disable changes if images have the alt text is exactly inline */
+img[alt="inline"] {
+  display: inline !important;
 }
 
 /*
@@ -1547,23 +1552,23 @@ img[src^="http"][alt~="blur"]:hover {
 }
 
 /* Alt text as caption under image */
-body:not(.no-image-alttext-caption) .image-embed:not([alt*=".png"], [alt*=".gif"], [alt*=".jpg"], [alt*=".jpeg"], [alt*=".tiff"], [alt*=".avif"], [alt*=".webp"])::after {
+body:not(.no-image-alttext-caption) .image-embed:not([alt*=".png"], [alt*=".gif"], [alt*=".jpg"], [alt*=".jpeg"], [alt*=".tiff"], [alt*=".avif"], [alt*=".webp"], [alt="inline"])::after {
   display: block;
   content: attr(alt);
   color: var(--text-muted);
   margin-inline: auto;
   text-align: center;
 }
-body:not(.no-image-alttext-caption) .image-embed:not([alt*=".png"], [alt*=".gif"], [alt*=".jpg"], [alt*=".jpeg"], [alt*=".tiff"], [alt*=".avif"], [alt*=".webp"], [width])::after {
+body:not(.no-image-alttext-caption) .image-embed:not([alt*=".png"], [alt*=".gif"], [alt*=".jpg"], [alt*=".jpeg"], [alt*=".tiff"], [alt*=".avif"], [alt*=".webp"], [alt="inline"], [width])::after {
   width: calc(var(--img-width, 100) / 100 * min(100%, var(--file-line-width)));
 }
-body:not(.no-image-alttext-caption) .markdown-reading-view .image-embed[src~="float"]:not([alt*=".png"], [alt*=".gif"], [alt*=".jpg"], [alt*=".jpeg"], [alt*=".tiff"], [alt*=".avif"], [alt*=".webp"], [width])::after {
+body:not(.no-image-alttext-caption) .markdown-reading-view .image-embed[src~="float"]:not([alt*=".png"], [alt*=".gif"], [alt*=".jpg"], [alt*=".jpeg"], [alt*=".tiff"], [alt*=".avif"], [alt*=".webp"], [alt="inline"], [width])::after {
   width: calc(var(--img-width, 100) / 100 * var(--file-line-width));
 }
-body:not(.no-image-alttext-caption) .image-embed:not([alt*=".png"], [alt*=".gif"], [alt*=".jpg"], [alt*=".jpeg"], [alt*=".tiff"], [alt*=".avif"], [alt*=".webp"], [width])[src~="left"]::after {
+body:not(.no-image-alttext-caption) .image-embed:not([alt*=".png"], [alt*=".gif"], [alt*=".jpg"], [alt*=".jpeg"], [alt*=".tiff"], [alt*=".avif"], [alt*=".webp"], [alt="inline"], [width])[src~="left"]::after {
   margin-inline: 0 auto;
 }
-body:not(.no-image-alttext-caption) .image-embed:not([alt*=".png"], [alt*=".gif"], [alt*=".jpg"], [alt*=".jpeg"], [alt*=".tiff"], [alt*=".avif"], [alt*=".webp"], [width])[src~="right"]::after {
+body:not(.no-image-alttext-caption) .image-embed:not([alt*=".png"], [alt*=".gif"], [alt*=".jpg"], [alt*=".jpeg"], [alt*=".tiff"], [alt*=".avif"], [alt*=".webp"], [alt="inline"], [width])[src~="right"]::after {
   margin-inline: auto 0;
 }
 
