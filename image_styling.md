@@ -1,5 +1,17 @@
 # Image styling syntax
 
+## Quick Note about Inline Images
+
+Inline images are broken by default due to how all images are centered. As a result, putting images with text will be displayed on their own line.
+
+To fix this, you need to set the alt text to `inline`:
+
+```md
+![[example-image.png|inline|24]] and some text
+```
+
+Note that you cannot have any other alt text or spaces.
+
 ## Format and Captions
 
 Modifications are placed after a `#` symbol followed by a space after the link. Remote images can also be modified, but follow a slightly different syntax and are a bit bugged in the current release.
