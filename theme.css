@@ -794,6 +794,10 @@ div:has(h1)+div p:has(.tag) {
 .markdown-embed[alt~="no-title"] .markdown-preview-section > :is(.mod-header, .mod-header + div:has(.frontmatter)) + div:has(h1,h2,h3,h4,h5,h6) {
   display: none;
 }
+/* Removes the embed icon */
+.markdown-embed[alt~="no-link"] .markdown-embed-link {
+  display: none;
+}
 
 
 /** YAML **/
