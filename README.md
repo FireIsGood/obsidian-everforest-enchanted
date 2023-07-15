@@ -36,11 +36,9 @@ You can get extra customization through the [Style Settings](https://github.com/
 
 A full list of styles can be found at [image styling](image_styling.md).
 
-|                  Dark                  |                  Light                  |
-| :------------------------------------: | :-------------------------------------: |
-|     ![](asssets/images%20dark.png)     |     ![](asssets/images%20light.png)     |
-| ![](asssets/multi%20images%20dark.png) | ![](asssets/multi%20images%20light.png) |
-| ![](asssets/float%20images%20dark.png) | ![](asssets/float%20images%20light.png) |
+|              Dark              |              Light              |
+| :----------------------------: | :-----------------------------: |
+| ![](asssets/images%20dark.png) | ![](asssets/images%20light.png) |
 
 ### Embed Styling
 
