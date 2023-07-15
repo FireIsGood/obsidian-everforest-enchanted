@@ -16,6 +16,7 @@ You can get extra customization through the [Style Settings](https://github.com/
 - [Image styling](image_styling.md) based on ID
   - Alt text as image captions
   - Image grids for multiple images placed inline
+- [Embed styling](embed_styling.md) based on alt text
 - Improved and custom callouts
 - Code block Language Labels
 - [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) for extra features
@@ -40,6 +41,14 @@ A full list of styles can be found at [image styling](image_styling.md).
 |     ![](asssets/images%20dark.png)     |     ![](asssets/images%20light.png)     |
 | ![](asssets/multi%20images%20dark.png) | ![](asssets/multi%20images%20light.png) |
 | ![](asssets/float%20images%20dark.png) | ![](asssets/float%20images%20light.png) |
+
+### Embed Styling
+
+A full list of styles can be found at [embed styling](embed_styling.md).
+
+|              Dark              |              Light              |
+| :----------------------------: | :-----------------------------: |
+| ![](asssets/embeds%20dark.png) | ![](asssets/embeds%20light.png) |
 
 ### Improved and Custom Callouts
 
