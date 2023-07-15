@@ -1433,8 +1433,8 @@ img {
 }
 
 /* Makes multiple images on the same line appear in a flex grid */
-.cm-line:not(.cm-active):has(.image-embed ~ .image-embed, img:not(.cm-widgetBuffer) ~ img:not(.cm-widgetBuffer)):not(>[alt="inline"]),
-p:has(.image-embed ~ .image-embed, img ~ img):not(>[alt="inline"]) {
+.cm-line:not(.cm-active):has(.image-embed:not([alt="inline"]) ~ .image-embed, img:not(.cm-widgetBuffer, [alt="inline"]) ~ img:not(.cm-widgetBuffer)),
+p:has(.image-embed:not([alt="inline"]) ~ .image-embed, img:not([alt="inline"]) ~ img) {
   display: flex;
   gap: 0.5rem;
 }
