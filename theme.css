@@ -791,7 +791,7 @@ div:has(h1)+div p:has(.tag) {
   padding: 0;
 }
 /* Removes the first title */
-.markdown-embed[alt~="no-title"] .markdown-preview-section > .mod-header + div:has(h1,h2,h3,h4,h5,h6) {
+.markdown-embed[alt~="no-title"] .markdown-preview-section > :is(.mod-header, .mod-header + div:has(.frontmatter)) + div:has(h1,h2,h3,h4,h5,h6) {
   display: none;
 }
 
