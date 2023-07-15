@@ -1180,11 +1180,11 @@ body.highlighted-folders .nav-folder:not(.is-collapsed, .mod-root) {
 
 /* External links */
 .external-link-remove-icon .cm-formatting.external-link {
-    display: none;
+  display: none;
 }
 .external-link-remove-icon a.external-link {
-    background-image: none;
-    padding-right: unset;
+  background-image: none;
+  padding-right: unset;
 }
 
 /* Centered tables */
