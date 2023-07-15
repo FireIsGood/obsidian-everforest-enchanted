@@ -67,15 +67,17 @@ External and local images can be used. More information can be found at [custom 
 The opacity has been lowered to 50% for these examples, by default it is 85%. To get these images in your own vault, see the link above for the image urls.
 
 > ![](asssets/theme%20dark%20image.png)
-> Photo by Pixabay from Pexels: https://www.pexels.com/photo/green-tree-268533/
+> Photo by Pixabay from Pexels: <https://www.pexels.com/photo/green-tree-268533/>
+<!-- markdownlint-disable-next-line no-blanks-blockquote -->
 
 > ![](asssets/theme%20light%20image.png)
-> Photo by Alissa Nabiullina: https://www.pexels.com/photo/selective-focus-photography-of-white-petaled-flower-plant-997567/
+> Photo by Alissa Nabiullina: <https://www.pexels.com/photo/selective-focus-photography-of-white-petaled-flower-plant-997567/>
 
 ### CSS Classes
 
 Add them to the YAML frontmatter to activate custom features.
 
+<!-- markdownlint-disable-next-line fenced-code-language -->
 ```
 ---
 cssclass: some-class, another-class
