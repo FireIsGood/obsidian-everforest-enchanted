@@ -1202,7 +1202,7 @@ body.highlighted-folders .nav-folder:not(.is-collapsed, .mod-root) {
   border-collapse: separate;
   border-spacing: 0;
 }
-.rounded-tables table:not(:has([rowspan])) :is(td, th) {
+.rounded-tables :where(table:not(:has([rowspan]))) :is(td, th) {
   border-width: 0 var(--table-border-width) var(--table-border-width) 0;
 }
 .rounded-tables table:not(:has([rowspan])) th:first-of-type {
