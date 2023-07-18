@@ -37,10 +37,13 @@ These are provided in addition to the [default sizing](https://help.obsidian.md/
 | keyword | description           |
 | ------- | --------------------- |
 | `1/4`   | Fit 25% of the screen |
+| `2/5`   | Fit 22% of the screen |
 | `1/3`   | Fit 33% of the screen |
 | `1/2`   | Fit 50% of the screen |
+| `3/5`   | Fit 60% of the screen |
 | `2/3`   | Fit 66% of the screen |
 | `3/4`   | Fit 75% of the screen |
+| `4/5`   | Fit 80% of the screen |
 
 ## Alignment
 
