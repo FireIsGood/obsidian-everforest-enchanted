@@ -958,6 +958,17 @@ settings:
     default: 0.7
     format: px
 -
+    id: image-embed-settings
+    title: Image Embed
+    type: heading
+    level: 2
+    collapsed: true
+-
+    id: image-embed-enable-zoom
+    title: Image Embeds - Enable Zoom
+    description: Enable zooming in on images by clicking on them. Just like minimal!
+    type: class-toggle
+-
     id: link-settings
     title: Links
     type: heading
@@ -1216,6 +1227,35 @@ body.highlighted-folders .nav-folder:not(.is-collapsed, .mod-root) {
 }
 .rounded-tables table:not(:has([rowspan])) tr:last-of-type td:last-of-type {
     border-bottom-right-radius: var(--rounded-tables-radius, 8px);
+}
+
+/* Image zoom */
+
+body.image-embed-enable-zoom .image-embed:active {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    max-height: calc(100% - 120px);
+    max-width: 100%;
+    margin: auto 0 !important;
+    inset: 0;
+    object-fit: contain;
+    z-index: 1;
+    cursor: zoom-out;
+    animation: menu-in var(--anim-duration-superfast) ease-out forwards;
+}
+body.image-embed-enable-zoom .image-embed:active img {
+    pointer-events: none;
+    padding: 0;
+    /* max-height: 60%; */
+    width: min(90%, calc(var(--readable-line-length-custom, 700px) + 120px)) !important;
+    /* max-height: 95vh; */
+    object-fit: contain;
+}
+body.image-embed-enable-zoom .image-embed:active::after {
+    margin-inline: 0 !important;
+    padding-inline: 1ch;
+    background-color: var(--background-primary);
 }
 
 
