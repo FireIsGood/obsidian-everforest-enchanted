@@ -622,6 +622,12 @@ a.external-link:hover {
     font-size: 19px;
 }
 
+/* Fix ordered list checkboxes */
+ol > li.task-list-item.is-checked[data-task="x"] {
+    text-decoration: var(--checklist-done-decoration);
+    color: var(--checklist-done-color);
+}
+
 /* Indentation lines*/
 .cm-indent::before,
 ul::before,
