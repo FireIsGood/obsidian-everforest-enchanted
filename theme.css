@@ -1541,7 +1541,7 @@ img[alt="inline"] {
 .image-embed > img:not([width]),
 span > img[src^="http"]:not([width]) {
     display: block;
-    width: calc(var(--img-width, 100) / 100 * min(100%, var(--file-line-width)));
+    width: calc(var(--img-width) / 100 * min(100%, var(--file-line-width)));
     margin-right: auto;
 }
 .image-embed[src~="1/4"],
