@@ -1261,7 +1261,7 @@ body.image-embed-enable-zoom .image-embed:active {
 body.image-embed-enable-zoom .image-embed:active img {
     width: var(--zoom-embed-size) !important;
     max-height: 100%;
-    margin: 0;
+    margin: 0 !important;
     user-select: none;
     object-fit: contain;
 }
