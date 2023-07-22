@@ -1586,6 +1586,12 @@ img[src^="http"][alt~="3/4"] {
 img[src^="http"][alt~="4/5"] {
     --img-width: 80;
 }
+.image-embed[src~="1/1"],
+.image-embed[src~="full"],
+img[src^="http"][alt~="1/1"],
+img[src^="http"][alt~="full"] {
+    --img-width: 100;
+}
 
 /* Alignment */
 .image-embed[src~="left"] > img,
