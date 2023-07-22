@@ -970,6 +970,11 @@ settings:
     level: 2
     collapsed: true
 -
+    id: image-embed-stretch
+    title: Image Embeds - Stretch all images to fit the full width
+    description: Makes all images stretch to fit the full width by default. Added as an option to revert behavior.
+    type: class-toggle
+-
     id: image-embed-enable-zoom
     title: Image Embeds - Enable zoom
     description: Enable zooming in on images by clicking on them. Just like minimal!
@@ -1536,6 +1541,11 @@ img[alt="inline"] {
     This snippet adds modification in the ![[image link# modification|caption]] format
     Excalidraw is not supported as it has its own format of using alt text set max width in pixels
 */
+
+/* Style setting to revert to old behavior */
+.image-embed-stretch {
+    --img-width: 100;
+}
 
 /* Sizing */
 .image-embed > img:not([width]),
