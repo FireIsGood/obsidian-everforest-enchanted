@@ -435,7 +435,8 @@ button:hover {
 .cm-s-obsidian span.cm-strong,
 strong,
 .cm-s-obsidian span.cm-em,
-em {
+em,
+.language-markdown :is(.bold, .italic) > * {
     color: var(--fg-purple);
 }
 
@@ -970,11 +971,6 @@ settings:
     level: 2
     collapsed: true
 -
-    id: image-embed-stretch
-    title: Image Embeds - Stretch all images to fit the full width
-    description: Makes all images stretch to fit the full width by default. Added as an option to revert behavior.
-    type: class-toggle
--
     id: image-embed-enable-zoom
     title: Image Embeds - Enable zoom
     description: Enable zooming in on images by clicking on them. Just like minimal!
@@ -984,6 +980,11 @@ settings:
     title: Image Embeds - Disable dragging
     description: Stop zoomed images from being dragged around. This breaks the blur keyword.
     type: class-toggle
+-
+        id: image-embed-stretch
+        title: Image Embeds - Stretch all images to fit the full width
+        description: Makes all images stretch to fit the full width by default. Added as an option to revert behavior.
+        type: class-toggle
 -
     id: link-settings
     title: Links
