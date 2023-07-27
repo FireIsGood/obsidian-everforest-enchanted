@@ -1512,12 +1512,19 @@ img {
 }
 
 /* Makes multiple images on the same line appear in a flex grid */
-.cm-line:not(.cm-active):has(.image-embed:not([alt="inline"]) ~ .image-embed, img:not(.cm-widgetBuffer, [alt="inline"]) ~ img:not(.cm-widgetBuffer)),
-p:has(.image-embed:not([alt="inline"]) ~ .image-embed, img:not([alt="inline"]) ~ img) {
+.cm-line:not(.cm-active):has(.image-embed ~ .image-embed, img:not(.cm-widgetBuffer) ~ img:not(.cm-widgetBuffer)):not(:has([alt="inline"])),
+p:has(.image-embed ~ .image-embed, img ~ img):not(:has([alt="inline"])) {
     display: flex;
     gap: 0.5rem;
+    align-items: end;
 }
-.cm-line:not(.cm-active):has(.image-embed ~ .image-embed, img:not(.cm-widgetBuffer) ~ img:not(.cm-widgetBuffer)) :is(.cm-widgetBuffer,span) {
+.cm-line:not(.cm-active):has(.image-embed ~ .image-embed, img:not(.cm-widgetBuffer) ~ img:not(.cm-widgetBuffer)):not(:has([alt="inline"])) > .image-embed,
+p:has(.image-embed ~ .image-embed, img ~ img):not(:has([alt="inline"])) > .image-embed {
+    flex: 1 1 0;
+    display: flex;
+    justify-content: center;
+}
+.cm-line:not(.cm-active):has(.image-embed ~ .image-embed, img:not(.cm-widgetBuffer) ~ img:not(.cm-widgetBuffer)) > .cm-widgetBuffer {
     display: none !important;
 }
 /* Makes a highlighted line shrink the image */
