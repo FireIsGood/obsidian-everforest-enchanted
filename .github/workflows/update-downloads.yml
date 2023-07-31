@@ -18,8 +18,8 @@ jobs:
         
       - name: Modifiy the specific files using scripts
         run: |
-          DL=`curl "https://releases.obsidian.md/stats/theme" | jq '."Everforest Enchanted".download' | rev | cut -c 4- | rev`k
-          echo "Updaing downloads to $DL"
+          DL=`curl "https://releases.obsidian.md/stats/theme" | jq '."Everforest Enchanted".download' | xargs numfmt --grouping`
+          echo "Updaing downloads to '$DL'"
           sed -i "/^\!\[Static Badge\]/c![Static Badge](https://img.shields.io/badge/Downloads-$DL-7c3aed?style=plastic&logo=obsidian)" README.md
           
           echo "Email is ommitted on purpose!"
