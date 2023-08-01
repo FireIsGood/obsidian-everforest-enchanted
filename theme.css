@@ -704,10 +704,6 @@ input.task-list-item-checkbox:checked::after {
     --line-height-tight: 1.375;
 }
 
-/* Fix margins in source mode */
-.markdown-source-view table {
-    margin-block: 0;
-}
 /* Fix table margin collapse bug */
 div:has(>table) {
     overflow: unset !important;
