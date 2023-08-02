@@ -47,7 +47,7 @@
     --checkbox-size: calc(var(--font-text-size) - 2px);
     --checkbox-radius: 25%;
 
-    --list-indent: var(--list-indent-custom, 24px); /* Adjusted in Style Settings */
+    --list-indent: var(--list-indent-custom, 18px); /* Adjusted in Style Settings */
     --list-spacing: 0;
     --list-bullet-size: 6px;
 
@@ -1015,9 +1015,9 @@ settings:
 -
     id: list-indent-custom
     title: Lists - List indent size
-    description: The size of list item indents. The default theme uses 32 px.
+    description: The size of list item indents. The default value of 18px mimics the appearance of editing mode. If you want a more default experience, the default theme uses 32 px.
     type: variable-number
-    default: 24
+    default: 18
     format: px
 -
     id: table-settings
