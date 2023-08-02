@@ -623,6 +623,20 @@ a.external-link:hover {
     font-size: 19px;
 }
 
+/* Fix list bullets and indentation lines offset for reading mode */
+.markdown-rendered .list-bullet {
+    margin-left: -11px;
+}
+:root .show-indentation-guide .has-list-bullet::before {
+    left: -11px;
+}
+.task-list-item {
+    margin-left: 6px;
+}
+.show-indentation-guide .contains-task-list.has-list-bullet::before {
+    margin-left: -6px;
+}
+
 /* Fix ordered list checkboxes */
 ol > li.task-list-item.is-checked[data-task="x"] {
     text-decoration: var(--checklist-done-decoration);
