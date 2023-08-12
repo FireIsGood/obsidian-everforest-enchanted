@@ -1,6 +1,6 @@
 # Everforest Enchanted
 
-![Static Badge](https://img.shields.io/badge/Downloads-3258-7c3aed?style=plastic&logo=obsidian)
+![Static Badge](https://img.shields.io/badge/Downloads-3385-7c3aed?style=plastic&logo=obsidian)
 ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/FireIsGood/obsidian-everforest-enchanted/main?style=plastic)
 
 An Obsidian port of the [Everforest](https://github.com/sainnhe/everforest) theme family. Heavily inspired by [another project of a similar name](https://github.com/0xGlitchbyte/obsidian_everforest) with my custom additions.
