@@ -1192,6 +1192,7 @@ settings:
     padding-bottom: 400px;
 }
 [data-id="everforest-enchanted-theme"] + .style-settings-container .setting-item-heading {
+    margin-top: 0;
     margin-bottom: 0;
 }
 [data-id="everforest-enchanted-theme"] + .style-settings-container .setting-item-heading + .style-settings-container {
