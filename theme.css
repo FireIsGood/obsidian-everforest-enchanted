@@ -983,7 +983,7 @@ settings:
 -
     id: image-embed-enable-zoom
     title: Image Embeds - Enable zoom
-    description: Enable zooming in on images by clicking on them. Just like minimal!
+    description: Enable zooming in on images by clicking on them. Just like minimal! Note that mobile Obsidian already has this.
     type: class-toggle
 -
     id: image-embed-no-drag
