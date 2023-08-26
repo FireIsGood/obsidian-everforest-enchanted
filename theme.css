@@ -40,7 +40,7 @@
 /**** Implementation ****/
 
 
-:root body:is(.theme-dark, .theme-light) {
+:root body:where(.theme-dark, .theme-light) {
 
     /** Miscellaneous **/
 
