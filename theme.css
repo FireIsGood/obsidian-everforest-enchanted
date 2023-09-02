@@ -78,12 +78,18 @@
     --text-faint:               var(--grey1);
     --text-selection:           var(--bg-visual);
 
-    --text-link:                var(--header-aqua);
-    --text-link-hover:          var(--fg-aqua);
-    --text-link-external:       var(--header-blue);
-    --text-link-external-hover: var(--fg-blue);
-    --text-accent:              var(--header-blue);
-    --text-accent-hover:        var(--header-purple);
+    --link-color:                  var(--header-aqua);
+    --link-color-hover:            var(--fg-aqua);
+    --link-external-color:         var(--header-blue);
+    --link-external-color-hover:   var(--fg-blue);
+    --text-accent:                 var(--header-blue);
+    --text-accent-hover:           var(--header-purple);
+
+    --link-unresolved-decoration-style:       dashed;
+    --link-unresolved-color:                  var(--header-blue);
+    --link-unresolved-color-hover:            var(--header-purple); /* Non-standard */
+    --link-unresolved-decoration-color:       var(--bg-red);
+    --link-unresolved-decoration-color-hover: var(--fg-red); /* Non-standard */
 
     --code-header: #0004;
     --code-background: var(--bg-dim);
@@ -573,38 +579,11 @@ pre.language-rust::after { content: "Rust" }
 
 /** Links **/
 
-.cm-s-obsidian span.cm-hmd-internal-link {
-    color: var(--text-link);
-}
-
-/* Wiki links */
-a.internal-link {
-    color: var(--text-link);
-}
-.cm-s-obsidian span.cm-hmd-internal-link:hover,
-a.internal-link:hover {
-    color: var(--text-link-hover)
-}
-
-/* Markdown links */
-a.external-link {
-    color: var(--text-link-external);
-}
-.markdown-source-view.mod-cm6 .cm-link .cm-underline:hover,
-.markdown-source-view.mod-cm6 .cm-url .cm-underline:hover,
-a.external-link:hover {
-    color: var(--text-link-external-hover);
-}
-
 /* Unresolved links */
-:root:root a.is-unresolved,
-.markdown-source-view.mod-cm6 span.is-unresolved > span.cm-underline {
-    --link-unresolved-decoration-style: dashed;
-    text-decoration-color: var(--bg-red);
-}
 :root:root a.is-unresolved:hover,
-.markdown-source-view.mod-cm6 span.is-unresolved > span.cm-underline:hover {
-    text-decoration-color: var(--fg-red);
+.markdown-source-view.mod-cm6 .is-unresolved .cm-underline:hover {
+    text-decoration-color: var(--link-unresolved-decoration-color-hover);
+    color: var(--link-unresolved-color-hover);
 }
 .cm-s-obsidian span.cm-hmd-internal-link:hover {
     text-decoration: none;
