@@ -17,6 +17,7 @@
 *?   - Links
 *?   - Lists
 *?   - Blockquotes
+*?   - Embeds
 *?   - Tables
 *?   - Tags
 *?   - Embeds
@@ -681,6 +682,9 @@ input.task-list-item-checkbox:checked::after {
     color: transparent;
     left: -2px;
 }
+
+
+/** Embeds **/
 
 /* Reduce embed edit button opacity */
 .markdown-source-view.mod-cm6 .cm-embed-block:hover .edit-block-button {
