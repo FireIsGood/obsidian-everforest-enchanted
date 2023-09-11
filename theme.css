@@ -686,6 +686,11 @@ input.task-list-item-checkbox:checked::after {
 
 /** Embeds **/
 
+.cm-embed-block {
+    box-shadow: 0 4px 14px -2px hsla(0,0%,0%,0%);
+    transition: box-shadow var(--anim-duration-fast) ease-out;
+}
+
 /* Reduce embed edit button opacity */
 .markdown-source-view.mod-cm6 .cm-embed-block:hover .edit-block-button {
     opacity: 0.5;
