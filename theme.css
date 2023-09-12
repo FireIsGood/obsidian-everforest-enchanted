@@ -304,22 +304,21 @@
 }
 
 /* Make gutters not affect the content flow for unstacked tabs */
-.workspace-tabs:not(.mod-stacked) .mod-cm6.is-readable-line-width:not(.full-width) .cm-contentContainer,
-body:not(.stacked-panes-gutter-disable-float) .workspace-tabs.mod-stacked .mod-cm6.is-readable-line-width .cm-contentContainer {
-    display: grid !important;
-}
-.workspace-tabs:not(.mod-stacked) .mod-cm6.is-readable-line-width:not(.full-width) :is(.cm-gutters,.cm-content),
-body:not(.stacked-panes-gutter-disable-float) .workspace-tabs.mod-stacked .mod-cm6.is-readable-line-width :is(.cm-gutters,.cm-content) {
-    grid-area: 1 / -1;
-}
-.workspace-tabs:not(.mod-stacked) .mod-cm6.is-readable-line-width:not(.full-width) .cm-content,
-body:not(.stacked-panes-gutter-disable-float) .workspace-tabs.mod-stacked .mod-cm6.is-readable-line-width .cm-content {
-    width: unset !important;
-}
-.workspace-tabs:not(.mod-stacked) .mod-cm6.is-readable-line-width:not(.full-width) .cm-gutters,
-body:not(.stacked-panes-gutter-disable-float) .workspace-tabs.mod-stacked .mod-cm6.is-readable-line-width .cm-gutters {
-    justify-self: left;
-    translate: -100% 0;
+.workspace-tabs:not(.mod-stacked) .mod-cm6.is-readable-line-width:not(.full-width),
+body:not(.stacked-panes-gutter-disable-float) .workspace-tabs.mod-stacked .mod-cm6.is-readable-line-width {
+    .cm-contentContainer {
+        display: grid !important;
+    }
+    :is(.cm-gutters,.cm-content) {
+        grid-area: 1 / -1;
+    }
+    .cm-content {
+        width: unset !important;
+    }
+    .cm-gutters {
+        justify-self: left;
+        translate: -100% 0;
+    }
 }
 
 /* Smaller margins for stacked tabs */
