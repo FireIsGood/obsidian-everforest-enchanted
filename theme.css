@@ -353,6 +353,11 @@ div ul.has-list-bullet ul.has-list-bullet .collapse-indicator {
     box-shadow: 0 4px 0 var(--text-highlight-bg);
 }
 
+/* Fix gutter number vertical cutoff */
+:root .cm-lineNumbers .cm-gutterElement {
+    line-height: normal !important;
+}
+
 
 /** Menus **/
 
@@ -1830,11 +1835,6 @@ hr.page-break::before {
         visibility: hidden;
         page-break-after: always;
     }
-}
-
-/* Fix gutter number vertical cutoff */
-.ͼ1 .cm-lineNumbers .cm-gutterElement {
-    line-height: normal !important;
 }
 
 /* Fix weird ol bug */
