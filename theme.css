@@ -370,11 +370,11 @@ button:hover {
 
 /* Modal transitions */
 .modal-container {
-    animation: modal-in var(--anim-duration-superfast) forwards;
+    animation: modal-in var(--anim-duration-superfast);
 }
 .modal,
 .prompt {
-    animation: menu-in var(--anim-duration-superfast) forwards;
+    animation: menu-in var(--anim-duration-superfast);
 }
 @keyframes menu-in {
     0% {translate: 0 4px}
