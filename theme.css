@@ -369,18 +369,18 @@ button:hover {
 }
 
 /* Modal transitions */
-.modal-container {
-    animation: modal-in var(--anim-duration-superfast);
+body:not(.disable-menu-animations, .enable-menu-blur) .modal-bg {
+    animation: fade-in var(--anim-duration-superfast) linear;
 }
-.modal,
-.prompt {
-    animation: menu-in var(--anim-duration-superfast);
+body:not(.disable-menu-animations) :is(.modal, .prompt) {
+    animation: fade-in var(--anim-duration-superfast),
+        slide-in var(--anim-duration-superfast) ease-out;
 }
-@keyframes menu-in {
+@keyframes slide-in {
     0% {translate: 0 4px}
     100% {translate: 0 0}
 }
-@keyframes modal-in {
+@keyframes fade-in {
     0% {opacity: 0}
     100% {opacity: 1}
 }
@@ -947,6 +947,29 @@ settings:
     description: Disables custom line number floating in the stacked tab mode. This makes the line numbers shift over the content in stacked tabs. Use this if your panes are too thin to show them.
     type: class-toggle
 -
+    id: menu-blur-settings
+    title: Menu modals
+    type: heading
+    level: 2
+    collapsed: true
+-
+    id: disable-menu-animations
+    title: Disable menu animations
+    description: Disables the floating-up animation of modal menus (e.g. settings, command palette).
+    type: class-toggle
+-
+    id: enable-menu-blur
+    title: Enable menu blur
+    description: Blur the content behind modal menus (e.g. settings, command palette).
+    type: class-toggle
+-
+    id: menu-blur-radius
+    title: Menu blur radius
+    description: The amount to blur in pixels.
+    type: variable-number
+    default: 5
+    format: px
+-
     id: element-settings
     title: Elements
     description: Lists, tables, canvas
@@ -1205,6 +1228,12 @@ settings:
 body.highlighted-folders .nav-folder:not(.is-collapsed, .mod-root) {
     border-radius: var(--radius-s);
     background-color: rgba(var(--mono-rgb-100), 0.05);
+}
+
+/* Menu blur */
+body:not(.is-translucent).enable-menu-blur .modal-bg {
+    backdrop-filter: blur(var(--menu-blur-radius, 5px));
+    opacity: 1 !important;
 }
 
 /** Element Settings **/
