@@ -499,7 +499,7 @@ pre {
 
 /* Codeblock top bars */
 pre[class^="language-"] {
-    padding-top: calc(var(--size-4-2) + var(--code-size) * var(--line-height-normal));
+    padding-top: calc(var(--size-4-2) + var(--code-size) * var(--line-height-normal) + 1px);
 }
 pre[class^="language-"]::before {
     content: "";
