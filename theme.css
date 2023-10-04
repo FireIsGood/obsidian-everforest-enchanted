@@ -667,7 +667,7 @@ input.task-list-item-checkbox:checked::after {
 
 .markdown-preview-view blockquote {
     padding-block: 0.25em;
-    padding-left: 17px;
+    padding-left: 1.7ch;
 }
 
 /* Make blockquotes work in source view */
