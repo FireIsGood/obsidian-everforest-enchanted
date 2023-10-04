@@ -611,7 +611,7 @@ pre.language-rust::after { content: "Rust" }
 .markdown-rendered .list-bullet {
     margin-left: -11px;
 }
-:root .show-indentation-guide .has-list-bullet::before {
+:root .show-indentation-guide li :is(ul, ol)::before {
     left: -11px;
 }
 .task-list-item {
