@@ -1556,7 +1556,8 @@ p:has(.image-embed ~ .image-embed, img ~ img):not(:has([alt="inline"])) > .image
     display: flex;
     justify-content: center;
 }
-.cm-line:not(.cm-active):has(.image-embed ~ .image-embed, img:not(.cm-widgetBuffer) ~ img:not(.cm-widgetBuffer)) > .cm-widgetBuffer {
+.cm-line:not(.cm-active):has(.image-embed ~ .image-embed, img:not(.cm-widgetBuffer) ~ img:not(.cm-widgetBuffer)) > .cm-widgetBuffer,
+.cm-widgetBuffer + span[contenteditable="false"] {
     display: none !important;
 }
 /* Makes a highlighted line shrink the image */
