@@ -1876,3 +1876,8 @@ ol > li > p {
 .markdown-preview-view .embedded-backlinks {
     margin-top: 100px;
 }
+
+/* Fix specific word break difference */
+:root .cm-lineWrapping {
+    white-space: unset;
+}
