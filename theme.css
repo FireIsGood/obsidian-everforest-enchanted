@@ -1065,7 +1065,7 @@ settings:
 -
     id: extra-appearance-settings
     title: Extras
-    description: Stacked pane count, background image
+    description: Stacked pane count, background image, visual parity
     type: heading
     level: 1
     collapsed: true
@@ -1084,7 +1084,7 @@ settings:
     markdown: true
 -
     id: custom-stacked-panes-enabled
-    title: Enable Custom Stacked Panes
+    title: Custom Stacked Panes
     description: Changes stacked panes to fit a certain number on screen instead of using pixel values.
     type: class-toggle
 -
@@ -1197,6 +1197,23 @@ settings:
     id: background-image-pane-view
     title: Pane view
     description: Changes pages to be panes on a transparent background. BEST USED WITH UI OPACITY 0!
+    type: class-toggle
+-   id: visual-parity
+    title: Visual Parity
+    type: heading
+    level: 2
+    collapsed: true
+-
+    id: background-image-description
+    title: Info
+    description: |
+        Changes editing mode to match reading mode visually.
+    type: info-text
+    markdown: true
+-
+    id: visual-parity-enabled
+    title: Visual Parity
+    description: Changes stacked panes to fit a certain number on screen instead of using pixel values.
     type: class-toggle
 
 */
@@ -1424,6 +1441,51 @@ body.background-image-enabled {
 }
 :root .background-image-pane-view .view-header  {
     background-color: var(--background-partially-transparent) !important;
+}
+
+
+/** Visual Parity **/
+body.visual-parity-enabled {
+    --p-spacing: calc(1.5 * var(--font-text-size));
+    --heading-spacing: calc(var(--p-spacing) * 1);
+
+    /* Fix hr elements */
+    .markdown-rendered hr {
+        margin-block: calc(
+            (
+                    var(--font-text-size, 1rem) * var(--line-height-normal) -
+                        var(--hr-thickness)
+                ) / 2 + var(--p-spacing)
+        );
+    }
+
+    /* Fix header top margins */
+    .is-live-preview .cm-content > .HyperMD-header {
+        padding-top: unset;
+    }
+
+    /* Remove top header spacing in live preview */
+    .mod-header + div:has(pre.frontmatter) + div > *,
+    .mod-header + div > * {
+        margin-top: 0 !important;
+    }
+
+    /* Fix collapsed headers in live preview */
+    .HyperMD-header:has(> .is-collapsed) {
+        padding-block: 0 var(--p-spacing);
+    }
+
+    /* Fix blockquotes */
+    :not(blockquote) + blockquote,
+    .cm-line:not(.HyperMD-quote-1) + .HyperMD-quote-1,
+    .HyperMD-quote-1:first-child {
+        padding-top: 0.25em !important;
+    }
+    blockquote:has(+ :not(blockquote)),
+    .HyperMD-quote-1:has(+ .cm-line:not(.HyperMD-quote-1)),
+    .HyperMD-quote-1:last-child {
+        padding-bottom: 0.25em !important;
+    }
 }
 
 
