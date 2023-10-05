@@ -1465,8 +1465,8 @@ body.visual-parity-enabled {
     }
 
     /* Remove top header spacing in live preview */
-    .mod-header + div:has(pre.frontmatter) + div > *,
-    .mod-header + div > * {
+    & .mod-header + div:has(pre.frontmatter) + div > *,
+    & .mod-header + div > * {
         margin-top: 0 !important;
     }
 
@@ -1476,14 +1476,14 @@ body.visual-parity-enabled {
     }
 
     /* Fix blockquotes */
-    :not(blockquote) + blockquote,
-    .cm-line:not(.HyperMD-quote-1) + .HyperMD-quote-1,
-    .HyperMD-quote-1:first-child {
+    & :not(blockquote) + blockquote,
+    & .cm-line:not(.HyperMD-quote-1) + .HyperMD-quote-1,
+    & .HyperMD-quote-1:first-child {
         padding-top: 0.25em !important;
     }
-    blockquote:has(+ :not(blockquote)),
-    .HyperMD-quote-1:has(+ .cm-line:not(.HyperMD-quote-1)),
-    .HyperMD-quote-1:last-child {
+    & blockquote:has(+ :not(blockquote)),
+    & .HyperMD-quote-1:has(+ .cm-line:not(.HyperMD-quote-1)),
+    & .HyperMD-quote-1:last-child {
         padding-bottom: 0.25em !important;
     }
 }
