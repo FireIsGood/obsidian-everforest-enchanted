@@ -1207,7 +1207,7 @@ settings:
     id: background-image-description
     title: Info
     description: |
-        Changes editing mode to match reading mode visually.
+        Changes reading mode to match editing mode visually.
     type: info-text
     markdown: true
 -
