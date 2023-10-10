@@ -9,6 +9,7 @@
 *? 2. General UI
 *?   - Workspace
 *?   - Menus
+*?   - Sidebars
 *?   - Canvas
 *?   - Loading Screen
 *? 4. Markdown
@@ -383,6 +384,15 @@ body:not(.disable-menu-animations) :is(.modal, .prompt) {
 @keyframes fade-in {
     0% {opacity: 0}
     100% {opacity: 1}
+}
+
+
+/** Sidebars **/
+
+/* Stop the scrollbar from causing layout shifts */
+.nav-files-container {
+    scrollbar-gutter: stable;
+    padding-right: var(--size-2-2);
 }
 
 
