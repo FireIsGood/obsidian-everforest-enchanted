@@ -9,7 +9,8 @@
         "ignore": [
           "width: fit-content",
           "text-decoration-thickness",
-          "translate"
+          "translate",
+          "scrollbar-gutter"
         ]
       }
     ]
