@@ -98,6 +98,18 @@
     --code-normal: var(--text-muted);
     --code-inline: var(--fg-blue);
 
+    --code-normal: var(--fg);
+    --code-comment: var(--grey1);
+    --code-function: var(--fg-green);
+    --code-important: var(--fg-red);
+    --code-keyword: var(--fg-blue);
+    --code-operator: var(--fg-orange);
+    --code-property: var(--fg-aqua);
+    --code-punctuation: var(--grey1);
+    --code-string: var(--fg-yellow);
+    --code-tag: var(--fg-orange);
+    --code-value: var(--fg-purple);
+
     --table-background: var(--bg2);
     --table-column-alt-background: unset;
     --table-row-alt-background: var(--bg1);
