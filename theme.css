@@ -1787,26 +1787,38 @@ img[src^="http"][alt~="blur"]:hover {
 }
 
 /* Alt text as caption under image */
-body:not(.no-image-alttext-caption) .image-embed:not([alt*=".png"], [alt*=".gif"], [alt*=".jpg"], [alt*=".jpeg"], [alt*=".tiff"], [alt*=".avif"], [alt*=".webp"], [alt="inline"])::after {
-    display: block;
+body:not(.no-image-alttext-caption)
+    .image-embed:not(
+        [alt*=".png"],
+        [alt*=".gif"],
+        [alt*=".jpg"],
+        [alt*=".jpeg"],
+        [alt*=".tiff"],
+        [alt*=".avif"],
+        [alt*=".webp"],
+        [alt="inline"],
+        [width]
+    )::after {
     content: attr(alt);
+    display: block;
     color: var(--text-muted);
-    margin-inline: auto;
     text-align: center;
+    width: calc(
+        var(--img-width, 100) / 100 * min(100%, var(--file-line-width))
+    );
 }
-body:not(.no-image-alttext-caption) .image-embed:not([alt*=".png"], [alt*=".gif"], [alt*=".jpg"], [alt*=".jpeg"], [alt*=".tiff"], [alt*=".avif"], [alt*=".webp"], [alt="inline"], [width])::after {
-    width: calc(var(--img-width, 100) / 100 * min(100%, var(--file-line-width)));
+/* Align the text boxes correctly */
+.image-embed {
+    &[src~="left"]::after {
+        margin-inline: 0 auto;
+    }
+    &[src~="right"]::after {
+        margin-inline: auto 0;
+    }
+    :root .markdown-preview-view &[src~="float"]::after {
+        width: 100%;
+    }
 }
-body:not(.no-image-alttext-caption) .markdown-reading-view .image-embed[src~="float"]:not([alt*=".png"], [alt*=".gif"], [alt*=".jpg"], [alt*=".jpeg"], [alt*=".tiff"], [alt*=".avif"], [alt*=".webp"], [alt="inline"], [width])::after {
-    width: calc(var(--img-width, 100) / 100 * min(100%, var(--file-line-width)));
-}
-body:not(.no-image-alttext-caption) .image-embed:not([alt*=".png"], [alt*=".gif"], [alt*=".jpg"], [alt*=".jpeg"], [alt*=".tiff"], [alt*=".avif"], [alt*=".webp"], [alt="inline"], [width])[src~="left"]::after {
-    margin-inline: 0 auto;
-}
-body:not(.no-image-alttext-caption) .image-embed:not([alt*=".png"], [alt*=".gif"], [alt*=".jpg"], [alt*=".jpeg"], [alt*=".tiff"], [alt*=".avif"], [alt*=".webp"], [alt="inline"], [width])[src~="right"]::after {
-    margin-inline: auto 0;
-}
-
 
 /** CSS Classes **/
 
