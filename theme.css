@@ -1628,6 +1628,7 @@ body.visual-parity-enabled {
 img {
     display: block;
     margin-inline: auto;
+    image-rendering: auto !important;
 }
 
 /* Makes multiple images on the same line appear in a flex grid */
