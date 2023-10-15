@@ -1809,6 +1809,9 @@ body:not(.no-image-alttext-caption)
 }
 /* Align the text boxes correctly */
 .image-embed {
+    &::after {
+        margin-inline: auto;
+    }
     &[src~="left"]::after {
         margin-inline: 0 auto;
     }
