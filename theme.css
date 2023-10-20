@@ -579,6 +579,7 @@ pre.language-ini::after { content: "INI" }
 pre.language-java::after { content: "JAVA" }
 pre.language-javascript::after { content: "JavaScript" }
 pre.language-js::after { content: "JavaScript" }
+pre.language-json::after { content: "JSON" }
 pre.language-lua::after { content: "Lua" }
 pre.language-makefile::after { content: "Makefile" }
 pre.language-markdown::after { content: "Markdown" }
