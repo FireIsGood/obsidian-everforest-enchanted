@@ -590,6 +590,7 @@ pre.language-node::after { content: "Node" }
 pre.language-php::after { content: "PHP" }
 pre.language-py::after { content: "Python" }
 pre.language-python::after { content: "Python" }
+pre.language-r::after { content: "R" }
 pre.language-react::after { content: "React" }
 pre.language-regex::after { content: "Regex" }
 pre.language-rust::after { content: "Rust" }
