@@ -469,7 +469,9 @@ body:not(.disable-menu-animations) :is(.modal, .prompt) {
 strong,
 .cm-s-obsidian span.cm-em,
 em,
-.language-markdown :is(.bold, .italic) > * {
+.language-markdown :is(.bold, .italic) > *,
+span:is(.cm-em, .cm-strong) + .cm-widgetBuffer + span.math,
+span.math:has(+ .cm-widgetBuffer + span:is(.cm-em, .cm-strong)) {
     color: var(--fg-purple);
 }
 
