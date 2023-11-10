@@ -489,11 +489,12 @@ del {
 .markdown-rendered code {
     background-color: var(--code-background);
     padding: 0.1em 0.25em;
-    border-radius: var(--radius-s)
+    border-radius: var(--radius-s);
+    font-size: var(--code-size) !important; /* required for lp */
 }
 /* Fix other elements' inline code */
 .cm-s-obsidian span.cm-inline-code:not(.cm-formatting),
-.markdown-rendered :is(table, p, li, .callout-title-inner) code {
+.markdown-rendered :is(table, p, li, .callout-title-inner, h1, h2, h3, h4, h5, h6) code {
     color: var(--code-inline);
 }
 
