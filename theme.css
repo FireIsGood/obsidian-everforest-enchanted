@@ -739,10 +739,15 @@ input.task-list-item-checkbox:checked::after {
     --line-height-tight: 1.375;
 }
 
-/* Fix table margin collapse bug */
-div:has(>table) {
+/* Fix table margin collapse bug and add table margins */
+div:not([class]):has(> table) {
     overflow: unset !important;
+
+    > table {
+        margin-block: var(--p-spacing);
+    }
 }
+
 /* Fix borders from Dataview */
 .table-view-table > thead > tr > th {
     border-left: var(--table-header-border-width) solid var(--table-header-border-color);
