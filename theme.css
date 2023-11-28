@@ -1232,7 +1232,8 @@ settings:
     title: Pane view
     description: Changes pages to be panes on a transparent background. BEST USED WITH UI OPACITY 0!
     type: class-toggle
--   id: visual-parity
+-
+    id: visual-parity
     title: Visual Parity
     type: heading
     level: 2
@@ -1247,7 +1248,7 @@ settings:
 -
     id: visual-parity-enabled
     title: Visual Parity
-    description: Changes stacked panes to fit a certain number on screen instead of using pixel values.
+    description: Changes reading mode to match editing mode.
     type: class-toggle
 
 */
