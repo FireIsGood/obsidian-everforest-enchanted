@@ -740,7 +740,7 @@ input.task-list-item-checkbox:checked::after {
 }
 
 /* Fix table margin collapse bug and add table margins */
-div:not([class]):has(> table) {
+.markdown-preview-view div:not([class]):has(> table) {
     overflow: unset !important;
 
     > table {
