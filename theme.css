@@ -1499,12 +1499,6 @@ body.visual-parity-enabled {
         padding-top: unset;
     }
 
-    /* Remove top header spacing in live preview */
-    & .mod-header + div:has(pre.frontmatter) + div > *,
-    & .mod-header + div > * {
-        margin-top: 0 !important;
-    }
-
     /* Fix collapsed headers in live preview */
     .HyperMD-header:has(> .is-collapsed) {
         padding-block: 0 var(--p-spacing);
