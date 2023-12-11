@@ -11,6 +11,8 @@ You can get extra customization through the [Style Settings](https://github.com/
 
 ![](asssets/theme%20screenshots.png)
 
+Image at the top right is from [aiu](https://twitter.com/aiu404l/) on Twitter, though the original post has been deleted.
+
 ## Features
 
 - [Everforest](https://github.com/sainnhe/everforest) style color palette
