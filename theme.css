@@ -602,6 +602,7 @@ pre.language-shell::after { content: "Shell" }
 pre.language-sql::after { content: "SQL" }
 pre.language-text::after { content: "Plain Text" }
 pre.language-ts::after { content: "TypeScript" }
+pre.language-toml::after { content: "TOML" }
 pre.language-txt::after { content: "Plain Text" }
 pre.language-typescript::after { content: "TypeScript" }
 pre.language-url::after { content: "URL" }
