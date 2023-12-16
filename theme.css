@@ -914,6 +914,15 @@ div:has(h1)+div p:has(.tag) {
     animation-name: cm-blink;
 }
 
+/* Vim mode cursor */
+.cm-editor.cm-focused .cm-fat-cursor {
+    background: var(--fg);
+    color: var(--bg0);
+}
+
+.cm-editor:not(.cm-focused) .cm-fat-cursor {
+    outline-color: var(--fg);
+}
 
 
 /**** Style Settings ****/
