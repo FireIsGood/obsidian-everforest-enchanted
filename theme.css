@@ -36,27 +36,25 @@
 *?
  **---------------------**/
 
-
-
 /**** Implementation ****/
 
-
 :root body:where(.theme-dark, .theme-light) {
-
     /** Miscellaneous **/
 
     --checkbox-size: calc(var(--font-text-size) - 2px);
     --checkbox-radius: 25%;
 
-    --list-indent: var(--list-indent-custom, 18px); /* Adjusted in Style Settings */
+    /* Adjusted in Style Settings */
+    --list-indent: var(--list-indent-custom, 18px);
     --list-spacing: 0;
     --list-bullet-size: 6px;
 
     --file-folding-offset: 22px;
 
-    --shadow-l: 0 4px 14px -2px hsla(0,0%,0%,40%);
+    --shadow-l: 0 4px 14px -2px hsla(0, 0%, 0%, 40%);
 
-    --file-line-width: var(--readable-line-length-custom, 700px); /* Adjusted in Style Settings */
+    /* Adjusted in Style Settings */
+    --file-line-width: var(--readable-line-length-custom, 700px);
 
     /** Backgrounds **/
 
@@ -66,30 +64,30 @@
     --embed-block-shadow-hover: var(--shadow-l);
     --blockquote-background-color: var(--background-embed);
 
-    --background-primary:       var(--bg0);
-    --background-primary-rgb:   var(--bg0-rgb);
-    --background-primary-alt:   var(--bg0);
-    --background-secondary:     var(--bg0);
+    --background-primary: var(--bg0);
+    --background-primary-rgb: var(--bg0-rgb);
+    --background-primary-alt: var(--bg0);
+    --background-secondary: var(--bg0);
     --background-secondary-alt: var(--bg0);
 
     /** General Colors **/
 
-    --text-normal:              var(--fg);
-    --text-muted:               var(--color-base-70);
-    --text-faint:               var(--grey1);
-    --text-selection:           var(--bg-visual);
+    --text-normal: var(--fg);
+    --text-muted: var(--color-base-70);
+    --text-faint: var(--grey1);
+    --text-selection: var(--bg-visual);
 
-    --link-color:                  var(--header-aqua);
-    --link-color-hover:            var(--fg-aqua);
-    --link-external-color:         var(--header-blue);
-    --link-external-color-hover:   var(--fg-blue);
-    --text-accent:                 var(--header-blue);
-    --text-accent-hover:           var(--header-purple);
+    --link-color: var(--header-aqua);
+    --link-color-hover: var(--fg-aqua);
+    --link-external-color: var(--header-blue);
+    --link-external-color-hover: var(--fg-blue);
+    --text-accent: var(--header-blue);
+    --text-accent-hover: var(--header-purple);
 
-    --link-unresolved-decoration-style:       dashed;
-    --link-unresolved-color:                  var(--header-blue);
-    --link-unresolved-color-hover:            var(--header-purple); /* Non-standard */
-    --link-unresolved-decoration-color:       var(--bg-red);
+    --link-unresolved-decoration-style: dashed;
+    --link-unresolved-color: var(--header-blue);
+    --link-unresolved-color-hover: var(--header-purple); /* Non-standard */
+    --link-unresolved-decoration-color: var(--bg-red);
     --link-unresolved-decoration-color-hover: var(--fg-red); /* Non-standard */
 
     --code-header: #0004;
@@ -145,9 +143,9 @@
     --h1-size: 2.125em;
     --h2-size: 1.625em;
     --h3-size: 1.375em;
-    --h4-size: 1.250em;
+    --h4-size: 1.25em;
     --h5-size: 1.125em;
-    --h6-size: 1.000em;
+    --h6-size: 1em;
 
     --h1-line-height: 1.5;
     --h2-line-height: 1.5;
@@ -164,7 +162,6 @@
     --h6-weight: 500;
 }
 
-
 /** Mobile mode fixes **/
 :root body.is-mobile {
     --input-shadow-hover: var(--input-shadow);
@@ -173,127 +170,120 @@
 }
 /* Dark mode */
 :root body.is-mobile.theme-dark {
-    --input-shadow: inset 0 1px 1px 0.5px rgba(255,255,255, 0.1),
-    0 2px 4px rgba(0,0,0,0.4);
+    --input-shadow: inset 0 1px 1px 0.5px rgba(255, 255, 255, 0.1),
+        0 2px 4px rgba(0, 0, 0, 0.4);
     --interactive-normal: var(--color-base-30);
     --background-modifier-form-field: var(--color-base-25);
 }
 /* Light mode */
 :root body.is-mobile.theme-light {
-    --input-shadow: inset 0 0 0.5px 1px rgba(0,0,0, 0.1),
-    0 2px 3px rgba(0,0,0,0.1);
+    --input-shadow: inset 0 0 0.5px 1px rgba(0, 0, 0, 0.1),
+        0 2px 3px rgba(0, 0, 0, 0.1);
     --interactive-normal: var(--color-base-00);
     --background-modifier-form-field: var(--color-base-00);
 }
 
-
-
 /**** Theme Colors ****/
-
 
 /** Dark Theme (Soft) **/
 
 :root .theme-dark {
     --bg-dim-rgb: 41, 49, 54;
-    --bg-dim:      #293136;
-    --bg0:         #333C43;
-    --bg1:         #3A464C;
-    --bg2:         #434F55;
-    --bg3:         #4D5960;
-    --bg4:         #555F66;
-    --bg5:         #5D6B66;
+    --bg-dim: #293136;
+    --bg0: #333c43;
+    --bg1: #3a464c;
+    --bg2: #434f55;
+    --bg3: #4d5960;
+    --bg4: #555f66;
+    --bg5: #5d6b66;
 
-    --bg-visual:   #5C3F4F;
-    --bg-red:      #59464C;
-    --bg-green:    #48584E;
-    --bg-blue:     #3F5865;
-    --bg-yellow:   #55544A;
+    --bg-visual: #5c3f4f;
+    --bg-red: #59464c;
+    --bg-green: #48584e;
+    --bg-blue: #3f5865;
+    --bg-yellow: #55544a;
 
-    --fg:          #D3C6AA;
+    --fg: #d3c6aa;
 
-    --fg-red:      #E67E80;
-    --fg-orange:   #E69875;
-    --fg-yellow:   #DBBC7F;
-    --fg-green:    #A7C080;
-    --fg-aqua:     #83C092;
-    --fg-blue:     #7FBBB3;
-    --fg-purple:   #D699B6;
+    --fg-red: #e67e80;
+    --fg-orange: #e69875;
+    --fg-yellow: #dbbc7f;
+    --fg-green: #a7c080;
+    --fg-aqua: #83c092;
+    --fg-blue: #7fbbb3;
+    --fg-purple: #d699b6;
 
-    --header-red:       #da6362;
-    --header-orange:    #d77f48;
-    --header-yellow:    #bf983d;
-    --header-green:     #899c40;
-    --header-aqua:      #569d79;
-    --header-blue:      #5a93a2;
-    --header-purple:    #b87b9d;
+    --header-red: #da6362;
+    --header-orange: #d77f48;
+    --header-yellow: #bf983d;
+    --header-green: #899c40;
+    --header-aqua: #569d79;
+    --header-blue: #5a93a2;
+    --header-purple: #b87b9d;
 
-    --grey0:       #7A8478;
-    --grey1:       #859289;
-    --grey2:       #9DA9A0;
+    --grey0: #7a8478;
+    --grey1: #859289;
+    --grey2: #9da9a0;
 
-    --statusline0: #A7C080;
-    --statusline1: #D3C6AA;
-    --statusline2: #E67E80;
+    --statusline0: #a7c080;
+    --statusline1: #d3c6aa;
+    --statusline2: #e67e80;
 
     --bg0-rgb: 51, 60, 67;
     --background-embed-transparent: rgba(62, 75, 80, 0.7);
     --tag-color-hsl: 254, 80%, 68%;
 }
 
-
 /** Light Theme (Hard) **/
 
 :root .theme-light {
     --bg-dim-rgb: 242, 239, 223;
-    --bg-dim:      #F2EFDF;
-    --bg0:         #FFFBEF;
-    --bg1:         #F8F5E4;
-    --bg2:         #F2EFDF;
-    --bg3:         #EDEADA;
-    --bg4:         #E8E5D5;
-    --bg5:         #BEC5B2;
+    --bg-dim: #f2efdf;
+    --bg0: #fffbef;
+    --bg1: #f8f5e4;
+    --bg2: #f2efdf;
+    --bg3: #edeada;
+    --bg4: #e8e5d5;
+    --bg5: #bec5b2;
 
-    --bg-visual:   #ded8db; /* Changed for visibility */
-    --bg-red:      #FFE7DE;
-    --bg-green:    #F3F5D9;
-    --bg-blue:     #ECF5ED;
-    --bg-yellow:   #FEF2D5;
+    --bg-visual: #ded8db; /* Changed for visibility */
+    --bg-red: #ffe7de;
+    --bg-green: #f3f5d9;
+    --bg-blue: #ecf5ed;
+    --bg-yellow: #fef2d5;
 
-    --fg:          #5C6A72;
+    --fg: #5c6a72;
 
-    --fg-red:      #F85552;
-    --fg-orange:   #F57D26;
-    --fg-yellow:   #DFA000;
-    --fg-green:    #8DA101;
-    --fg-aqua:     #35A77C;
-    --fg-blue:     #3A94C5;
-    --fg-purple:   #DF69BA;
+    --fg-red: #f85552;
+    --fg-orange: #f57d26;
+    --fg-yellow: #dfa000;
+    --fg-green: #8da101;
+    --fg-aqua: #35a77c;
+    --fg-blue: #3a94c5;
+    --fg-purple: #df69ba;
 
-    --header-red:       #f85552;
-    --header-orange:    #f88f44;
-    --header-yellow:    #f3b931;
-    --header-green:     #abd113;
-    --header-aqua:      #569d79;
-    --header-blue:      #5a93a2;
-    --header-purple:    #dd2b8d;
+    --header-red: #f85552;
+    --header-orange: #f88f44;
+    --header-yellow: #f3b931;
+    --header-green: #abd113;
+    --header-aqua: #569d79;
+    --header-blue: #5a93a2;
+    --header-purple: #dd2b8d;
 
-    --grey0:       #A6B0A0;
-    --grey1:       #939F91;
-    --grey2:       #829181;
+    --grey0: #a6b0a0;
+    --grey1: #939f91;
+    --grey2: #829181;
 
-    --statusline0: #93B259;
+    --statusline0: #93b259;
     --statusline1: #708089;
-    --statusline2: #E66868;
+    --statusline2: #e66868;
 
     --bg0-rgb: 255, 251, 239;
     --background-embed-transparent: rgb(238 236 213 / 70%); /* Using bg2 */
     --tag-color-hsl: 254, 80%, 68%;
 }
 
-
-
 /**** General UI ****/
-
 
 /** Workspace **/
 
@@ -316,12 +306,15 @@
 }
 
 /* Make gutters not affect the content flow for unstacked tabs */
-.workspace-tabs:not(.mod-stacked) .mod-cm6.is-readable-line-width:not(.full-width),
-body:not(.stacked-panes-gutter-disable-float) .workspace-tabs.mod-stacked .mod-cm6.is-readable-line-width {
+.workspace-tabs:not(.mod-stacked)
+    .mod-cm6.is-readable-line-width:not(.full-width),
+body:not(.stacked-panes-gutter-disable-float)
+    .workspace-tabs.mod-stacked
+    .mod-cm6.is-readable-line-width {
     .cm-contentContainer {
         display: grid !important;
     }
-    :is(.cm-gutters,.cm-content) {
+    :is(.cm-gutters, .cm-content) {
         grid-area: 1 / -1;
     }
     .cm-content {
@@ -340,10 +333,16 @@ body:not(.stacked-panes-gutter-disable-float) .workspace-tabs.mod-stacked .mod-c
 
 /* Collapse indicator */
 .markdown-source-view.mod-cm6 .cm-fold-indicator .collapse-indicator {
-    padding-right: .45rem;
+    padding-right: 0.45rem;
 }
-.markdown-source-view.mod-cm6 .cm-line:not(.cm-active):not(.HyperMD-header):not(.HyperMD-task-line, .HyperMD-list-line-1) .cm-fold-indicator .collapse-indicator {
-    padding-right: .75rem;
+.markdown-source-view.mod-cm6
+    .cm-line:not(.cm-active):not(.HyperMD-header):not(
+        .HyperMD-task-line,
+        .HyperMD-list-line-1
+    )
+    .cm-fold-indicator
+    .collapse-indicator {
+    padding-right: 0.75rem;
 }
 div ul.has-list-bullet ul.has-list-bullet .collapse-indicator {
     margin-left: -2.75rem;
@@ -353,7 +352,7 @@ div ul.has-list-bullet ul.has-list-bullet .collapse-indicator {
 }
 
 /* Hide extra tab dividers */
-.workspace-tab-header:has(+.is-active) > .workspace-tab-header-inner::after {
+.workspace-tab-header:has(+ .is-active) > .workspace-tab-header-inner::after {
     visibility: hidden;
 }
 
@@ -370,7 +369,6 @@ div ul.has-list-bullet ul.has-list-bullet .collapse-indicator {
     line-height: normal !important;
 }
 
-
 /** Menus **/
 
 /* Checkboxes and dropdowns */
@@ -385,18 +383,26 @@ body:not(.disable-menu-animations, .enable-menu-blur) .modal-bg {
     animation: fade-in var(--anim-duration-superfast) linear;
 }
 body:not(.disable-menu-animations) :is(.modal, .prompt) {
-    animation: fade-in var(--anim-duration-superfast),
+    animation:
+        fade-in var(--anim-duration-superfast),
         slide-in var(--anim-duration-superfast) ease-out;
 }
 @keyframes slide-in {
-    0% {translate: 0 4px}
-    100% {translate: 0 0}
+    0% {
+        translate: 0 4px;
+    }
+    100% {
+        translate: 0 0;
+    }
 }
 @keyframes fade-in {
-    0% {opacity: 0}
-    100% {opacity: 1}
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
-
 
 /** Sidebars **/
 
@@ -405,7 +411,6 @@ body:not(.disable-menu-animations) :is(.modal, .prompt) {
     scrollbar-gutter: stable;
     padding-right: var(--size-2-2);
 }
-
 
 /** Canvas **/
 
@@ -420,10 +425,10 @@ body:not(.disable-menu-animations) :is(.modal, .prompt) {
 
 /* Text trees */
 .progress-bar-message::before {
-    content: '🌲 ';
+    content: "🌲 ";
 }
 .progress-bar-message::after {
-    content: ' 🌲';
+    content: " 🌲";
 }
 
 /* Progress bars */
@@ -442,10 +447,7 @@ body:not(.disable-menu-animations) :is(.modal, .prompt) {
     height: 100%;
 }
 
-
-
 /**** Markdown ****/
-
 
 /** Headers **/
 
@@ -459,7 +461,6 @@ body:not(.disable-menu-animations) :is(.modal, .prompt) {
 .mod-header + div > * {
     margin-top: 0;
 }
-
 
 /** Emphasis **/
 
@@ -480,11 +481,13 @@ del {
     color: var(--text-faint);
 }
 
-
 /** Code **/
 
 /* Inline code */
-.cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-formatting + .cm-inline-code),
+.cm-s-obsidian
+    span.cm-inline-code:not(.cm-formatting):not(
+        .cm-formatting + .cm-inline-code
+    ),
 .markdown-rendered code {
     background-color: var(--code-background);
     padding: 0.1em 0.25em;
@@ -493,7 +496,9 @@ del {
 }
 /* Fix other elements' inline code */
 .cm-s-obsidian span.cm-inline-code:not(.cm-formatting),
-.markdown-rendered :is(table, p, li, .callout-title-inner, h1, h2, h3, h4, h5, h6) code {
+.markdown-rendered
+    :is(table, p, li, .callout-title-inner, h1, h2, h3, h4, h5, h6)
+    code {
     color: var(--code-inline);
 }
 
@@ -523,7 +528,9 @@ pre {
 
 /* Codeblock top bars */
 pre[class^="language-"] {
-    padding-top: calc(var(--size-4-2) + var(--code-size) * var(--line-height-normal) + 1px);
+    padding-top: calc(
+        var(--size-4-2) + var(--code-size) * var(--line-height-normal) + 1px
+    );
 }
 pre[class^="language-"]::before {
     content: "";
@@ -534,7 +541,9 @@ pre[class^="language-"]::before {
     height: calc(var(--code-size) * var(--line-height-normal));
     background-color: var(--code-header);
 }
-.HyperMD-codeblock-begin-bg:not(:has(>.code-block-flair > *)):has(>.code-block-flair)::before {
+.HyperMD-codeblock-begin-bg:not(:has(> .code-block-flair > *)):has(
+        > .code-block-flair
+    )::before {
     content: "";
     position: absolute;
     inset: 0;
@@ -555,7 +564,7 @@ pre[class^="language-"]::after {
     color: var(--text-muted);
     font-size: 0.875em;
 }
-.markdown-source-view.mod-cm6 .code-block-flair:not(:has(>svg)) {
+.markdown-source-view.mod-cm6 .code-block-flair:not(:has(> svg)) {
     top: 0;
     padding: 0 4px;
     height: calc(1em * var(--line-height-normal));
@@ -568,48 +577,129 @@ pre[class^="language-"]::after {
     top: calc(6px + var(--code-size) * var(--line-height-normal));
 }
 
-pre.language-applescript::after { content: "AppleScript" }
-pre.language-bash::after { content: "Bash" }
-pre.language-c::after { content: "C" }
-pre.language-cpp::after { content: "C++" }
-pre.language-cs::after { content: "C#" }
-pre.language-css::after { content: "CSS" }
-pre.language-flow::after { content: "Flow" }
-pre.language-git::after { content: "GIT" }
-pre.language-haskell::after { content: "Haskell" }
-pre.language-html::after { content: "HTML" }
-pre.language-ini::after { content: "INI" }
-pre.language-java::after { content: "JAVA" }
-pre.language-javascript::after { content: "JavaScript" }
-pre.language-js::after { content: "JavaScript" }
-pre.language-json::after { content: "JSON" }
-pre.language-lua::after { content: "Lua" }
-pre.language-makefile::after { content: "Makefile" }
-pre.language-markdown::after { content: "Markdown" }
-pre.language-md::after { content: "Markdown" }
-pre.language-nginx::after { content: "Nginx" }
-pre.language-node::after { content: "Node" }
-pre.language-php::after { content: "PHP" }
-pre.language-py::after { content: "Python" }
-pre.language-python::after { content: "Python" }
-pre.language-r::after { content: "R" }
-pre.language-react::after { content: "React" }
-pre.language-regex::after { content: "Regex" }
-pre.language-rust::after { content: "Rust" }
-pre.language-sequence::after { content: "Sequence" }
-pre.language-shell::after { content: "Shell" }
-pre.language-sql::after { content: "SQL" }
-pre.language-text::after { content: "Plain Text" }
-pre.language-ts::after { content: "TypeScript" }
-pre.language-toml::after { content: "TOML" }
-pre.language-txt::after { content: "Plain Text" }
-pre.language-typescript::after { content: "TypeScript" }
-pre.language-url::after { content: "URL" }
-pre.language-vim::after { content: "vimrc" }
-pre.language-xml::after { content: "XML" }
-pre.language-yaml::after { content: "YAML" }
-pre.language-zsh::after { content: "zsh" }
-
+pre.language-applescript::after {
+    content: "AppleScript";
+}
+pre.language-bash::after {
+    content: "Bash";
+}
+pre.language-c::after {
+    content: "C";
+}
+pre.language-cpp::after {
+    content: "C++";
+}
+pre.language-cs::after {
+    content: "C#";
+}
+pre.language-css::after {
+    content: "CSS";
+}
+pre.language-flow::after {
+    content: "Flow";
+}
+pre.language-git::after {
+    content: "GIT";
+}
+pre.language-haskell::after {
+    content: "Haskell";
+}
+pre.language-html::after {
+    content: "HTML";
+}
+pre.language-ini::after {
+    content: "INI";
+}
+pre.language-java::after {
+    content: "JAVA";
+}
+pre.language-javascript::after {
+    content: "JavaScript";
+}
+pre.language-js::after {
+    content: "JavaScript";
+}
+pre.language-json::after {
+    content: "JSON";
+}
+pre.language-lua::after {
+    content: "Lua";
+}
+pre.language-makefile::after {
+    content: "Makefile";
+}
+pre.language-markdown::after {
+    content: "Markdown";
+}
+pre.language-md::after {
+    content: "Markdown";
+}
+pre.language-nginx::after {
+    content: "Nginx";
+}
+pre.language-node::after {
+    content: "Node";
+}
+pre.language-php::after {
+    content: "PHP";
+}
+pre.language-py::after {
+    content: "Python";
+}
+pre.language-python::after {
+    content: "Python";
+}
+pre.language-r::after {
+    content: "R";
+}
+pre.language-react::after {
+    content: "React";
+}
+pre.language-regex::after {
+    content: "Regex";
+}
+pre.language-rust::after {
+    content: "Rust";
+}
+pre.language-sequence::after {
+    content: "Sequence";
+}
+pre.language-shell::after {
+    content: "Shell";
+}
+pre.language-sql::after {
+    content: "SQL";
+}
+pre.language-text::after {
+    content: "Plain Text";
+}
+pre.language-ts::after {
+    content: "TypeScript";
+}
+pre.language-toml::after {
+    content: "TOML";
+}
+pre.language-txt::after {
+    content: "Plain Text";
+}
+pre.language-typescript::after {
+    content: "TypeScript";
+}
+pre.language-url::after {
+    content: "URL";
+}
+pre.language-vim::after {
+    content: "vimrc";
+}
+pre.language-xml::after {
+    content: "XML";
+}
+pre.language-yaml::after {
+    content: "YAML";
+}
+pre.language-zsh::after {
+    content: "zsh";
+}
 
 /** Links **/
 
@@ -623,11 +713,10 @@ pre.language-zsh::after { content: "zsh" }
     text-decoration: none;
 }
 
-
 /** Lists **/
 
 .markdown-source-view span.list-bullet {
-    padding-right: .3rem;
+    padding-right: 0.3rem;
 }
 .markdown-preview-view .list-bullet::after {
     font-size: 19px;
@@ -673,7 +762,8 @@ input.task-list-item-checkbox:hover {
     border-color: var(--header-blue);
 }
 input.task-list-item-checkbox:checked {
-    box-shadow: inset 0 0 0 calc(0.0625 * var(--font-text-size)) var(--background-primary);
+    box-shadow: inset 0 0 0 calc(0.0625 * var(--font-text-size))
+        var(--background-primary);
     transition: box-shadow 0s;
 }
 input.task-list-item-checkbox:checked::after {
@@ -682,7 +772,8 @@ input.task-list-item-checkbox:checked::after {
 
 .checkbox-container {
     background-color: var(--interactive-before);
-    transition: background-color var(--anim-duration-moderate) cubic-bezier(0, 0.5, 0, 1);
+    transition: background-color var(--anim-duration-moderate)
+        cubic-bezier(0, 0.5, 0, 1);
 }
 .checkbox-container:after {
     background-color: var(--interactive-accent);
@@ -690,7 +781,6 @@ input.task-list-item-checkbox:checked::after {
 .checkbox-container.is-enabled:after {
     background-color: var(--bg3);
 }
-
 
 /** Blockquotes **/
 
@@ -702,21 +792,23 @@ input.task-list-item-checkbox:checked::after {
 /* Make blockquotes work in source view */
 .markdown-source-view:not(.is-live-preview) .HyperMD-quote {
     background-color: var(--background-embed);
-    border-left: var(--blockquote-border-thickness) solid var(--blockquote-border-color);
+    border-left: var(--blockquote-border-thickness) solid
+        var(--blockquote-border-color);
 }
-.markdown-source-view:not(.is-live-preview) .cm-formatting-quote:not(.cm-formatting-quote-1) {
+.markdown-source-view:not(.is-live-preview)
+    .cm-formatting-quote:not(.cm-formatting-quote-1) {
     position: relative;
 }
-.markdown-source-view:not(.is-live-preview) .cm-formatting-quote:not(.cm-formatting-quote-1)::before {
+.markdown-source-view:not(.is-live-preview)
+    .cm-formatting-quote:not(.cm-formatting-quote-1)::before {
     content: "\200b";
     position: absolute;
     width: 1px;
-    border-left: var(--blockquote-border-thickness) solid var(--blockquote-border-color);
+    border-left: var(--blockquote-border-thickness) solid
+        var(--blockquote-border-color);
     color: transparent;
     left: -2px;
 }
-
-
 
 /** Tables **/
 
@@ -735,9 +827,12 @@ input.task-list-item-checkbox:checked::after {
 
 /* Fix borders from Dataview */
 .table-view-table > thead > tr > th {
-    border-left: var(--table-header-border-width) solid var(--table-header-border-color);
-    border-top: var(--table-header-border-width) solid var(--table-header-border-color);
-    border-right: var(--table-header-border-width) solid var(--table-header-border-color);
+    border-left: var(--table-header-border-width) solid
+        var(--table-header-border-color);
+    border-top: var(--table-header-border-width) solid
+        var(--table-header-border-color);
+    border-right: var(--table-header-border-width) solid
+        var(--table-header-border-color);
 }
 :root .table-view-table thead > tr > th {
     border-width: var(--table-border-width) 0 3px var(--table-border-width);
@@ -758,7 +853,6 @@ input.task-list-item-checkbox:checked::after {
     border-bottom: var(--table-border-width) solid var(--table-border-color);
 }
 
-
 /** Tags **/
 
 .cm-s-obsidian span.cm-hashtag,
@@ -767,13 +861,12 @@ a.tag {
 }
 
 /* Remove spacing between h1 + tag */
-div:has(+div>p>.tag)>h1 {
+div:has(+ div > p > .tag) > h1 {
     margin-bottom: 0;
 }
-div:has(h1)+div p:has(.tag) {
+div:has(h1) + div p:has(.tag) {
     margin-top: 0;
 }
-
 
 /** Embeds **/
 
@@ -790,7 +883,7 @@ div:has(h1)+div p:has(.tag) {
 
 /* Add a shadow to embeds */
 .cm-embed-block {
-    box-shadow: 0 4px 14px -2px hsla(0,0%,0%,0%);
+    box-shadow: 0 4px 14px -2px hsla(0, 0%, 0%, 0%);
     transition: box-shadow var(--anim-duration-fast) ease-out;
 }
 
@@ -813,7 +906,11 @@ div:has(h1)+div p:has(.tag) {
 }
 
 /* Embed first header */
-.markdown-embed-content .markdown-preview-section .mod-header + div :is(h1,h2,h3,h4,h5,h6) {
+.markdown-embed-content
+    .markdown-preview-section
+    .mod-header
+    + div
+    :is(h1, h2, h3, h4, h5, h6) {
     margin-top: 0;
 }
 
@@ -833,14 +930,16 @@ div:has(h1)+div p:has(.tag) {
     padding: 0;
 }
 /* Removes the first title */
-.markdown-embed[alt~="no-title"] .markdown-preview-section > :is(.mod-header, .mod-header + div:has(.frontmatter)) + div:has(h1,h2,h3,h4,h5,h6) {
+.markdown-embed[alt~="no-title"]
+    .markdown-preview-section
+    > :is(.mod-header, .mod-header + div:has(.frontmatter))
+    + div:has(h1, h2, h3, h4, h5, h6) {
     display: none;
 }
 /* Removes the embed icon */
 .markdown-embed[alt~="no-link"] .markdown-embed-link {
     display: none;
 }
-
 
 /** YAML **/
 
@@ -852,10 +951,7 @@ div:has(h1)+div p:has(.tag) {
     font-weight: 500;
 }
 
-
-
 /**** Graph ****/
-
 
 .graph-view.color-circle,
 .graph-view.color-fill-highlight {
@@ -877,10 +973,7 @@ div:has(h1)+div p:has(.tag) {
     opacity: 0.4;
 }
 
-
-
 /**** Mobile ****/
-
 
 /* Add shadow to mobile navbar */
 .mobile-navbar {
@@ -891,12 +984,10 @@ div:has(h1)+div p:has(.tag) {
     background-color: unset;
 }
 
-
-
 /**** Cursor ****/
 
-
-.cm-cursorLayer .cm-cursor {}
+.cm-cursorLayer .cm-cursor {
+}
 
 /* animation of the blinking */
 .cm-cursorLayer {
@@ -922,9 +1013,7 @@ div:has(h1)+div p:has(.tag) {
     outline-color: var(--fg);
 }
 
-
 /**** Style Settings ****/
-
 
 /* @settings
 
@@ -1266,22 +1355,28 @@ settings:
 .vertical-tab-content > div:has(.style-settings-heading):last-child {
     padding-bottom: 400px;
 }
-[data-id="everforest-enchanted-theme"] + .style-settings-container .setting-item-heading {
+[data-id="everforest-enchanted-theme"]
+    + .style-settings-container
+    .setting-item-heading {
     margin-top: 0;
     margin-bottom: 0;
 }
-[data-id="everforest-enchanted-theme"] + .style-settings-container .setting-item-heading + .style-settings-container {
+[data-id="everforest-enchanted-theme"]
+    + .style-settings-container
+    .setting-item-heading
+    + .style-settings-container {
     margin-top: 2px;
     padding-top: 16px;
     padding-left: 25px;
     border-left: 1px dashed var(--background-modifier-border);
     border-bottom: 1px dashed var(--background-modifier-border);
 }
-.view-content .style-settings-container :is(.setting-item-control:has(input), input[type="text"]) {
+.view-content
+    .style-settings-container
+    :is(.setting-item-control:has(input), input[type="text"]) {
     width: 100%;
     place-content: flex-start;
 }
-
 
 /** Editor Settings **/
 
@@ -1296,7 +1391,6 @@ body:not(.is-translucent).enable-menu-blur .modal-bg {
     backdrop-filter: blur(var(--menu-blur-radius, 5px));
     opacity: 1 !important;
 }
-
 
 /** Element Settings **/
 
@@ -1345,7 +1439,10 @@ body.image-embed-enable-zoom .image-embed {
     cursor: zoom-out;
 }
 body.image-embed-enable-zoom .image-embed:active {
-    --zoom-embed-size: min(90%, calc(var(--readable-line-length-custom, 700px) + 120px));
+    --zoom-embed-size: min(
+        90%,
+        calc(var(--readable-line-length-custom, 700px) + 120px)
+    );
     display: flex !important;
     flex-direction: column;
     align-items: center;
@@ -1370,7 +1467,7 @@ body.image-embed-enable-zoom .image-embed:active::after {
     padding: 1ch;
     font-size: large;
     box-sizing: border-box;
-    width:  var(--zoom-embed-size)  !important;
+    width: var(--zoom-embed-size) !important;
     background-color: var(--background-primary);
 }
 body.image-embed-enable-zoom .image-embed:active::before {
@@ -1387,28 +1484,42 @@ body.image-embed-enable-zoom.image-embed-no-drag .image-embed:active img {
     pointer-events: none;
 }
 /* Hacky fix for callouts */
-body.image-embed-enable-zoom .cm-embed-block.cm-callout:has(.image-embed:active) {
+body.image-embed-enable-zoom
+    .cm-embed-block.cm-callout:has(.image-embed:active) {
     contain: none !important;
 }
-
 
 /** Custom Stacked Panes **/
 
 .custom-stacked-panes-enabled .mod-vertical .mod-stacked .workspace-leaf {
-    max-width: calc((100% / var(--custom-stacked-panes-count, 2)) - 2.5rem) !important;
+    max-width: calc(
+        (100% / var(--custom-stacked-panes-count, 2)) - 2.5rem
+    ) !important;
     width: 100% !important;
 }
 
-
 /** Custom Background Image **/
 
-.theme-dark {--background-image-url: var(--background-image-dark-url)}
-.theme-light {--background-image-url: var(--background-image-light-url)}
+.theme-dark {
+    --background-image-url: var(--background-image-dark-url);
+}
+.theme-light {
+    --background-image-url: var(--background-image-light-url);
+}
 
 body.background-image-enabled {
-    --background-transparent: rgba(var(--background-primary-rgb), var(--pane-opacity, 0.85));
-    --background-partially-transparent: rgba(var(--background-primary-rgb), var(--ui-opacity, 0.85));
-    --background-tabs-transparent: rgba(var(--background-primary-rgb), var(--tab-opacity, 0.85));
+    --background-transparent: rgba(
+        var(--background-primary-rgb),
+        var(--pane-opacity, 0.85)
+    );
+    --background-partially-transparent: rgba(
+        var(--background-primary-rgb),
+        var(--ui-opacity, 0.85)
+    );
+    --background-tabs-transparent: rgba(
+        var(--background-primary-rgb),
+        var(--tab-opacity, 0.85)
+    );
 }
 
 /* Apply the background image */
@@ -1426,33 +1537,44 @@ body.background-image-enabled {
 }
 
 /* Make workspace UI elements transparent */
-.background-image-enabled :is(
-    .mod-root .workspace-tab-header-container,
-    .workspace-ribbon,
-    .workspace-split,
-    .graph-controls),
+.background-image-enabled
+    :is(
+        .mod-root .workspace-tab-header-container,
+        .workspace-ribbon,
+        .workspace-split,
+        .graph-controls
+    ),
 .workspace-ribbon::before {
     background-color: var(--background-partially-transparent) !important;
 }
 
 /* Make stacked tab headers transparent */
-.background-image-enabled .workspace-tab-container .workspace-tab-header:not(.mod-active),
-.background-image-enabled .workspace-tab-container .workspace-tab-header.mod-active {
+.background-image-enabled
+    .workspace-tab-container
+    .workspace-tab-header:not(.mod-active),
+.background-image-enabled
+    .workspace-tab-container
+    .workspace-tab-header.mod-active {
     background-color: var(--background-tabs-transparent) !important;
 }
 
 /* Remove other backgrounds */
-.background-image-enabled :is(
-    .titlebar-button-container,
-    .mod-vertical .workspace-tab-header,
-    .document-search-container,
-    .workspace-leaf,
-    .horizontal-main-container > .workspace,
-    .pdf-sidebar-container,
-    .pdf-container,
-    .pdf-toolbar),
-.background-image-enabled .workspace-split:not(.mod-root, .mod-horizontal) .workspace-tab-header-container,
-.background-image-enabled .workspace-split:not(.mod-left-split, .mod-right-split) {
+.background-image-enabled
+    :is(
+        .titlebar-button-container,
+        .mod-vertical .workspace-tab-header,
+        .document-search-container,
+        .workspace-leaf,
+        .horizontal-main-container > .workspace,
+        .pdf-sidebar-container,
+        .pdf-container,
+        .pdf-toolbar
+    ),
+.background-image-enabled
+    .workspace-split:not(.mod-root, .mod-horizontal)
+    .workspace-tab-header-container,
+.background-image-enabled
+    .workspace-split:not(.mod-left-split, .mod-right-split) {
     background-color: transparent !important;
 }
 /* Fix double side headers */
@@ -1472,7 +1594,11 @@ body.background-image-enabled {
     background-color: transparent !important;
 }
 .background-image-pane-view .view-content .cm-sizer,
-.background-image-pane-view .view-content > .markdown-reading-view > .markdown-rendered > .markdown-preview-sizer {
+.background-image-pane-view
+    .view-content
+    > .markdown-reading-view
+    > .markdown-rendered
+    > .markdown-preview-sizer {
     box-sizing: content-box;
     padding-inline: 2rem;
     padding-top: 2rem;
@@ -1482,10 +1608,9 @@ body.background-image-enabled {
 .background-image-pane-view .view-content .cm-sizer:has(.cm-gutters) {
     padding-left: calc(2rem + 24px);
 }
-:root .background-image-pane-view .view-header  {
+:root .background-image-pane-view .view-header {
     background-color: var(--background-partially-transparent) !important;
 }
-
 
 /** Visual Parity **/
 body.visual-parity-enabled {
@@ -1525,10 +1650,7 @@ body.visual-parity-enabled {
     }
 }
 
-
-
 /**** Extra Fixes ****/
-
 
 /** Callouts **/
 
@@ -1545,7 +1667,8 @@ body.visual-parity-enabled {
     border-radius: 4px;
     mix-blend-mode: normal !important;
 }
-.callout, .cm-callout {
+.callout,
+.cm-callout {
     box-shadow: 2px 2px 3px #0004;
 }
 .callout-title {
@@ -1561,7 +1684,11 @@ body.visual-parity-enabled {
     color: rgb(var(--callout-color));
 }
 .callout-title-inner {
-    color: color-mix(in srgb, rgb(var(--callout-color)) 70%, var(--color-base-100));
+    color: color-mix(
+        in srgb,
+        rgb(var(--callout-color)) 70%,
+        var(--color-base-100)
+    );
     filter: contrast(2);
 }
 .callout-title-inner > * {
@@ -1612,7 +1739,7 @@ body.visual-parity-enabled {
     padding: 0 !important;
 }
 .callout[data-callout="math"] .callout-content .math-block {
-    border: none
+    border: none;
 }
 .callout[data-callout="graph"] {
     --callout-color: 255, 152, 0;
@@ -1637,7 +1764,6 @@ body.visual-parity-enabled {
     background-color: var(--code-background);
 }
 
-
 /** Image Formatting **/
 
 img {
@@ -1647,24 +1773,38 @@ img {
 }
 
 /* Makes multiple images on the same line appear in a flex grid */
-.cm-line:not(.cm-active):has(.image-embed ~ .image-embed, img:not(.cm-widgetBuffer) ~ img:not(.cm-widgetBuffer)):not(:has([alt="inline"])),
+.cm-line:not(.cm-active):has(
+        .image-embed ~ .image-embed,
+        img:not(.cm-widgetBuffer) ~ img:not(.cm-widgetBuffer)
+    ):not(:has([alt="inline"])),
 p:has(.image-embed ~ .image-embed, img ~ img):not(:has([alt="inline"])) {
     display: flex;
     gap: 0.5rem;
     align-items: start;
 }
-.cm-line:not(.cm-active):has(.image-embed ~ .image-embed, img:not(.cm-widgetBuffer) ~ img:not(.cm-widgetBuffer)):not(:has([alt="inline"])) > .image-embed,
-p:has(.image-embed ~ .image-embed, img ~ img):not(:has([alt="inline"])) > .image-embed {
+.cm-line:not(.cm-active):has(
+        .image-embed ~ .image-embed,
+        img:not(.cm-widgetBuffer) ~ img:not(.cm-widgetBuffer)
+    ):not(:has([alt="inline"]))
+    > .image-embed,
+p:has(.image-embed ~ .image-embed, img ~ img):not(:has([alt="inline"]))
+    > .image-embed {
     flex: 1 1 0;
     display: flex;
     justify-content: center;
 }
-.cm-line:not(.cm-active):has(.image-embed ~ .image-embed, img:not(.cm-widgetBuffer) ~ img:not(.cm-widgetBuffer)) > .cm-widgetBuffer,
+.cm-line:not(.cm-active):has(
+        .image-embed ~ .image-embed,
+        img:not(.cm-widgetBuffer) ~ img:not(.cm-widgetBuffer)
+    )
+    > .cm-widgetBuffer,
 .cm-widgetBuffer + span[contenteditable="false"]:not([class]) {
     display: none !important;
 }
 /* Makes a highlighted line shrink the image */
-:root:root .cm-line.cm-active > :is(.image-embed:not([alt="inline"]), img:not([alt="inline"])) {
+:root:root
+    .cm-line.cm-active
+    > :is(.image-embed:not([alt="inline"]), img:not([alt="inline"])) {
     width: 100px;
     display: inline-block;
 }
@@ -1755,7 +1895,9 @@ img[src^="http"][alt~="right"] {
 
 /* Floats */
 .markdown-reading-view .image-embed[src~="float"] > img:not([width]) {
-    width: calc(var(--img-width, 100) / 100 * min(100vw, var(--file-line-width)));
+    width: calc(
+        var(--img-width, 100) / 100 * min(100vw, var(--file-line-width))
+    );
     margin: 0 !important;
 }
 .markdown-reading-view .image-embed[src~="float"] {
@@ -1781,7 +1923,7 @@ img[src^="http"][alt~="black"] {
 }
 .image-embed[src~="border"] > img,
 img[src^="http"][alt~="border"] {
-    border: .25rem solid var(--background-modifier-border);
+    border: 0.25rem solid var(--background-modifier-border);
 }
 .image-embed[src~="shadow"] > img,
 img[src^="http"][alt~="shadow"] {
@@ -1853,12 +1995,12 @@ body:not(.no-image-alttext-caption)
     list-style: none;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: .5rem;
+    gap: 0.5rem;
     padding-left: 0;
 }
 .columns :where(div, li) > ol > li {
     outline: 1px solid var(--color-base-40);
-    padding: .5rem .75rem;
+    padding: 0.5rem 0.75rem;
 }
 .columns :where(div, li) > ol > li > ul {
     background: none;
@@ -1896,12 +2038,12 @@ body:not(.no-image-alttext-caption)
     list-style: none;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: .5rem;
+    gap: 0.5rem;
     padding-left: 0;
 }
 .dashboard div > ul:not(.dataview) > li {
     outline: 1px solid #fff2;
-    padding: .5rem .25rem;
+    padding: 0.5rem 0.25rem;
 }
 .dashboard div > ul > li > .list-bullet {
     display: none;
@@ -1913,7 +2055,6 @@ body:not(.no-image-alttext-caption)
     border-right: none !important;
 }
 
-
 /** Misc. **/
 
 /* Fix Dataview markers */
@@ -1923,15 +2064,17 @@ body:not(.no-image-alttext-caption)
 .dataview.list-view-ul li::before {
     visibility: visible;
     position: absolute;
-    content: '\200B';
+    content: "\200B";
     pointer-events: none;
     border-radius: var(--list-bullet-radius);
     width: var(--list-bullet-size);
     height: var(--list-bullet-size);
     border: var(--list-bullet-border);
-    transform: translate(-.85em, .6em);
+    transform: translate(-0.85em, 0.6em);
     background-color: var(--list-marker-color);
-    transition: transform 0.15s, box-shadow 0.15s;
+    transition:
+        transform 0.15s,
+        box-shadow 0.15s;
 }
 .table-view-table > tbody > tr:hover {
     background-color: var(--table-row-background-hover) !important;
@@ -1939,15 +2082,15 @@ body:not(.no-image-alttext-caption)
 
 /* Make math display better */
 div.math-block {
-    padding-block: .125em;
+    padding-block: 0.125em;
     border: 1px solid #fff2;
-    border-radius: 5px
+    border-radius: 5px;
 }
 /* Make the weird span ones also work */
 p span.math-block > mjx-container {
     padding-block: 1rem;
     border: 1px solid #fff2;
-    border-radius: 5px
+    border-radius: 5px;
 }
 
 /* Make MathJax text bigger */
@@ -1960,9 +2103,9 @@ mjx-stretchy-h.mjx-c2013 mjx-ext mjx-c::before {
 }
 
 /* Add Outline to Math */
-.math.math-block.cm-embed-block{
+.math.math-block.cm-embed-block {
     border: 1px solid #fff2;
-    border-radius: 5px
+    border-radius: 5px;
 }
 
 /* Make print break hr elements */
@@ -1974,8 +2117,8 @@ hr.page-break {
     background-color: unset;
 }
 hr.page-break::before {
-    content: 'Page Break';
-    font-size: .75em;
+    content: "Page Break";
+    font-size: 0.75em;
     margin-inline: auto;
 }
 @media print {
