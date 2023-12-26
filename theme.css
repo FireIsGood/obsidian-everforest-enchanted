@@ -299,6 +299,7 @@
 
 /* Gutters */
 .markdown-source-view.mod-cm6 .cm-gutters {
+    padding-inline-end: var(--file-folding-offset);
     pointer-events: none;
 }
 .cm-gutter .cm-active {
@@ -756,7 +757,6 @@ ol::before {
 /* Checkbox list */
 .markdown-source-view.mod-cm6 input.task-list-item-checkbox {
     border-width: 1px;
-    margin-left: 1px;
 }
 input.task-list-item-checkbox:hover {
     border-color: var(--header-blue);
