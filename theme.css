@@ -1410,7 +1410,7 @@ body:not(.is-translucent).enable-menu-blur .modal-bg {
 
 /* H2 underline option */
 body.h2-underline h2,
-body.h2-underline .HyperMD-header.HyperMD-header-2.cm-line {
+body.h2-underline .HyperMD-header-2.cm-line {
     border-bottom: 2px solid var(--background-modifier-border);
     padding-bottom: 2px;
 }
