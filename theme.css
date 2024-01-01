@@ -451,13 +451,6 @@ body:not(.disable-menu-animations) :is(.modal, .prompt) {
 /**** Markdown ****/
 
 /** Headers **/
-/* H2 underline option */
-body.h2-underline h2,
-body.h2-underline .HyperMD-header.HyperMD-header-2.cm-line {
-  border-bottom: 2px solid var(--background-modifier-border);
-  width: 100%;
-  padding-bottom: 2px;
-}
 
 /* Fix update formatting coloring */
 .cm-formatting-header {
@@ -1128,6 +1121,18 @@ settings:
     default: 0.7
     format: px
 -
+    id: header-settings
+    title: Headers
+    type: heading
+    level: 2
+    collapsed: true
+-
+    id: h2-underline
+    title: Headers - H2 underline
+    description: Enable H2 underline
+    type: class-toggle
+    default: false
+-
     id: image-embed-settings
     title: Image Embeds
     type: heading
@@ -1354,12 +1359,6 @@ settings:
     title: Visual Parity
     description: Changes reading mode to match editing mode.
     type: class-toggle
--
-    id: h2-underline
-    title: H2 underline
-    description: Toggle H2 underline (border-bottom)
-    type: class-toggle
-    default: false
 
 */
 
@@ -1392,6 +1391,13 @@ settings:
 }
 
 /** Editor Settings **/
+
+/* H2 underline option */
+body.h2-underline h2,
+body.h2-underline .HyperMD-header.HyperMD-header-2.cm-line {
+    border-bottom: 2px solid var(--background-modifier-border);
+    padding-bottom: 2px;
+}
 
 /* Highlighted folders */
 body.highlighted-folders .nav-folder:not(.is-collapsed, .mod-root) {
