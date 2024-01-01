@@ -1026,7 +1026,7 @@ settings:
 -
     id: editor-settings
     title: Editor
-    description: Line length, line numbers, folders
+    description: Folders, line length, line numbers, menu modal blur
     type: heading
     level: 1
     collapsed: true
@@ -1098,7 +1098,7 @@ settings:
 -
     id: element-settings
     title: Elements
-    description: Lists, tables, canvas
+    description: Canvas, headers, image embeds, links, lists, tables
     type: heading
     level: 1
     collapsed: true
@@ -1124,7 +1124,7 @@ settings:
 -
     id: h2-underline
     title: Headers - H2 underline
-    description: Enable H2 underline
+    description: Enable H2 underline.
     type: class-toggle
     default: false
 -
@@ -1168,7 +1168,7 @@ settings:
 -
     id: list-indent-custom
     title: Lists - List indent size
-    description: The size of list item indents. The default value of 18px mimics the appearance of editing mode. If you want a more default experience, the default theme uses 32 px.
+    description: The size of list item indents. The default value of 18px mimics the appearance of editing mode. If you want a more default experience, the default theme uses 32 px. Currently does not work as intended due to JS changes in Obsidian 1.5 which is sad... There are technically workarounds but they would not be very clean.
     type: variable-number
     default: 18
     format: px
@@ -1203,37 +1203,10 @@ settings:
 -
     id: extra-appearance-settings
     title: Extras
-    description: Stacked pane count, background image, visual parity
+    description: Background images, Stacked panes with a count, visual parity between modes
     type: heading
     level: 1
     collapsed: true
--
-    id: custom-stacked-panes
-    title: Stacked Pane Count
-    type: heading
-    level: 2
-    collapsed: true
--
-    id: custom-stacked-panes-description
-    title: Info
-    description: |
-        This setting turns stacked panes from a pixel width to a number visible on screen at once. Check the [GitHub Repo documentation](https://github.com/FireIsGood/obsidian-everforest-enchanted/blob/main/custom_stacked_panes.md) for more information.
-    type: info-text
-    markdown: true
--
-    id: custom-stacked-panes-enabled
-    title: Custom Stacked Panes
-    description: Changes stacked panes to fit a certain number on screen instead of using pixel values.
-    type: class-toggle
--
-    id: custom-stacked-panes-count
-    title: Pane Count
-    description: The number of panes to show up at once.
-    type: variable-number-slider
-    default: 2
-    min: 1
-    max: 5
-    step: 1
 -
     id: background-image
     title: Background Image
@@ -1337,22 +1310,49 @@ settings:
     description: Changes pages to be panes on a transparent background. BEST USED WITH UI OPACITY 0!
     type: class-toggle
 -
+    id: custom-stacked-panes
+    title: Stacked Pane Count
+    type: heading
+    level: 2
+    collapsed: true
+-
+    id: custom-stacked-panes-description
+    title: Info
+    description: |
+        This setting turns stacked panes from a pixel width to a number visible on screen at once. Check the [GitHub Repo documentation](https://github.com/FireIsGood/obsidian-everforest-enchanted/blob/main/custom_stacked_panes.md) for more information.
+    type: info-text
+    markdown: true
+-
+    id: custom-stacked-panes-enabled
+    title: Custom Stacked Panes
+    description: Changes stacked panes to fit a certain number on screen instead of using pixel values.
+    type: class-toggle
+-
+    id: custom-stacked-panes-count
+    title: Pane Count
+    description: The number of panes to show up at once.
+    type: variable-number-slider
+    default: 2
+    min: 1
+    max: 5
+    step: 1
+-
     id: visual-parity
     title: Visual Parity
     type: heading
     level: 2
     collapsed: true
 -
-    id: background-image-description
+    id: visual-parity-description
     title: Info
     description: |
-        Changes reading mode to match editing mode visually.
+        Changes reading mode to match editing mode visually. This mainly modifies the sizes of margins and makes the top element not have margin to simulare how it works in editing mode.
     type: info-text
     markdown: true
 -
     id: visual-parity-enabled
     title: Visual Parity
-    description: Changes reading mode to match editing mode.
+    description: Enables visual parity.
     type: class-toggle
 
 */
