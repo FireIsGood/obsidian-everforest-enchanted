@@ -415,12 +415,7 @@ body:not(.disable-menu-animations) :is(.modal, .prompt) {
 
 /** Canvas **/
 
-/* Custom dot pattern size (style settings) */
-.canvas-background > pattern > circle {
-    cx: var(--canvas-dot-size, 0.7);
-    cy: var(--canvas-dot-size, 0.7);
-    r: var(--canvas-dot-size, 0.7);
-}
+/* Changed in Style Settings */
 
 /** Loading Screen **/
 
@@ -1392,13 +1387,6 @@ settings:
 
 /** Editor Settings **/
 
-/* H2 underline option */
-body.h2-underline h2,
-body.h2-underline .HyperMD-header.HyperMD-header-2.cm-line {
-    border-bottom: 2px solid var(--background-modifier-border);
-    padding-bottom: 2px;
-}
-
 /* Highlighted folders */
 body.highlighted-folders .nav-folder:not(.is-collapsed, .mod-root) {
     border-radius: var(--radius-s);
@@ -1413,6 +1401,20 @@ body:not(.is-translucent).enable-menu-blur .modal-bg {
 
 /** Element Settings **/
 
+/* Custom dot pattern size (style settings) */
+.canvas-background > pattern > circle {
+    cx: var(--canvas-dot-size, 0.7);
+    cy: var(--canvas-dot-size, 0.7);
+    r: var(--canvas-dot-size, 0.7);
+}
+
+/* H2 underline option */
+body.h2-underline h2,
+body.h2-underline .HyperMD-header.HyperMD-header-2.cm-line {
+    border-bottom: 2px solid var(--background-modifier-border);
+    padding-bottom: 2px;
+}
+
 /* External links */
 .external-link-remove-icon .cm-formatting.external-link {
     display: none;
@@ -1420,37 +1422,6 @@ body:not(.is-translucent).enable-menu-blur .modal-bg {
 .external-link-remove-icon a.external-link {
     background-image: none;
     padding-right: unset;
-}
-
-/* Centered tables */
-.centered-tables table {
-    margin-inline: auto;
-}
-
-/* Full width tables */
-.full-width-tables table {
-    width: 100%;
-}
-
-/* Rounded tables */
-.rounded-tables table:not(:has([rowspan])) {
-    border-collapse: separate;
-    border-spacing: 0;
-}
-.rounded-tables :where(table:not(:has([rowspan]))) :is(td, th) {
-    border-width: 0 var(--table-border-width) var(--table-border-width) 0;
-}
-.rounded-tables table:not(:has([rowspan])) th:first-of-type {
-    border-top-left-radius: var(--rounded-tables-radius, 8px);
-}
-.rounded-tables table:not(:has([rowspan])) th:last-of-type {
-    border-top-right-radius: var(--rounded-tables-radius, 8px);
-}
-.rounded-tables table:not(:has([rowspan])) tr:last-of-type td:first-of-type {
-    border-bottom-left-radius: var(--rounded-tables-radius, 8px);
-}
-.rounded-tables table:not(:has([rowspan])) tr:last-of-type td:last-of-type {
-    border-bottom-right-radius: var(--rounded-tables-radius, 8px);
 }
 
 /* Image zoom */
@@ -1506,6 +1477,40 @@ body.image-embed-enable-zoom.image-embed-no-drag .image-embed:active img {
 body.image-embed-enable-zoom
     .cm-embed-block.cm-callout:has(.image-embed:active) {
     contain: none !important;
+}
+
+/* List indent size */
+/* Set in the body selector at the top */
+
+/* Centered tables */
+.centered-tables table {
+    margin-inline: auto;
+}
+
+/* Full width tables */
+.full-width-tables table {
+    width: 100%;
+}
+
+/* Rounded tables */
+.rounded-tables table:not(:has([rowspan])) {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+.rounded-tables :where(table:not(:has([rowspan]))) :is(td, th) {
+    border-width: 0 var(--table-border-width) var(--table-border-width) 0;
+}
+.rounded-tables table:not(:has([rowspan])) th:first-of-type {
+    border-top-left-radius: var(--rounded-tables-radius, 8px);
+}
+.rounded-tables table:not(:has([rowspan])) th:last-of-type {
+    border-top-right-radius: var(--rounded-tables-radius, 8px);
+}
+.rounded-tables table:not(:has([rowspan])) tr:last-of-type td:first-of-type {
+    border-bottom-left-radius: var(--rounded-tables-radius, 8px);
+}
+.rounded-tables table:not(:has([rowspan])) tr:last-of-type td:last-of-type {
+    border-bottom-right-radius: var(--rounded-tables-radius, 8px);
 }
 
 /** Custom Stacked Panes **/
