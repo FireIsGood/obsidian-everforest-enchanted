@@ -1416,67 +1416,75 @@ body.h2-underline .HyperMD-header-2.cm-line {
 }
 
 /* External links */
-.external-link-remove-icon .cm-formatting.external-link {
-    display: none;
-}
-.external-link-remove-icon a.external-link {
-    background-image: none;
-    padding-right: unset;
+body.external-link-remove-icon {
+    & .cm-formatting.external-link {
+        display: none;
+    }
+    & a.external-link {
+        background-image: none;
+        padding-right: unset;
+    }
 }
 
 /* Image zoom */
-body.image-embed-enable-zoom .image-embed {
-    cursor: zoom-out;
-}
-body.image-embed-enable-zoom .image-embed:active {
-    --zoom-embed-size: min(
-        90%,
-        calc(var(--readable-line-length-custom, 700px) + 120px)
-    );
-    display: flex !important;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    max-width: 100%;
-    width: 100% !important;
-    margin: auto 0 !important;
-    inset: 0;
-    object-fit: contain;
-    z-index: 1;
-}
-body.image-embed-enable-zoom .image-embed:active img {
-    width: var(--zoom-embed-size) !important;
-    max-height: 80%;
-    margin: 0 !important;
-    user-select: none;
-    object-fit: contain;
-}
-body.image-embed-enable-zoom .image-embed:active::after {
-    margin-inline: 0 !important;
-    padding: 1ch;
-    font-size: large;
-    box-sizing: border-box;
-    width: var(--zoom-embed-size) !important;
-    background-color: var(--background-primary);
-}
-body.image-embed-enable-zoom .image-embed:active::before {
-    content: "";
-    position: absolute;
-    background-color: var(--color-base-00);
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    opacity: 0.75;
-}
-/* Option to disable dragging */
-body.image-embed-enable-zoom.image-embed-no-drag .image-embed:active img {
-    pointer-events: none;
-}
-/* Hacky fix for callouts */
-body.image-embed-enable-zoom
-    .cm-embed-block.cm-callout:has(.image-embed:active) {
-    contain: none !important;
+body.image-embed-enable-zoom {
+    & .image-embed {
+        & img {
+            cursor: zoom-out;
+        }
+
+        &:active {
+            --zoom-embed-size: min(
+                90%,
+                calc(var(--readable-line-length-custom, 700px) + 120px)
+            );
+            display: flex !important;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            max-width: 100%;
+            width: 100% !important;
+            margin: auto 0 !important;
+            inset: 0;
+            object-fit: contain;
+            z-index: 1;
+        }
+        &:active img {
+            width: var(--zoom-embed-size) !important;
+            max-height: 80%;
+            margin: 0 !important;
+            user-select: none;
+            object-fit: contain;
+        }
+        &:active::after {
+            margin-inline: 0 !important;
+            padding: 1ch;
+            font-size: large;
+            box-sizing: border-box;
+            width: var(--zoom-embed-size) !important;
+            background-color: var(--background-primary);
+        }
+        &:active::before {
+            content: "";
+            position: absolute;
+            background-color: var(--color-base-00);
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.75;
+        }
+    }
+
+    /* Option to disable dragging */
+    &.image-embed-no-drag .image-embed:active img {
+        pointer-events: none;
+    }
+
+    /* Hacky fix for callouts */
+    & .cm-embed-block.cm-callout:has(.image-embed:active) {
+        contain: none !important;
+    }
 }
 
 /* List indent size */
@@ -1493,24 +1501,25 @@ body.image-embed-enable-zoom
 }
 
 /* Rounded tables */
-.rounded-tables table:not(:has([rowspan])) {
+body.rounded-tables :where(table:not(:has([rowspan]))) {
     border-collapse: separate;
     border-spacing: 0;
-}
-.rounded-tables :where(table:not(:has([rowspan]))) :is(td, th) {
-    border-width: 0 var(--table-border-width) var(--table-border-width) 0;
-}
-.rounded-tables table:not(:has([rowspan])) th:first-of-type {
-    border-top-left-radius: var(--rounded-tables-radius, 8px);
-}
-.rounded-tables table:not(:has([rowspan])) th:last-of-type {
-    border-top-right-radius: var(--rounded-tables-radius, 8px);
-}
-.rounded-tables table:not(:has([rowspan])) tr:last-of-type td:first-of-type {
-    border-bottom-left-radius: var(--rounded-tables-radius, 8px);
-}
-.rounded-tables table:not(:has([rowspan])) tr:last-of-type td:last-of-type {
-    border-bottom-right-radius: var(--rounded-tables-radius, 8px);
+
+    & :is(td, th) {
+        border-width: 0 var(--table-border-width) var(--table-border-width) 0;
+    }
+    & th:first-of-type {
+        border-top-left-radius: var(--rounded-tables-radius, 8px);
+    }
+    & th:last-of-type {
+        border-top-right-radius: var(--rounded-tables-radius, 8px);
+    }
+    & tr:last-of-type td:first-of-type {
+        border-bottom-left-radius: var(--rounded-tables-radius, 8px);
+    }
+    & tr:last-of-type td:last-of-type {
+        border-bottom-right-radius: var(--rounded-tables-radius, 8px);
+    }
 }
 
 /** Custom Stacked Panes **/
