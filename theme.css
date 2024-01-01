@@ -1491,12 +1491,12 @@ body.image-embed-enable-zoom {
 /* Set in the body selector at the top */
 
 /* Centered tables */
-.centered-tables table {
+body.centered-tables table {
     margin-inline: auto;
 }
 
 /* Full width tables */
-.full-width-tables table {
+body.full-width-tables table {
     width: 100%;
 }
 
