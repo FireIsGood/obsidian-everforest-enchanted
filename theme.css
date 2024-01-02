@@ -45,7 +45,7 @@
     --checkbox-radius: 25%;
 
     /* Adjusted in Style Settings */
-    --list-indent: var(--list-indent-custom, 18px);
+    --list-indent: var(--list-indent-custom, 28px);
     --list-spacing: 0;
     --list-bullet-size: 6px;
 
@@ -721,9 +721,14 @@ pre.language-zsh::after {
     font-size: 19px;
 }
 
+/* Loose lists in reading mode */
+:root:root:root li > p {
+    margin-block: var(--p-spacing);
+}
+
 /* Fix list bullets and indentation lines offset for reading mode */
 .markdown-rendered .list-bullet {
-    margin-left: -11px;
+    margin-left: -12px;
 }
 :root .show-indentation-guide li :is(ul, ol)::before {
     left: -11px;
@@ -1168,9 +1173,9 @@ settings:
 -
     id: list-indent-custom
     title: Lists - List indent size
-    description: The size of list item indents. The default value of 18px mimics the appearance of editing mode. If you want a more default experience, the default theme uses 32 px. Currently does not work as intended due to JS changes in Obsidian 1.5 which is sad... There are technically workarounds but they would not be very clean.
+    description: The size of list item indents. The default value set here of 28px mimics the appearance of editing mode. If you want a more default experience, the default theme uses 2.25em which is essentially 36px. Currently does not work as intended due to JS changes in Obsidian 1.5 which is sad... There are technically workarounds but they would not be very clean.
     type: variable-number
-    default: 18
+    default: 28
     format: px
 -
     id: table-settings
