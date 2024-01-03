@@ -1129,7 +1129,7 @@ settings:
 -
     id: h2-underline
     title: Headers - H2 underline
-    description: Enable H2 underline.
+    description: Enable h2 underline.
     type: class-toggle
     default: false
 -
