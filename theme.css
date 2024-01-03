@@ -1133,6 +1133,22 @@ settings:
     type: class-toggle
     default: false
 -
+    id: h2-underline-style
+    title: Headers - H2 underline style
+    description: Change style of the h2 underline
+    type: variable-select
+    default: solid
+    options:
+        -
+            label: Solid
+            value: solid
+        -
+            label: Dotted
+            value: dotted
+        -
+            label: Dashed
+            value: dashed
+-
     id: image-embed-settings
     title: Image Embeds
     type: heading
@@ -1416,7 +1432,8 @@ body:not(.is-translucent).enable-menu-blur .modal-bg {
 /* H2 underline option */
 body.h2-underline h2,
 body.h2-underline .HyperMD-header-2.cm-line {
-    border-bottom: 2px solid var(--background-modifier-border);
+    border-bottom: 2px var(--h2-underline-style, solid)
+        var(--background-modifier-border);
     padding-bottom: 2px;
 }
 
