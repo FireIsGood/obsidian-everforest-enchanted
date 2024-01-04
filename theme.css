@@ -1918,6 +1918,10 @@ body.visual-parity-enabled {
         padding-top: unset;
     }
 
+    .markdown-source-view.mod-cm6 .cm-table-widget {
+        padding-block: 0;
+    }
+
     /* Fix collapsed headers in live preview */
     .HyperMD-header:has(> .is-collapsed) {
         padding-block: 0 var(--p-spacing);
