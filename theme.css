@@ -1378,17 +1378,31 @@ settings:
 
 */
 
-/* Improve style setting appearance */
+/** Improve style setting appearance **/
+/* Padding on the bottom */
 [data-type="style-settings"] .view-content > div:last-child,
 .vertical-tab-content > div:has(.style-settings-heading):last-child {
     padding-bottom: 400px;
 }
+
+/* Remove default margins */
 [data-id="everforest-enchanted-theme"]
     + .style-settings-container
     .setting-item-heading {
     margin-top: 0;
     margin-bottom: 0;
 }
+
+/* Style headings */
+[data-id="everforest-enchanted-theme"]
+    + .style-settings-container
+    .setting-item-heading {
+    border-color: var(--setting-border-color);
+}
+.setting-item-heading > .setting-item-info > .setting-item-name {
+    color: var(--setting-border-color) !important;
+}
+/* Style heading containers */
 [data-id="everforest-enchanted-theme"]
     + .style-settings-container
     .setting-item-heading
@@ -1396,14 +1410,49 @@ settings:
     margin-top: 2px;
     padding-top: 16px;
     padding-left: 25px;
-    border-left: 1px dashed var(--background-modifier-border);
-    border-bottom: 1px dashed var(--background-modifier-border);
+    border-width: 0 0 1px 1px;
+    border-style: dashed;
+    border-color: var(--setting-border-color);
 }
+/* Style the carat */
+.style-settings-collapse-indicator {
+    color: var(--setting-border-color);
+}
+
+/* Modify the style of setting items */
 .view-content
     .style-settings-container
     :is(.setting-item-control:has(input), input[type="text"]) {
     width: 100%;
     place-content: flex-start;
+}
+
+/* Heading colors */
+/* Yellow skipped for contrast. There will hopefully never be 6 levels of indentation */
+[data-level="1"],
+[data-level="1"] + .style-settings-container {
+    --setting-border-color: var(--header-red);
+    --setting-icon-color: var(--fg-red);
+}
+[data-level="2"],
+[data-level="2"] + .style-settings-container {
+    --setting-border-color: var(--header-orange);
+    --setting-icon-color: var(--fg-orange);
+}
+[data-level="3"],
+[data-level="3"] + .style-settings-container {
+    --setting-border-color: var(--header-green);
+    --setting-icon-color: var(--fg-green);
+}
+[data-level="4"],
+[data-level="4"] + .style-settings-container {
+    --setting-border-color: var(--header-blue);
+    --setting-icon-color: var(--fg-blue);
+}
+[data-level="5"],
+[data-level="5"] + .style-settings-container {
+    --setting-border-color: var(--header-purple);
+    --setting-icon-color: var(--fg-purple);
 }
 
 /** Editor Settings **/
