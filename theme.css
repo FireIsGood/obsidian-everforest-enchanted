@@ -1127,6 +1127,40 @@ settings:
     level: 2
     collapsed: true
 -
+    id: h1-settings
+    title: Header 1 settings
+    type: heading
+    level: 3
+    collapsed: true
+-
+    id: h1-underline
+    title: Headers - h1 underline
+    description: Enable h1 underline.
+    type: class-toggle
+    default: false
+-
+    id: h1-underline-style
+    title: Headers - h1 underline style
+    description: Change style of the h1 underline
+    type: variable-select
+    default: solid
+    options:
+        -
+            label: Solid
+            value: solid
+        -
+            label: Dotted
+            value: dotted
+        -
+            label: Dashed
+            value: dashed
+-
+    id: h2-settings
+    title: Header 2 settings
+    type: heading
+    level: 3
+    collapsed: true
+-
     id: h2-underline
     title: Headers - H2 underline
     description: Enable h2 underline.
@@ -1136,6 +1170,118 @@ settings:
     id: h2-underline-style
     title: Headers - H2 underline style
     description: Change style of the h2 underline
+    type: variable-select
+    default: solid
+    options:
+        -
+            label: Solid
+            value: solid
+        -
+            label: Dotted
+            value: dotted
+        -
+            label: Dashed
+            value: dashed
+-
+    id: h3-settings
+    title: Header 3 settings
+    type: heading
+    level: 3
+    collapsed: true
+-
+    id: h3-underline
+    title: Headers - h3 underline
+    description: Enable h3 underline.
+    type: class-toggle
+    default: false
+-
+    id: h3-underline-style
+    title: Headers - h3 underline style
+    description: Change style of the h3 underline
+    type: variable-select
+    default: solid
+    options:
+        -
+            label: Solid
+            value: solid
+        -
+            label: Dotted
+            value: dotted
+        -
+            label: Dashed
+            value: dashed
+-
+    id: h4-settings
+    title: Header 4 settings
+    type: heading
+    level: 3
+    collapsed: true
+-
+    id: h4-underline
+    title: Headers - h4 underline
+    description: Enable h4 underline.
+    type: class-toggle
+    default: false
+-
+    id: h4-underline-style
+    title: Headers - h4 underline style
+    description: Change style of the h4 underline
+    type: variable-select
+    default: solid
+    options:
+        -
+            label: Solid
+            value: solid
+        -
+            label: Dotted
+            value: dotted
+        -
+            label: Dashed
+            value: dashed
+-
+    id: h5-settings
+    title: Header 5 settings
+    type: heading
+    level: 3
+    collapsed: true
+-
+    id: h5-underline
+    title: Headers - h5 underline
+    description: Enable h5 underline.
+    type: class-toggle
+    default: false
+-
+    id: h5-underline-style
+    title: Headers - h5 underline style
+    description: Change style of the h5 underline
+    type: variable-select
+    default: solid
+    options:
+        -
+            label: Solid
+            value: solid
+        -
+            label: Dotted
+            value: dotted
+        -
+            label: Dashed
+            value: dashed
+-
+    id: h6-settings
+    title: Header 6 settings
+    type: heading
+    level: 3
+    collapsed: true
+-
+    id: h6-underline
+    title: Headers - h6 underline
+    description: Enable h6 underline.
+    type: class-toggle
+    default: false
+-
+    id: h6-underline-style
+    title: Headers - h6 underline style
+    description: Change style of the h6 underline
     type: variable-select
     default: solid
     options:
@@ -1478,10 +1624,46 @@ body:not(.is-translucent).enable-menu-blur .modal-bg {
     r: var(--canvas-dot-size, 0.7);
 }
 
+/* Header underlines */
+/* H1 underline option */
+body.h1-underline h1,
+body.h1-underline .HyperMD-header-1.cm-line {
+    border-bottom: 2px var(--h1-underline-style, solid)
+        var(--background-modifier-border);
+    padding-bottom: 2px;
+}
 /* H2 underline option */
 body.h2-underline h2,
 body.h2-underline .HyperMD-header-2.cm-line {
     border-bottom: 2px var(--h2-underline-style, solid)
+        var(--background-modifier-border);
+    padding-bottom: 2px;
+}
+/* H3 underline option */
+body.h3-underline h3,
+body.h3-underline .HyperMD-header-3.cm-line {
+    border-bottom: 2px var(--h3-underline-style, solid)
+        var(--background-modifier-border);
+    padding-bottom: 2px;
+}
+/* H4 underline option */
+body.h4-underline h4,
+body.h4-underline .HyperMD-header-4.cm-line {
+    border-bottom: 2px var(--h4-underline-style, solid)
+        var(--background-modifier-border);
+    padding-bottom: 2px;
+}
+/* H5 underline option */
+body.h5-underline h5,
+body.h5-underline .HyperMD-header-5.cm-line {
+    border-bottom: 2px var(--h5-underline-style, solid)
+        var(--background-modifier-border);
+    padding-bottom: 2px;
+}
+/* H6 underline option */
+body.h6-underline h6,
+body.h6-underline .HyperMD-header-6.cm-line {
+    border-bottom: 2px var(--h6-underline-style, solid)
         var(--background-modifier-border);
     padding-bottom: 2px;
 }
