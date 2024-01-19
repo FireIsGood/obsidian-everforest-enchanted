@@ -817,6 +817,8 @@ input.task-list-item-checkbox:checked::after {
 }
 
 /* Fix table margin collapse bug and add table margins */
+/* They keep changing this and it breaks the theme every time, I'm quite annoyed... */
+.markdown-preview-view .block-language-dataview,
 .markdown-preview-view div:not([class]):has(> table) {
     overflow: unset !important;
 
