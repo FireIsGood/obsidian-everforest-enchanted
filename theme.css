@@ -576,6 +576,10 @@ pre[class^="language-"]::after {
 pre.language-applescript::after {
     content: "AppleScript";
 }
+pre.language-armasm::after,
+pre.language-arm-asm::after {
+    content: "ARM Assembly";
+}
 pre.language-bash::after {
     content: "Bash";
 }
