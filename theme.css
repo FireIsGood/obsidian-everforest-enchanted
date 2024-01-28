@@ -628,10 +628,8 @@ pre.language-lua::after {
 pre.language-makefile::after {
     content: "Makefile";
 }
+pre.language-md::after,
 pre.language-markdown::after {
-    content: "Markdown";
-}
-pre.language-md::after {
     content: "Markdown";
 }
 pre.language-nginx::after {
