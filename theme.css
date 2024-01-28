@@ -632,6 +632,9 @@ pre.language-md::after,
 pre.language-markdown::after {
     content: "Markdown";
 }
+pre.language-matlab::after {
+    content: "MATLAB";
+}
 pre.language-nginx::after {
     content: "Nginx";
 }
