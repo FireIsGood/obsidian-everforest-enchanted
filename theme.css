@@ -1110,7 +1110,7 @@ settings:
 -
     id: element-settings
     title: Elements
-    description: Canvas, headers, image embeds, links, lists, tables
+    description: Canvas, headers, image embeds, links, lists, math blocks, tables
     type: heading
     level: 1
     collapsed: true
@@ -1346,6 +1346,17 @@ settings:
     type: variable-number
     default: 28
     format: px
+-
+    id: math-settings
+    title: Math blocks
+    type: heading
+    level: 2
+    collapsed: true
+-
+    id: disable-math-outline
+    title: Math blocks - Disable outline
+    description: Removes the outline around math blocks.
+    type: class-toggle
 -
     id: table-settings
     title: Tables
@@ -1749,6 +1760,18 @@ body.image-embed-enable-zoom {
 
 /* List indent size */
 /* Set in the body selector at the top */
+
+/* Math */
+/* Outlines for math blocks (enabled by default) */
+body:not(.disable-math-outline)
+    :is(
+        div.math-block,
+        span.math-block > mjx-container,
+        .math.math-block.cm-embed-block
+    ) {
+    border: 1px solid var(--bg5);
+    border-radius: 5px;
+}
 
 /* Tables */
 /* Centered tables */
@@ -2394,12 +2417,6 @@ span.math-block > mjx-container {
 /* Make \overline{} display on higher resolution screens*/
 mjx-stretchy-h.mjx-c2013 mjx-ext mjx-c::before {
     font-weight: 900;
-}
-
-/* Add Outline to Math */
-.math.math-block.cm-embed-block {
-    border: 1px solid #fff2;
-    border-radius: 5px;
 }
 
 /* Make print break hr elements */
