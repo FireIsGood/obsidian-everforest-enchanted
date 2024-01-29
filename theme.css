@@ -1750,6 +1750,7 @@ body.image-embed-enable-zoom {
 /* List indent size */
 /* Set in the body selector at the top */
 
+/* Tables */
 /* Centered tables */
 body.centered-tables table {
     margin-inline: auto;
