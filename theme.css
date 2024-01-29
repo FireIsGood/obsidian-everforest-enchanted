@@ -2381,14 +2381,10 @@ body:not(.no-image-alttext-caption)
 /* Make math display better */
 div.math-block {
     padding-block: 0.125em;
-    border: 1px solid #fff2;
-    border-radius: 5px;
 }
 /* Make the weird span ones also work */
 p span.math-block > mjx-container {
     padding-block: 1rem;
-    border: 1px solid #fff2;
-    border-radius: 5px;
 }
 
 /* Make MathJax text bigger */
