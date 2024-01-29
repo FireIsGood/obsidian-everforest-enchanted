@@ -2383,7 +2383,7 @@ div.math-block {
     padding-block: 0.125em;
 }
 /* Make the weird span ones also work */
-p span.math-block > mjx-container {
+span.math-block > mjx-container {
     padding-block: 1rem;
 }
 
