@@ -1928,6 +1928,17 @@ body.background-image-enabled {
 :root .background-image-pane-view .view-header {
     background-color: var(--background-partially-transparent) !important;
 }
+/* New tab page */
+:root .view-content:has(> .empty-state) {
+    width: fit-content;
+    height: unset;
+    margin: auto;
+    padding: clamp(2rem, 5vw, 4rem);
+    border-radius: 1rem;
+}
+.empty-state {
+    position: static;
+}
 
 /** Visual Parity **/
 body.visual-parity-enabled {
