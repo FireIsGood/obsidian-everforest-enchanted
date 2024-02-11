@@ -2369,7 +2369,7 @@ body:not(.no-image-alttext-caption)
         gap: 0.5rem;
         padding-left: 0;
         & > li {
-            outline: 1px solid #fff2;
+            outline: 1px solid var(--bg5);
             padding: 0.5rem 0.25rem;
         }
     }
