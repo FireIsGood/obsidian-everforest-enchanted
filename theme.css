@@ -2346,39 +2346,45 @@ body:not(.no-image-alttext-caption)
 
 /* Custom dashboard */
 /* Title at top of the document */
-.dashboard .markdown-preview-section .title {
-    top: 60px;
-    left: 50%;
-    transform: translateX(-50%);
-    position: absolute;
-    font-size: 26pt !important;
-    font-weight: bolder;
-    letter-spacing: 8px;
-}
-.dashboard h1 {
-    border-bottom-style: dotted !important;
-    border-width: 1px !important;
-    padding-bottom: 3px !important;
-}
-.dashboard div > ul:not(.dataview) {
-    list-style: none;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 0.5rem;
-    padding-left: 0;
-}
-.dashboard div > ul:not(.dataview) > li {
-    outline: 1px solid #fff2;
-    padding: 0.5rem 0.25rem;
-}
-.dashboard div > ul > li > .list-bullet {
-    display: none;
-}
-.dashboard div > ul > li > .list-collapse-indicator {
-    display: none;
-}
-.dashboard div > ul > li > ul:before {
-    border-right: none !important;
+.dashboard {
+    & .markdown-preview-section .title {
+        top: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+        font-size: 26pt !important;
+        font-weight: bolder;
+        letter-spacing: 8px;
+    }
+
+    & h1 {
+        border-bottom-style: dotted !important;
+        border-width: 1px !important;
+        padding-bottom: 3px !important;
+    }
+    & div > ul:not(.dataview) {
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 0.5rem;
+        padding-left: 0;
+        & > li {
+            outline: 1px solid #fff2;
+            padding: 0.5rem 0.25rem;
+        }
+    }
+
+    & div > ul > li {
+        & > .list-bullet {
+            display: none;
+        }
+        & .list-collapse-indicator {
+            display: none;
+        }
+        & ul:before {
+            border-right: none !important;
+        }
+    }
 }
 
 /** Misc. **/
