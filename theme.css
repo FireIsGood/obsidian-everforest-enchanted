@@ -2345,12 +2345,6 @@ body:not(.no-image-alttext-caption)
 }
 
 /* Custom dashboard */
-.dashboard {
-    padding: 25px 20px !important;
-}
-.dashboard.is-readable-line-width:not(.full-width) .markdown-preview-section {
-    width: 100% !important;
-}
 /* Title at top of the document */
 .dashboard .markdown-preview-section .title {
     top: 60px;
