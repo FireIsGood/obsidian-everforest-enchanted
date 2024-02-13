@@ -16,7 +16,7 @@ Image at the top right is from [aiu](https://twitter.com/aiu404l/) on Twitter, t
 ## Features
 
 - [Everforest](https://github.com/sainnhe/everforest) style color palette
-- Light and Dark themes (Hard and Soft respectively)
+  - Light and Dark themes (Hard and Soft themes of Everforest respectively)
 - Different colors for internal and external links
 - [Image styling](image_styling.md) based on ID
   - Alt text as image captions
@@ -25,8 +25,15 @@ Image at the top right is from [aiu](https://twitter.com/aiu404l/) on Twitter, t
 - Improved and custom callouts
 - Code block Language Labels
 - [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) for extra features
+  - Header underlines
+  - Custom line length (AKA readable line width, page width, like 5 other names)
+    - Separate wide width for those Really Big Notes
+  - Zoom in on images
+  - Full width tables
   - [Custom background images](custom_background_image.md) with support for external and local images
   - [Custom stacked panes](custom_stacked_panes.md) based on count rather than pixels
+  - Visual Parity (Makes Reading mode look like Editing mode)
+  - And more!
 - Custom CSS classes
   - Customized Dashboard *(Inspired by the [Dashboard++ snippet](https://github.com/TfTHacker/DashboardPlusPlus))*
 
