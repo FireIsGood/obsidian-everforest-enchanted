@@ -1108,6 +1108,57 @@ settings:
     default: 5
     format: px
 -
+    id: vim-cursor-settings
+    title: Vim
+    type: heading
+    level: 2
+    collapsed: true
+-
+    id: vim-curor-animate
+    title: Animate vim cursor
+    description: Adds an animation when moving the vim cursor.
+    type: class-toggle
+-
+    id: vim-cursor-speed
+    title: Vim cursor speed
+    description: Speed at which the cursor will move
+    type: variable-select
+    default: var(--anim-duration-superfast)
+    options:
+        -
+            label: FTL
+            value: 30ms
+        -
+            label: Light speed
+            value: 45ms
+        -
+            label: Fast
+            value: 55ms
+        -
+            label: Normal
+            value: var(--anim-duration-superfast)
+        -
+            label: Slow
+            value: var(--anim-duration-fast)
+        -
+            label: Very slow
+            value: var(--anim-duration-moderate)
+        -
+            label: Snail speed
+            value: var(--anim-duration-slow)
+        -
+            label: Molases in January
+            value: 1000ms
+        -
+            label: 0 degrees kelvin
+            value: 5s
+        -
+            label: The seconds hand of the analogue clock in your least favorite middle school class
+            value: 20s
+        -
+            label: Zeno's paradox
+            value: 60s
+-
     id: element-settings
     title: Elements
     description: Canvas, headers, image embeds, links, lists, math blocks, tables
@@ -1631,6 +1682,15 @@ body.highlighted-folders .nav-folder:not(.is-collapsed, .mod-root) {
 body:not(.is-translucent).enable-menu-blur .modal-bg {
     backdrop-filter: blur(var(--menu-blur-radius, 5px));
     opacity: 1 !important;
+}
+
+/* Vim cursor options */
+body.vim-curor-animate .cm-fat-cursor {
+    transition:
+        left var(--vim-cursor-speed, var(--anim-duration-superfast))
+            cubic-bezier(0.39, 0.575, 0.565, 1),
+        top var(--vim-cursor-speed, var(--anim-duration-superfast))
+            cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
 /** Element Settings **/
