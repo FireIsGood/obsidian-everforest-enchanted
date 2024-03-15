@@ -9,68 +9,68 @@ I had some issues with the styling of the other project, but the codebase was ve
 
 You can get extra customization through the [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) plugin.
 
-![](asssets/theme%20screenshots.png)
+![](assets/theme%20screenshots.png)
 
 Image at the top right is from [aiu](https://twitter.com/aiu404l/) on Twitter, though the original post has been deleted.
 
 ## Features
 
-- [Everforest](https://github.com/sainnhe/everforest) style color palette
-  - Light and Dark themes (Hard and Soft themes of Everforest respectively)
-- Different colors for internal and external links
-- [Image styling](image_styling.md) based on ID
-  - Alt text as image captions
-  - Image grids for multiple images placed inline
-- [Embed styling](embed_styling.md) based on alt text
-- Improved and custom callouts
-- Code block Language Labels
-- [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) for extra features
-  - Header underlines
-  - Custom line length (AKA readable line width, page width, like 5 other names)
-    - Separate wide width for those Really Big Notes
-  - Zoom in on images
-  - Full width tables
-  - [Custom background images](custom_background_image.md) with support for external and local images
-  - [Custom stacked panes](custom_stacked_panes.md) based on count rather than pixels
-  - Visual Parity (Makes Reading mode look like Editing mode)
-  - And more!
-- Custom CSS classes
-  - Customized Dashboard *(Inspired by the [Dashboard++ snippet](https://github.com/TfTHacker/DashboardPlusPlus))*
+-   [Everforest](https://github.com/sainnhe/everforest) style color palette
+    -   Light and Dark themes (Hard and Soft themes of Everforest respectively)
+-   Different colors for internal and external links
+-   [Image styling](image_styling.md) based on ID
+    -   Alt text as image captions
+    -   Image grids for multiple images placed inline
+-   [Embed styling](embed_styling.md) based on alt text
+-   Improved and custom callouts
+-   Code block Language Labels
+-   [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) for extra features
+    -   Header underlines
+    -   Custom line length (AKA readable line width, page width, like 5 other names)
+        -   Separate wide width for those Really Big Notes
+    -   Zoom in on images
+    -   Full width tables
+    -   [Custom background images](custom_background_image.md) with support for external and local images
+    -   [Custom stacked panes](custom_stacked_panes.md) based on count rather than pixels
+    -   Visual Parity (Makes Reading mode look like Editing mode)
+    -   And more!
+-   Custom CSS classes
+    -   Customized Dashboard _(Inspired by the [Dashboard++ snippet](https://github.com/TfTHacker/DashboardPlusPlus))_
 
 ### Themes
 
-|                 Dark                  |                 Light                  |
-| :-----------------------------------: | :------------------------------------: |
-|     ![](asssets/theme%20dark.png)     |     ![](asssets/theme%20light.png)     |
-| ![](asssets/theme%20dark%20image.png) | ![](asssets/theme%20light%20image.png) |
+|                 Dark                 |                 Light                 |
+| :----------------------------------: | :-----------------------------------: |
+|     ![](assets/theme%20dark.png)     |     ![](assets/theme%20light.png)     |
+| ![](assets/theme%20dark%20image.png) | ![](assets/theme%20light%20image.png) |
 
 ### Image styling
 
 A full list of styles can be found at [image styling](image_styling.md).
 
-|              Dark              |              Light              |
-| :----------------------------: | :-----------------------------: |
-| ![](asssets/images%20dark.png) | ![](asssets/images%20light.png) |
+|             Dark              |             Light              |
+| :---------------------------: | :----------------------------: |
+| ![](assets/images%20dark.png) | ![](assets/images%20light.png) |
 
 ### Embed Styling
 
 A full list of styles can be found at [embed styling](embed_styling.md).
 
-|              Dark              |              Light              |
-| :----------------------------: | :-----------------------------: |
-| ![](asssets/embeds%20dark.png) | ![](asssets/embeds%20light.png) |
+|             Dark              |             Light              |
+| :---------------------------: | :----------------------------: |
+| ![](assets/embeds%20dark.png) | ![](assets/embeds%20light.png) |
 
 ### Improved and Custom Callouts
 
-|               Dark               |               Light               |
-| :------------------------------: | :-------------------------------: |
-| ![](asssets/callouts%20dark.png) | ![](asssets/callouts%20light.png) |
+|              Dark               |              Light               |
+| :-----------------------------: | :------------------------------: |
+| ![](assets/callouts%20dark.png) | ![](assets/callouts%20light.png) |
 
 ### Code block Language Labels
 
-|                Dark                |                Light                |
-| :--------------------------------: | :---------------------------------: |
-| ![](asssets/codeblocks%20dark.png) | ![](asssets/codeblocks%20light.png) |
+|               Dark                |               Light                |
+| :-------------------------------: | :--------------------------------: |
+| ![](assets/codeblocks%20dark.png) | ![](assets/codeblocks%20light.png) |
 
 ## Custom Background Images
 
@@ -78,11 +78,12 @@ External and local images can be used. More information can be found at [custom 
 
 The opacity has been lowered to 50% for these examples, by default it is 85%. To get these images in your own vault, see the link above for the image urls.
 
-> ![](asssets/theme%20dark%20image.png)
+> ![](assets/theme%20dark%20image.png)
 > Photo by Pixabay from Pexels: <https://www.pexels.com/photo/green-tree-268533/>
+
 <!-- markdownlint-disable-next-line no-blanks-blockquote -->
 
-> ![](asssets/theme%20light%20image.png)
+> ![](assets/theme%20light%20image.png)
 > Photo by Alissa Nabiullina: <https://www.pexels.com/photo/selective-focus-photography-of-white-petaled-flower-plant-997567/>
 
 ### CSS Classes
@@ -90,6 +91,7 @@ The opacity has been lowered to 50% for these examples, by default it is 85%. To
 Add them to the YAML frontmatter to activate custom features.
 
 <!-- markdownlint-disable-next-line fenced-code-language -->
+
 ```
 ---
 cssclass: some-class, another-class
