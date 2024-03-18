@@ -127,3 +127,7 @@ Implemented CSS Classes:
 ## Contributing
 
 If you find a bug or have a feature you want added, feel free to add it as an issue or pull request.
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
