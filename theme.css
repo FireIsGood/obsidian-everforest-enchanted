@@ -128,7 +128,6 @@
 
     --checkbox-color: var(--fg-blue);
 
-    --canvas-background: transparent;
     --canvas-dot-pattern: var(--color-base-50);
 
     /** Headers **/
@@ -1885,6 +1884,9 @@ body.rounded-tables :where(table:not(:has([rowspan]))) {
 }
 
 body.background-image-enabled {
+    /* This breaks canvas screenshots! */
+    --canvas-background: transparent;
+
     --background-transparent: rgba(
         var(--background-primary-rgb),
         var(--pane-opacity, 0.85)
