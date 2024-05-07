@@ -538,12 +538,15 @@ pre[class^="language-"]::before {
 }
 .HyperMD-codeblock-begin-bg:not(:has(> .code-block-flair > *)):has(
         > .code-block-flair
-    )::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-color: var(--code-header);
-    border-radius: 4px 4px 0 0;
+    ) {
+    overflow: hidden;
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: var(--code-header);
+        /* border-radius: 4px 4px 0 0; */
+    }
 }
 
 /* Codeblock language labels */
