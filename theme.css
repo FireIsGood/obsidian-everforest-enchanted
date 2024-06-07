@@ -1956,7 +1956,10 @@ body.background-image-enabled {
     .workspace-split:not(.mod-root, .mod-horizontal)
     .workspace-tab-header-container,
 .background-image-enabled
-    .workspace-split:not(.mod-left-split, .mod-right-split) {
+    .workspace-split:not(.mod-left-split, .mod-right-split),
+.background-image-enabled
+    .workspace-split.mod-left-split
+    .workspace-sidedock-vault-profile {
     background-color: transparent !important;
 }
 /* Fix double side headers */
