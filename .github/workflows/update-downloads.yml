@@ -2,30 +2,30 @@ name: Update README Download Count
 run-name: Updaing download count
 
 on:
-  schedule:
-  - cron: "0 12 * * 6"
-  workflow_dispatch:
+    schedule:
+        - cron: "0 12 * * 6"
+    workflow_dispatch:
 
 jobs:
-  update:
-    name: Update download count
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2.3.2
-        with:
-          token: ${{ secrets.GIT_ACCESS_TOKEN }}
-        
-      - name: Modifiy the specific files using scripts
-        run: |
-          DL=`curl "https://releases.obsidian.md/stats/theme" | jq '."Everforest Enchanted".download' | xargs numfmt --grouping`
-          echo "Updaing downloads to '$DL'"
-          sed -i "/^\!\[Static Badge\]/c![Static Badge](https://img.shields.io/badge/Downloads-$DL-7c3aed?style=plastic&logo=obsidian)" README.md
-          
-          echo "Email is ommitted on purpose!"
-          git config --global user.name "GitHub Workflow"
-          git config --global user.email ""
-          
-          git add -A
-          git commit -m "Chore: Update download count"
-          git push
+    update:
+        name: Update download count
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v2.3.2
+              with:
+                  token: ${{ secrets.GIT_ACCESS_TOKEN }}
+
+            - name: Modifiy the specific files using scripts
+              run: |
+                  DL=`curl "https://releases.obsidian.md/stats/theme" | jq '."Everforest Enchanted".download' | xargs numfmt --grouping`
+                  echo "Updaing downloads to '$DL'"
+                  sed -i "/^\!\[Static Badge\]/c![Static Badge](https://img.shields.io/badge/Downloads-$DL-7c3aed?style=plastic&logo=obsidian)" README.md
+
+                  echo "Email is ommitted on purpose!"
+                  git config --global user.name "GitHub Workflow"
+                  git config --global user.email ""
+
+                  git add -A
+                  git commit -m "Chore: Update download count"
+                  git push

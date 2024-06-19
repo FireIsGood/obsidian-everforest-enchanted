@@ -28,8 +28,8 @@ You can use extra parameters in the url of these two sites to get smaller images
 
 Image we want:
 
-> ![Green Tree](https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?w=1920&q=80)
-> *Photo by Pixabay from Pexels: <https://www.pexels.com/photo/green-tree-268533/>*
+> ![Green Tree](https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?w=1920&q=80)  
+> _Photo by Pixabay from Pexels: <https://www.pexels.com/photo/green-tree-268533/>_
 
 We would use the following link:
 
@@ -37,7 +37,7 @@ We would use the following link:
 
 And place it in the URL function:
 
-```
+```css
 url("https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?w=1920&q=80")
 ```
 
@@ -49,8 +49,8 @@ Turns into:
 
 Image we want:
 
-> ![Selective Focus Photography of White Petaled Flower Plant](https://images.pexels.com/photos/997567/pexels-photo-997567.jpeg?w=1920&q=80)
-> *Photo by Alissa Nabiullina from Pexels: <https://www.pexels.com/photo/selective-focus-photography-of-white-petaled-flower-plant-997567/>*
+> ![Selective Focus Photography of White Petaled Flower Plant](https://images.pexels.com/photos/997567/pexels-photo-997567.jpeg?w=1920&q=80)  
+> _Photo by Alissa Nabiullina from Pexels: <https://www.pexels.com/photo/selective-focus-photography-of-white-petaled-flower-plant-997567/>_
 
 We would use the following link:
 
@@ -58,7 +58,7 @@ We would use the following link:
 
 And place it in the URL function:
 
-```
+```css
 url("https://images.pexels.com/photos/997567/pexels-photo-997567.jpeg?w=1920&q=80")
 ```
 
@@ -68,7 +68,7 @@ Turns into:
 
 ## Local Images
 
-Local images are a bit harder and you'll need to know how to create and use  snippets due to security changes in 1.3 with how Obsidian allows file system access.
+Local images are a bit harder and you'll need to know how to create and use snippets due to security changes in 1.3 with how Obsidian allows file system access.
 
 You can leave the Style Settings variables alone when using local images since snippets are always higher priority than style settings.
 
@@ -76,22 +76,26 @@ Using large local images **can cause lag**. If you're having issues, you can try
 
 If you want **different images** for both dark and light modes, you should use the following template:
 
+<!-- prettier-ignore-start -->
 ```css
 :root body.theme-dark {
-  --background-image-url: url("")
+  --background-image-url: url("");
 }
 :root body.theme-light {
-  --background-image-url: url("")
+  --background-image-url: url("");
 }
 ```
+<!-- prettier-ignore-end -->
 
 If you want the **same image** for both modes, you should use the following template:
 
+<!-- prettier-ignore-start -->
 ```css
 :root body {
-  --background-image-url: url("")
+  --background-image-url: url("");
 }
 ```
+<!-- prettier-ignore-end -->
 
 Now, you have to get yourself a [data URI](https://css-tricks.com/data-uris/) inside the quotation marks. Since the base64 text is really large and annoying to go back and edit, I would recommend resizing or doing any editing to the image to make it the size you want before the next step. If you don't care about the background being blurred, you could reduce the resolution down to a width of 960px and convert to the AVIF file format. I found [an online converter](https://avif.io/) that works in your browser for this.
 

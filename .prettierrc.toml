@@ -1,2 +1,7 @@
 tabWidth = 4
 useTabs  = false
+
+[[overrides]]
+files = "*.md"
+[overrides.options]
+tabWidth = 1
