@@ -41,3 +41,4 @@ Steps to reproduce the behavior, e.g.
 
 - [ ] I have updated to the latest version of the theme (`Obsidian Settings → Appearance → Themes - Manage → Update`).
 - [ ] I made sure that the issue is related to this theme, by checking that the issue does not occur with other themes or the default theme.
+- [ ] I made sure that the issue is not caused by snippets, by chekcing that the issue does not occur with snippets enabled.
