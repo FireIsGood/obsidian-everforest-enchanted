@@ -27,5 +27,5 @@ jobs:
                   git config --global user.email ""
 
                   git add -A
-                  git commit -m "Chore: Update download count"
+                  git commit -m "chore: Update download count"
                   git push
