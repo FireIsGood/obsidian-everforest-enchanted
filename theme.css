@@ -924,7 +924,7 @@ div:has(h1) + div p:has(.tag) {
 }
 
 /* Embed last p */
-.markdown-embed-content .markdown-preview-section > div:last-child p {
+.markdown-embed-content .markdown-preview-section > div:last-child > p {
     margin-bottom: 0;
 }
 
