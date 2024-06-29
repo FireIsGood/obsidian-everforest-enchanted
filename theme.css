@@ -706,6 +706,10 @@ pre.language-zsh::after {
 
 /** Links **/
 
+:root a {
+    transition: opacity 0s;
+}
+
 /* Unresolved links */
 :root:root a.is-unresolved:hover,
 .markdown-source-view.mod-cm6 .is-unresolved .cm-underline:hover {
