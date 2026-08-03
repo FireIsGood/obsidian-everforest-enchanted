@@ -2361,10 +2361,10 @@ body.visual-parity-enabled {
 .callout {
     --callout-content-padding: var(--size-4-2) var(--size-4-4);
     --callout-content-color: rgba(var(--bg-dim-rgb), 0.3);
-    --callout-border-solid: 1px solid rgba(var(--callout-color), 0.3);
-    --callout-border-dashed: 1px dashed rgba(var(--callout-color), 0.4);
+    --callout-border-solid: 1px solid color-mix(in srgb, var(--callout-color) 30%, transparent);
+    --callout-border-dashed: 1px dashed color-mix(in srgb, var(--callout-color) 40%, transparent);
     padding: 0;
-    border-left: 0.125rem solid rgba(var(--callout-color), 0.7);
+    border-left: 0.125rem solid color-mix(in srgb, var(--callout-color) 70%, transparent);
     border-top: var(--callout-border-solid);
     border-right: var(--callout-border-solid);
     border-bottom: var(--callout-border-solid);
@@ -2379,18 +2379,18 @@ body.visual-parity-enabled {
     padding: 0.5rem 0.75rem;
     gap: 0.5rem;
     border-radius: 2px 2px 0 0;
-    background-color: rgba(var(--callout-color), 0.2);
+    background-color: color-mix(in srgb, var(--callout-color) 20%, transparent);
 }
 .callout.is-collapsible .callout-title {
     cursor: pointer !important;
 }
 .callout-icon svg.svg-icon {
-    color: rgb(var(--callout-color));
+    color: var(--callout-color);
 }
 .callout-title-inner {
     color: color-mix(
         in srgb,
-        rgb(var(--callout-color)) 70%,
+        var(--callout-color) 70%,
         var(--color-base-100)
     );
     filter: contrast(2);
@@ -2436,7 +2436,7 @@ body.visual-parity-enabled {
 /* Custom callouts */
 /* Uses Material Colors 300-500 + A100 */
 .callout[data-callout="math"] {
-    --callout-color: 132, 255, 255;
+    --callout-color: rgb(132, 255, 255);
     --callout-icon: lucide-sigma;
 }
 .callout[data-callout="math"] .callout-content {
@@ -2446,18 +2446,18 @@ body.visual-parity-enabled {
     border: none;
 }
 .callout[data-callout="graph"] {
-    --callout-color: 255, 152, 0;
+    --callout-color: rgb(255, 152, 0);
     --callout-icon: lucide-line-chart;
 }
 .callout[data-callout="image"] {
-    --callout-color: 234, 128, 252;
+    --callout-color: rgb(234, 128, 252);
     --callout-icon: lucide-image;
 }
 .callout[data-callout="image"] .callout-content {
     padding: 0 !important;
 }
 .callout[data-callout="code"] {
-    --callout-color: 76, 175, 80;
+    --callout-color: rgb(76, 175, 80);
     --callout-icon: lucide-curly-braces;
 }
 .callout[data-callout="code"] .callout-content {
